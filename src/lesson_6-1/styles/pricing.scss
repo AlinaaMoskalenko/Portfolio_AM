@@ -1,0 +1,45 @@
+$border-radius: 2.3px;
+.pricing {
+  width: 100%;
+  padding-top: 28.8px;
+  padding-bottom: 34.9px;
+  padding-left: 214.4px;
+  padding-right: 194.4px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &__title {
+    font-size: 20.9px;
+    line-height: 1;
+    color: rgb(36, 47, 64);
+    margin-bottom: 13.9px;
+  }
+  &__text {
+    font-size: 9.3px;
+    line-height: 1.62;
+    text-align: center;
+    color: rgb(91, 107, 130);
+    margin-bottom: 23.2px;
+  }
+}
+.pricing-action {
+  display: flex;
+  justify-content: center;
+  &__button {
+    width: 116.2px;
+    height: 34.9px;
+    border: none;
+    &:first-child {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      background-color: rgb(60, 207, 142);
+      color: rgb(255, 255, 255);
+    }
+    &:last-child {
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      background-color: rgb(228, 237, 242);
+      color: rgb(91, 107, 130);
+    }
+  }
+}

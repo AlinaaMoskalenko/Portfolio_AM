@@ -1,0 +1,374 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+$font-main: 17px;
+
+.section {
+  @include flex-center-horizontal;
+  width: $main-width;
+  &_dark {
+    background: $background-dark;
+  }
+  &_light {
+    background: $background-light;
+  }
+  &_iphone-xs {
+    padding-top: 48px;
+  }
+  &_red-cross {
+    margin: $section-margin;
+    padding: 50px 0;
+  }
+  &_iphone-xr {
+    padding-top: 55px;
+  }
+  &_watch {
+    margin: 1rem 0 0.5rem 0;
+  }
+  &__content {
+    @include flex-vertical;
+    justify-content: center;
+    align-items: center;
+    max-width: $page-content-width;
+    width: $main-width;
+    &_watch {
+      flex-direction: row;
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+    &_red-cross {
+      margin: 0 auto;
+      text-align: center;
+    }
+    &_grid {
+      flex-wrap: wrap;
+      padding: 0 0.5rem;
+      @include mobile {
+        padding: 0;
+      }
+    }
+  }
+  &__description {
+    width: $main-width;
+    &_watch {
+      padding-top: 37px;
+    }
+  }
+  &__image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &_iphone-xs {
+      width: 80%;
+      height: 415px;
+      background-image: url(../../assets/images/h_w_6/hero-iphone-xs_large_2x.jpg);
+      @include mobile {
+        margin-top: 30px;
+        height: 331px;
+        background-image: url(../../assets/images/h_w_6/hero-iphone-xs_small_2x.jpg);
+      }
+    }
+    &_logo-arc {
+      width: $main-width;
+      height: 68px;
+      background-image: url(../../assets/images/h_w_6/logo_arc_large.jpg);
+      @include mobile {
+        background-image: url(../../assets/images/h_w_6/logo_arc_small_2x.jpg);
+      }
+    }
+    &_iphone-xr {
+      width: $main-width;
+      height: 420px;
+      background-position: center bottom;
+      background-image: url(../../assets/images/h_w_6/iphone_xr_largetall.jpg);
+      @include mobile {
+        margin-top: 30px;
+        height: 332px;
+        background-image: url(../../assets/images/h_w_6/iphone_xr_small_2x.jpg);
+      }
+    }
+    &_watch {
+      width: $main-width;
+      height: 738px;
+      background-image: url(../../assets/images/h_w_6/apple_watch_series_4_largetall.jpg);
+      @include mobile {
+        height: 309px;
+        background-position-y: bottom;
+        background-image: url(../../assets/images/h_w_6/apple_watch_series_4_small_2x.jpg);
+      }
+    }
+  }
+  &__red-cross {
+    font-size: $font-main;
+    line-height: 25px;
+    margin-top: 9px;
+    color: $link-color;
+    @include mobile {
+      max-width: 209px;
+    }
+  }
+  &__block_options {
+    min-height: 580px;
+    flex-basis: 50%;
+    width: 50%;
+    padding: 0.5rem;
+    @include laptop {
+      min-height: 490px;
+    }
+    @include mobile {
+      min-height: 500px;
+      padding: 0.5rem 0;
+      width: $main-width;
+      flex-basis: 100%;
+    }
+  }
+}
+
+.description {
+  @include flex-vertical;
+  align-items: center;
+  color: $text-color-in-dark;
+  &__title {
+    font-size: 25px;
+    font-weight: 400;
+    &_watch {
+      margin-top: 6px;
+      font-size: 27px;
+      color: $text-color-in-light;
+      @include mobile {
+        font-size: $font-main;
+      }
+    }
+    &_grid {
+      font-size: 40px;
+      line-height: 1.1;
+      font-weight: 600;
+      margin-bottom: 13px;
+      @include laptop {
+        font-size: 32px;
+        margin-bottom: 0;
+      }
+    }
+    &_small-xs {
+      margin-right: 20px;
+      @include iphone-title;
+      &:after {
+        content: "S";
+        @include iphone-after;
+      }
+    }
+    &_small-xr {
+      margin-right: 35px;
+      @include iphone-title;
+      &:after {
+        content: "R";
+        @include iphone-after;
+      }
+    }
+  }
+  &__title-logo {
+    margin-bottom: 17px;
+    width: $main-width;
+    height: 78px;
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/images/h_w_6/apple_watch_series_4_logo_hero_large.jpg);
+    @include mobile {
+      height: 47px;
+      background-image: url(../../assets/images/h_w_6/apple_watch_series_4_logo_hero_small_2x.jpg);
+    }
+  }
+  &__content {
+    &_pre-order {
+      margin-top: 0.8em;
+      font-size: $font-main;
+      color: rgb(204, 204, 204);
+    }
+    &_grid {
+      font-size: 19px;
+      &_text {
+        @include laptop {
+          max-width: 75%;
+          text-align: center;
+        }
+        @include mobile {
+          max-width: 75%;
+          text-align: center;
+        }
+      }
+      @include laptop {
+        font-size: $font-main;
+        margin-top: 3px;
+      }
+    }
+  }
+  &__link {
+    margin-top: 5.1px;
+    font-size: $font-main;
+    color: $link-color;
+    &_white {
+      color: rgb(255, 255, 255);
+      &_try:after {
+        content: "↗";
+      }
+    }
+    &_light-link {
+      color: $link-light-color;
+    }
+    &:nth-child(2) {
+      margin-left: 26px;
+    }
+    @include laptop {
+      font-size: $font-main;
+    }
+    @include mobile {
+      font-size: $font-main;
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.content {
+  margin-top: 9px;
+  font-size: $font-main;
+  &__learn-more {
+    color: $link-color;
+    &_xs {
+      font-size: 20px;
+      color: $link-light-color;
+    }
+    &_watch {
+      font-size: 21px;
+    }
+    @include mobile {
+      &_watch {
+        font-size: 19px;
+      }
+    }
+  }
+  &__buy {
+    margin-left: 24px;
+    color: $link-color;
+    &_xs {
+      font-size: 20px;
+      color: $link-light-color;
+    }
+    &_watch {
+      font-size: 21px;
+    }
+    @include mobile {
+      &_watch {
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+.block {
+  @include flex-vertical;
+  align-items: center;
+  justify-content: space-between;
+  width: $main-width;
+  height: 100%;
+  background: $background-light;
+  &_apple-music {
+    @include background-image-base;
+    padding-bottom: 52px;
+    background-image: url(../../assets/images/h_w_6/apple_music_large.jpg);
+    @include laptop {
+      background-image: url(../../assets/images/h_w_6/apple_music_medium_2x.jpg);
+    }
+    @include mobile {
+      background-image: url(../../assets/images/h_w_6/apple_music_small_2x.jpg);
+    }
+  }
+  &_apple-giveback {
+    @include background-image-base;
+    width: $main-width;
+    background-image: url(../../assets/images/h_w_6/give_back_large.jpg);
+    @include laptop {
+      background-image: url(../../assets/images/h_w_6/give_back_medium_2x.jpg);
+    }
+    @include mobile {
+      height: 548px;
+      background-image: url(../../assets/images/h_w_6/give_back_small_2x.jpg);
+    }
+  }
+  &_macbookpro {
+    @include background-image-base;
+    background-image: url(../../assets/images/h_w_6/macbook_pro_performance_large.jpg);
+    @include laptop {
+      background-image: url(../../assets/images/h_w_6/macbook_pro_performance_medium_2x.jpg);
+    }
+    @include mobile {
+      background-image: url(../../assets/images/h_w_6/macbook_pro_performance_small_2x.jpg);
+    }
+  }
+  &__description {
+    padding-top: 52px;
+    &_light {
+      color: $text-color-in-light;
+    }
+    @include laptop {
+      padding-top: 42px;
+    }
+    @include mobile {
+      padding-top: 37px;
+    }
+  }
+  &__image {
+    &_apple-music {
+      @include background-image-base;
+      width: 37px;
+      height: 37px;
+      background-image: url(../../assets/images/h_w_6/icon_apple_music_large.png);
+      @include mobile {
+        background-image: url(../../assets/images/h_w_6/icon_apple_music_small_2x.png);
+      }
+    }
+    &_airpods {
+      @include background-image-base;
+      width: 417px;
+      height: 387px;
+      background-image: url(../../assets/images/h_w_6/airpods_large.jpg);
+      @include laptop {
+        width: 304px;
+        height: 314px;
+        background-image: url(../../assets/images/h_w_6/airpods_medium_2x.jpg);
+      }
+    }
+    &_homepod {
+      @include background-image-base;
+      width: 376px;
+      height: 390px;
+      background-image: url(../../assets/images/h_w_6/homepod_large.jpg);
+      @include laptop {
+        width: 311px;
+        height: 325px;
+        background-image: url(../../assets/images/h_w_6/homepod_medium.jpg);
+      }
+      @include mobile {
+        height: 340px;
+        background-image: url(../../assets/images/h_w_6/homepod_small_2x.jpg);
+      }
+    }
+    &_ipad {
+      @include background-image-base;
+      width: 516px;
+      height: 335px;
+      background-image: url(../../assets/images/h_w_6/ipad_large.jpg);
+      @include laptop {
+        width: 228px;
+        height: 340px;
+        background-image: url(../../assets/images/h_w_6/ipad_medium_2x.jpg);
+      }
+      @include mobile {
+        background-image: url(../../assets/images/h_w_6/ipad_small_2x.jpg);
+      }
+    }
+  }
+}

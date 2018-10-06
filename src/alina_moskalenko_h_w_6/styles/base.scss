@@ -1,0 +1,59 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: $font-size-base;
+  color: $base-font-color;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header {
+  width: $main-width;
+  height: $global-nav-height;
+}
+
+.main {
+  width: $main-width;
+  min-height: 100vh;
+}
+
+.footer {
+  width: $main-width;
+  margin-top: 0.5rem;
+  color: $footer-text-color;
+  font-size: $footer-font-size;
+  background-color: rgb(242, 242, 242);
+}

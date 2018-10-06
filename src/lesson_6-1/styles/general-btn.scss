@@ -1,0 +1,30 @@
+$btn-size: 10px;
+$border-radius: 6px;
+
+.general-btn {
+  width: 100%;
+  padding: 10px;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  background-color: rgb(255, 255, 255);
+
+  &__button {
+    width: $btn-size;
+    height: $btn-size;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+
+    &:first-child {
+      background-color: #ff6058;
+    }
+
+    &:nth-child(2) {
+      background-color: #ffc130;
+    }
+
+    &:last-child {
+      background-color: #28c940;
+    }
+  }
+}

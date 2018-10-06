@@ -1,0 +1,35 @@
+.pricing-items {
+  padding-left: 40px;
+  padding-right: 20px;
+  padding-bottom: 34.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 171.5px;
+  height: 253.4px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.1);
+  padding-top: 39.5px;
+  padding-bottom: 29.1px;
+  &__name-pack {
+    color: rgb(36, 47, 64);
+  }
+  &__price {
+      font-size: 34.9px;
+      position: relative;
+      color: rgb(36, 47, 64);
+      &:before {
+          content: '$';
+          position: absolute;
+          font-size: 15.1px;
+
+      }
+  }
+}

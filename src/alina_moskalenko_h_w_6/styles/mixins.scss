@@ -1,0 +1,98 @@
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin opacity-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin opacity-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+$xs-screen: 480px;
+$sm-screen: 768px;
+$md-screen: 980px;
+$lg-screen: 1069px;
+$xl-screen: 1920px;
+
+@mixin xs-mobile {
+  @media (max-width: #{$xs-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$sm-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$md-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$lg-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$xl-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: #{$xl-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin iphone-title {
+  position: relative;
+  margin-bottom: 14px;
+  font-size: 42px;
+  font-weight: 500;
+  @include tablet {
+    font-size: 37px;
+  }
+}
+
+@mixin iphone-after {
+  position: absolute;
+  font-size: 25px;
+  top: 50%;
+  right: 50%;
+  padding: 2px 6px 0 6px;
+  transform: translate(125px, -50%);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  @include tablet {
+    font-size: 20px;
+    transform: translate(110px, -50%);
+  }
+}
+
+@mixin background-image-base {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,1 @@
+import './lesson_6-1.scss';

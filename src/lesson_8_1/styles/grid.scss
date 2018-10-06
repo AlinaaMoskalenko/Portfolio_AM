@@ -1,0 +1,186 @@
+@import "./mixins.scss";
+
+$devices-width: "xl", "lg", "md", "sm";
+$col-counts: 12;
+$min-col-size: 100% / $col-counts;
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  @include sm {
+    margin: 0 12px 12px 12px;
+  }
+}
+
+.grid-conteiner__block {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  &_left {
+    padding-right: 12.5px;
+  }
+  &_right {
+    padding-left: 12.5px;
+  }
+  @include lg {
+    height: 743px;
+  }
+  @include md {
+    height: 512px;
+  }
+  @include sm {
+    padding: 12px 0 0 0;
+  }
+}
+
+.first-block {
+  height: 50%;
+  padding-bottom: 12.5px;
+  @include sm {
+    padding-bottom: 0;
+  }
+}
+
+.second-block {
+  height: 50%;
+  padding-top: 12.5px;
+  @include sm {
+    padding-top: 12px;
+  }
+}
+.speaker-0 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/lesson_8_1/speaker-0.jpg);
+}
+
+.speaker-1 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/lesson_8_1/speaker-1.jpg);
+}
+
+.speaker-2 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/lesson_8_1/speaker-2.jpg);
+}
+
+.home {
+  position: relative;
+  &__general {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    color: rgb(114, 114, 118);
+    background-color: white;
+    border-radius: 5px;
+    &_mini {
+      top: 45%;
+    }
+    &_max {
+      top: 30%;
+    }
+    @include md {
+      max-height: 48px;
+      min-width: 90%;
+    }
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  &__title {
+    margin-right: 10px;
+  }
+  &__btn {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: inherit;
+    background-color: transparent;
+    &:hover {
+      border-color: rgb(255, 255, 255);
+    }
+  }
+}
+
+@for $i from 1 through $col-counts {
+  $size: $min-col-size * $i;
+
+  .col-#{$i} {
+    flex-basis: $size;
+    width: $size;
+    max-width: $size;
+  }
+  .col-auto {
+    flex-basis: auto;
+    width: auto;
+    max-width: none;
+  }
+  .offset-#{$i} {
+    margin-left: $min-col-size * $i;
+  }
+}
+
+@for $i from 1 through 12 {
+  $size: $min-col-size * $i;
+  .col-sm-#{$i} {
+    @include sm {
+      flex-basis: $size;
+      width: $size;
+      max-width: $size;
+    }
+  }
+  .col-md-#{$i} {
+    @include md {
+      flex-basis: $size;
+      width: $size;
+      max-width: $size;
+    }
+  }
+  .col-lg-#{$i} {
+    @include lg {
+      flex-basis: $size;
+      width: $size;
+      max-width: $size;
+    }
+  }
+
+  .col-xl-#{$i} {
+    @include xl {
+      flex-basis: $size;
+      width: $size;
+      max-width: $size;
+    }
+  }
+}
+
+@each $device in $devices-width {
+  @for $i from 1 through 12 {
+    $size: $min-col-size * $i;
+    .offset-#{$device}-#{$i} {
+      margin-left: $size;
+    }
+  }
+}
