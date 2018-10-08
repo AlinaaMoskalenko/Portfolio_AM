@@ -92,7 +92,7 @@ $transition-delay: 100ms;
     left: 0;
     padding: 0 34px;
     height: calc(100vh - #{$global-nav-height});
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     transform: scaleY(0);
     transform-origin: top center;
     transition: all 500ms;
@@ -101,6 +101,7 @@ $transition-delay: 100ms;
   .global-nav_opened > .global-nav__menu {
     @include opacity-visible;
     transform: scaleY(1);
+    background-color: rgb(0, 0, 0);
   }
 
   .global-nav__link_with_image {

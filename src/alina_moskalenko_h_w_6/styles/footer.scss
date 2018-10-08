@@ -2,6 +2,7 @@
 
 $footer-link: rgb(85, 85, 85);
 $border-color: rgb(214, 214, 214);
+$count: 7;
 
 .footer-content {
   margin: 0 auto;
@@ -18,6 +19,10 @@ $border-color: rgb(214, 214, 214);
   &__bootom {
     padding-top: 34px;
     padding-bottom: 21px;
+    @include mobile {
+      padding-top: 17px;
+      padding-bottom: 19px;
+    }
   }
   h3 {
     font-weight: 600;
@@ -26,10 +31,27 @@ $border-color: rgb(214, 214, 214);
   h4 {
     font-weight: 400;
   }
+  @include mobile {
+    &__mobile-nav {
+      flex-direction: column;
+    }
+  }
 }
 
 .nav-ftr {
   padding-top: 20px;
+  display: flex;
+  h3 {
+    font-size: $footer-font-size;
+    margin-bottom: 0.8rem;
+    position: relative;
+    @include mobile {
+      font-weight: 400;
+      padding: 10px 0;
+      margin: 0;
+      border-bottom: 1px solid $border-color;
+    }
+  }
   &__item {
     flex-basis: 20%;
     a {
@@ -40,14 +62,65 @@ $border-color: rgb(214, 214, 214);
         margin-bottom: 0;
       }
     }
-    h3 {
-      margin-bottom: 0.8rem;
+  }
+}
+.burger-ftr {
+  display: none;
+}
+
+@include mobile {
+  .burger-ftr {
+    display: block;
+    content: "+";
+    font-size: 14px;
+    position: absolute;
+    right: 8px;
+    bottom: 9px;
+  }
+  @for $i from 1 through $count {
+    .burger-menu-#{$i} {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0);
+      a {
+        display: none;
+      }
+    }
+    .burger-ftr-#{$i} {
+      transition: all 100ms;
+    }
+    .nav-ftr_opened-#{$i} .nav-ftr__item-#{$i} {
+      transition: all 100ms;
+      .burger-ftr-#{$i} {
+        transform: rotate(45deg);
+        transition: all 100ms;
+      }
+      h3 {
+        border: none;
+      }
+      .burger-menu-#{$i} {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        transition: opacity 200ms;
+        a {
+          display: block;
+          padding: 6px 14px;
+          &:last-child {
+            padding-bottom: 16px;
+            border-bottom: 1px solid $border-color;
+          }
+        }
+      }
     }
   }
 }
 
 .item__column:last-child {
   padding-top: 24px;
+  @include mobile {
+    padding-top: 0;
+  }
 }
 
 .bootom {
@@ -58,6 +131,9 @@ $border-color: rgb(214, 214, 214);
       a {
         color: $link-color;
       }
+      @include mobile {
+        border: none;
+      }
     }
     &:last-child {
       padding-top: 8px;
@@ -66,8 +142,16 @@ $border-color: rgb(214, 214, 214);
       a {
         color: $footer-link;
       }
+      @include mobile {
+        flex-direction: column;
+      }
     }
   }
+}
+
+.content__apple-shop {
+  max-width: 60%;
+  line-height: 15px;
 }
 
 .footer-legal {
@@ -79,6 +163,10 @@ $border-color: rgb(214, 214, 214);
   @include tablet {
     flex-direction: column;
     align-items: flex-start;
+  }
+  @include mobile {
+    padding-top: 12px;
+    order: 1;
   }
 }
 
@@ -95,6 +183,7 @@ $border-color: rgb(214, 214, 214);
     }
   }
 }
+
 .footer-locale {
   display: flex;
   align-items: center;
@@ -107,5 +196,9 @@ $border-color: rgb(214, 214, 214);
   }
   @include tablet {
     align-items: flex-start;
+  }
+  @include mobile {
+    align-items: center;
+    order: 0;
   }
 }

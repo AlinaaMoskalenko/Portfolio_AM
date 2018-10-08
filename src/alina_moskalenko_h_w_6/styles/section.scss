@@ -132,6 +132,9 @@ $font-main: 17px;
   &__title {
     font-size: 25px;
     font-weight: 400;
+    @include mobile {
+      font-size: $font-main;
+    }
     &_watch {
       margin-top: 6px;
       font-size: 27px;
@@ -157,6 +160,9 @@ $font-main: 17px;
         content: "S";
         @include iphone-after;
       }
+      @include mobile {
+        font-size: 32px;
+      }
     }
     &_small-xr {
       margin-right: 35px;
@@ -164,6 +170,9 @@ $font-main: 17px;
       &:after {
         content: "R";
         @include iphone-after;
+      }
+      @include mobile {
+        font-size: 32px;
       }
     }
   }
@@ -245,9 +254,7 @@ $font-main: 17px;
       font-size: 21px;
     }
     @include mobile {
-      &_watch {
-        font-size: 19px;
-      }
+      font-size: $font-main;
     }
   }
   &__buy {
@@ -261,9 +268,7 @@ $font-main: 17px;
       font-size: 21px;
     }
     @include mobile {
-      &_watch {
-        font-size: 19px;
-      }
+      font-size: $font-main;
     }
   }
 }
