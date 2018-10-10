@@ -1,0 +1,48 @@
+@mixin inherit-content-position {
+  position: inherit;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+}
+
+@mixin center-content-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$sm-screen: 576px;
+$md-screen: 768px;
+$lg-screen: 992px;
+$xl-screen: 1200px;
+
+@mixin sm {
+  @media (max-width: $sm-screen) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $sm-screen) and (max-width: $md-screen) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$md-screen}) and (max-width: #{$lg-screen}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$lg-screen}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
