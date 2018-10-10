@@ -121,7 +121,7 @@ p {
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.1);
   padding-top: 39.5px;
   padding-bottom: 29.1px;
-  transition-duration: 20ms; }
+  transition-duration: 50ms; }
   .item__recommended {
     position: absolute;
     display: -ms-flexbox;
@@ -180,7 +180,7 @@ p {
     background-color: white; }
   .item:hover {
     z-index: 2;
-    transition-duration: 20ms;
+    transition-duration: 50ms;
     -ms-transform: scale(1.1);
         transform: scale(1.1); }
     .item:hover .item__button {

@@ -19,7 +19,7 @@
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.1);
   padding-top: 39.5px;
   padding-bottom: 29.1px;
-  transition-duration: 20ms;
+  transition-duration: 50ms;
   &__recommended {
     position: absolute;
     @include horizontal-center-center;
@@ -75,7 +75,7 @@
   }
   &:hover {
     z-index: 2;
-    transition-duration: 20ms;
+    transition-duration: 50ms;
     transform: scale(1.1);
     .item__button {
       color: $white-color;
