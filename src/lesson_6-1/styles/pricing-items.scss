@@ -1,35 +1,100 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
 .pricing-items {
   padding-left: 40px;
   padding-right: 20px;
   padding-bottom: 34.8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include horizontal-center-center;
 }
 
 .item {
-  display: flex;
-  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+  @include vertical-between;
   align-items: center;
-  flex-direction: column;
   width: 171.5px;
   height: 253.4px;
-  background-color: rgb(255, 255, 255);
+  background-color: $white-color;
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.1);
   padding-top: 39.5px;
   padding-bottom: 29.1px;
+  transition-duration: 20ms;
+  &__recommended {
+    position: absolute;
+    @include horizontal-center-center;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70.9px;
+    height: 13.4px;
+    border-radius: 1.7px;
+    background-color: rgb(255, 179, 75);
+    color: $white-color;
+    text-transform: uppercase;
+  }
   &__name-pack {
+    font-weight: normal;
     color: rgb(36, 47, 64);
+    &_recommended {
+      margin-top: 18.6px;
+    }
   }
   &__price {
-      font-size: 34.9px;
+    position: relative;
+    font-size: 34.9px;
+    color: rgb(36, 47, 64);
+    &:before {
+      content: "$";
       position: relative;
-      color: rgb(36, 47, 64);
-      &:before {
-          content: '$';
-          position: absolute;
-          font-size: 15.1px;
+      bottom: 2px;
+      margin-right: 2px;
+      font-size: 15.1px;
+    }
+    &:after {
+      content: "/mo";
+      position: relative;
+      bottom: 2px;
+      font-size: 9.3px;
+      color: $main-color;
+    }
+  }
+  &__option {
+    @include vertical-between;
+    height: 56px;
+  }
+  &__button {
+    width: 99.4px;
+    height: 27.9px;
+    font-size: $main-font-size;
+    color: $main-color;
+    text-transform: uppercase;
+    border-radius: 2.3px;
+    border: solid 0.6px $main-color;
+    background-color: $white-color;
+  }
+  &:hover {
+    z-index: 2;
+    transition-duration: 20ms;
+    transform: scale(1.1);
+    .item__button {
+      color: $white-color;
+      border-color: $green-color;
+      background-color: $green-color;
+    }
+  }
+}
 
-      }
+.option__text {
+  display: flex;
+  &:before {
+    content: "✓";
+    width: 9px;
+    height: 9px;
+    @include horizontal-center-center;
+    border-radius: 50%;
+    border: 1px solid $green-color;
+    color: $green-color;
+    margin-right: 6.4px;
   }
 }

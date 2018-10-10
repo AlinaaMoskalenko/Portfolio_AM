@@ -6,7 +6,7 @@ $border-radius: 6px;
   padding: 10px;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
-  background-color: rgb(255, 255, 255);
+  background-color: $white-color;
 
   &__button {
     width: $btn-size;
