@@ -48,6 +48,7 @@ $arrow-options: 2px solid rgb(0, 0, 255);
         );
       }
       &__content {
+        transition: transform 500ms;
         font-size: inherit;
         visibility: visible;
         transform: scaleY(1);

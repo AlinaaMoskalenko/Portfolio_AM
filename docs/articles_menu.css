@@ -66,6 +66,7 @@ h4 {
     border-bottom: 1px solid black;
     background-image: linear-gradient(96deg, #010289 2%, #1d30d5); }
   .article_active .article__content {
+    transition: transform 500ms;
     font-size: inherit;
     visibility: visible;
     -ms-transform: scaleY(1);
