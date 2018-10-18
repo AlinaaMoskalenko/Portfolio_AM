@@ -16,7 +16,8 @@ const baseConf = (_path) => {
         alina_moskalenko_h_w_8: ['./src/alina_moskalenko_h_w_8/alina_moskalenko_h_w_8.js'],
         lesson9: ['./src/lesson9/lesson9.js'],
         lesson_10: ['./src/lesson_10/lesson_10.js'],
-        lightbulb: ['./src/lightbulb/lightbulb.js']
+        lightbulb: ['./src/lightbulb/lightbulb.js'],
+        articles_menu: ['./src/articles_menu/articles_menu.js']
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
