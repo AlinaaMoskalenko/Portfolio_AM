@@ -22,7 +22,11 @@ $arrow-options: 2px solid rgb(0, 0, 255);
     background-color: rgb(4, 8, 44);
   }
   &__content {
-    display: none;
+    font-size: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 500ms;
   }
   &:last-child {
     margin-bottom: 0;
@@ -44,7 +48,9 @@ $arrow-options: 2px solid rgb(0, 0, 255);
         );
       }
       &__content {
-        display: block;
+        font-size: inherit;
+        visibility: visible;
+        transform: scaleY(1);
         padding: 1.5rem;
         color: rgb(102, 99, 99);
         background-color: rgb(255, 255, 255);

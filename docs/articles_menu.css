@@ -47,7 +47,13 @@ h4 {
     padding: 1.5rem;
     background-color: #04082c; }
   .article__content {
-    display: none; }
+    font-size: 0;
+    visibility: hidden;
+    -ms-transform: scaleY(0);
+        transform: scaleY(0);
+    -ms-transform-origin: top;
+        transform-origin: top;
+    transition: all 500ms; }
   .article:last-child {
     margin-bottom: 0; }
   .article_active .article__arrow-list {
@@ -60,7 +66,10 @@ h4 {
     border-bottom: 1px solid black;
     background-image: linear-gradient(96deg, #010289 2%, #1d30d5); }
   .article_active .article__content {
-    display: block;
+    font-size: inherit;
+    visibility: visible;
+    -ms-transform: scaleY(1);
+        transform: scaleY(1);
     padding: 1.5rem;
     color: #666363;
     background-color: white; }
