@@ -60,80 +60,77 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 342);
+/******/ 	return __webpack_require__(__webpack_require__.s = 354);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 342:
+/***/ 354:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(343);
+module.exports = __webpack_require__(355);
 
 
 /***/ }),
 
-/***/ 343:
+/***/ 355:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(344);
+__webpack_require__(356);
 
-var commentForm = document.querySelector('#commentForm');
-var cancel = document.querySelector('#cancel');
-var userName = document.querySelector('#username');
-var userText = document.querySelector('#userText');
-var text = document.querySelector('#text');
+var _lightBulb = __webpack_require__(357);
 
-function createComment() {
-    return '<div class="comment">\n                <p>' + userText.value + '</p>\n                <h2>' + userName.value + '</h2> \n            </div>';
+var lightBulbElements = document.querySelectorAll('.lightbulb-block');
+
+for (var i = 0; i < lightBulbElements.length; i++) {
+    (0, _lightBulb.lightBulb)(lightBulbElements[i]);
 }
-
-function resetFileds() {
-    userName.value = '';
-    userText.value = '';
-}
-
-function send(e) {
-    e.preventDefault();
-    var texxtComntent = text.innerHTML;
-    if (!userName.value) {
-        //userName.value === '' or !!userName.value - двойное отрицание
-        userName.style.background = 'red';
-        text.innerHTML = 'Error!';
-    }
-
-    console.log(text.innerHTML);
-
-    if (!userText.value) {
-        userText.style.background = 'red';
-        text.innerHTML = 'Error!';
-    }
-
-    if (!!userName.value && !!userText.value) {
-        text.innerHTML = text.innerHTML + createComment();
-        resetFileds();
-    }
-}
-
-function reset(e) {
-    resetFileds();
-    userName.style.background = 'inherit';
-    userText.style.background = 'inherit';
-    text.innerHTML = '';
-}
-
-commentForm.onsubmit = send;
-cancel.onclick = reset;
 
 /***/ }),
 
-/***/ 344:
+/***/ 356:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 357:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.lightBulb = lightBulb;
+function lightBulb(targetElement) {
+    var ACTIVE_LIGHTER_BULB_CLASS_NAME = 'lightbulb-object_active';
+    var ACTIVE_SWITCH_CLASS_NAME = 'lightbulb-switch_active';
+    var lightBulb = targetElement.querySelector('.lightbulb-object');
+    var lightBulbSwitch = targetElement.querySelector('.lightbulb-switch');
+    var activeElement = false;
+
+    function turnOnLightBulb() {
+        lightBulb.classList.toggle(ACTIVE_LIGHTER_BULB_CLASS_NAME);
+        lightBulbSwitch.classList.toggle(ACTIVE_SWITCH_CLASS_NAME);
+    }
+
+    lightBulbSwitch.onclick = function () {
+        if (activeElement !== false) {
+            activeElement = false;
+            lightBulbSwitch.textContent = 'on';
+        } else {
+            activeElement = true;
+            lightBulbSwitch.textContent = 'off';
+        }
+        turnOnLightBulb();
+    };
+}
 
 /***/ })
 
