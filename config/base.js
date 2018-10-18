@@ -10,12 +10,11 @@ const baseConf = (_path) => {
     const VENDORS_NAME = 'vendors';
     const entry = {
         index: ['babel-polyfill', './src/index/index.js'],
-        lesson_5: ['./src/lesson_5/lesson_5.js'],
-        lesson_6: ['./src/lesson_6/lesson_6.js'],
         alina_moskalenko_h_w_6: ['./src/alina_moskalenko_h_w_6/alina_moskalenko_h_w_6.js'],
         'lesson_6-1': ['./src/lesson_6-1/lesson_6-1.js'],
         lesson_8_1: ['./src/lesson_8_1/lesson_8_1.js'],
-        alina_moskalenko_h_w_8: ['./src/alina_moskalenko_h_w_8/alina_moskalenko_h_w_8.js']
+        alina_moskalenko_h_w_8: ['./src/alina_moskalenko_h_w_8/alina_moskalenko_h_w_8.js'],
+        lesson9: ['./src/lesson9/lesson9.js']
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
@@ -92,7 +91,7 @@ const baseConf = (_path) => {
                      * Pass along the updated reference to your code
                      * You can add here any file extension you want to get copied to your output
                      */
-                    test: /\.(png|jpg|jpeg|gif|svg)$/,
+                    test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
                     loader: 'file-loader?publicPath=./&name=assets/images/[name].[ext]'
                 },
                 {
