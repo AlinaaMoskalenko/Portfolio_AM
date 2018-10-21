@@ -1,0 +1,24 @@
+$colors: "red", "yellow", "green", "aqua", "pink", "blue", "black";
+
+.traffic-lighter {
+  width: 60px;
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 4px;
+  &__lamp {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: rgb(124, 124, 124);
+    outline: none;
+    transition: all 0.5s;
+    &_active {
+      @each $color in $colors {
+        &.traffic-lighter__lamp_#{$color} {
+          background-color: #{$color};
+        }
+      }
+    }
+  }
+}
