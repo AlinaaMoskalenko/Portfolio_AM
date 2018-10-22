@@ -1,5 +1,4 @@
 import './tab_menu.scss';
-
 import { tabMenu } from "./scripts/tabMenu";
 
 const tabHtmlTitles = document.querySelector('.article-title');
