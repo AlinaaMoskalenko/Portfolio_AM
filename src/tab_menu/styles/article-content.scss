@@ -1,0 +1,15 @@
+$font-size: 22px;
+
+.article-content {
+  &__content {
+    text-align: justify;
+    display: none;
+    &_active {
+      display: inline-block;
+      font-size: $font-size;
+      padding: 1.5rem;
+      color: rgb(102, 99, 99);
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}

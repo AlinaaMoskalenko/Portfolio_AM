@@ -9,7 +9,7 @@ export function articleMenu(targetElement) {
         if (activeElement !== undefined && activeIterator !== i) {
             activeElement.classList.remove(ACTIVE_ARTICLE_CLASS_NAME);
         }
-        
+
         activeElement = element;
         activeIterator = i;
         element.classList.toggle(ACTIVE_ARTICLE_CLASS_NAME);
