@@ -13,9 +13,14 @@ export function tabMenu(targetTitle, targetContent) {
         titles[i].setAttribute('data-title', i);
     }
 
-    function showTabOption() {
+    // attachEvents 
+    function attachEvents() {
         targetTitle.addEventListener('click', function (event) {
-            hiddenTabOption(activeTabContent);
+            if (activeTab) {
+                activeTab.classList.remove(ACTIVE_TITLE_TAB);
+                activeTabContent.classList.remove(ACTIVE_CONTENT);
+            }
+            // hiddenTabOption(activeTabContent);
             activeTab = event.target;
             activeTabContent = contents[event.target.getAttribute('data-title')];
             event.target.classList.add(ACTIVE_TITLE_TAB);
@@ -23,12 +28,12 @@ export function tabMenu(targetTitle, targetContent) {
         });
     }
 
-    function hiddenTabOption(content) {
-        if (activeTab) {
-            activeTab.classList.remove(ACTIVE_TITLE_TAB);
-            content.classList.remove(ACTIVE_CONTENT);
-        }
-    }
+    // function hiddenTabOption(content) {
+    //     if (activeTab) {
+    //         activeTab.classList.remove(ACTIVE_TITLE_TAB);
+    //         content.classList.remove(ACTIVE_CONTENT);
+    //     }
+    // }
 
-    showTabOption();
+    attachEvents();
 }
