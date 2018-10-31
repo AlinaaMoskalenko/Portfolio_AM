@@ -13,14 +13,10 @@ export function tabMenu(targetTitle, targetContent) {
         titles[i].setAttribute('data-title', i);
     }
 
-    // attachEvents 
+    // из attachEvents можно выделить еще одну функцию, которая отображает контент showTabContent
     function attachEvents() {
         targetTitle.addEventListener('click', function (event) {
-            if (activeTab) {
-                activeTab.classList.remove(ACTIVE_TITLE_TAB);
-                activeTabContent.classList.remove(ACTIVE_CONTENT);
-            }
-            // hiddenTabOption(activeTabContent);
+            hideTabContent(activeTabContent);
             activeTab = event.target;
             activeTabContent = contents[event.target.getAttribute('data-title')];
             event.target.classList.add(ACTIVE_TITLE_TAB);
@@ -28,12 +24,12 @@ export function tabMenu(targetTitle, targetContent) {
         });
     }
 
-    // function hiddenTabOption(content) {
-    //     if (activeTab) {
-    //         activeTab.classList.remove(ACTIVE_TITLE_TAB);
-    //         content.classList.remove(ACTIVE_CONTENT);
-    //     }
-    // }
+    function hideTabContent(content) {
+        if (activeTab) {
+            activeTab.classList.remove(ACTIVE_TITLE_TAB);
+            content.classList.remove(ACTIVE_CONTENT);
+        }
+    }
 
     attachEvents();
 }
