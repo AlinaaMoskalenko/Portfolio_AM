@@ -20,7 +20,8 @@ const baseConf = (_path) => {
         articles_menu: ['./src/articles_menu/articles_menu.js'],
         lesson_11_1: ['./src/lesson_11_1/lesson_11_1.js'],
         tab_menu: ['./src/tab_menu/tab_menu.js'],
-        clock: ['./src/clock/clock.js']
+        clock: ['./src/clock/clock.js'],
+        comments: ['./src/comments/comments.js']
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

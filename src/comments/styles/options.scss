@@ -1,0 +1,19 @@
+.options {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 25px;
+  &__button {
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(51, 211, 51, 0.767);
+    padding: 10px 15px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    &:hover {
+      background-color: green;
+    }
+    &:first-child {
+      margin-right: 25px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.user-block {
+  display: flex;
+  flex-direction: column;
+  &__fullname {
+    margin: 15px 0;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    outline-color: rgb(67, 189, 67);
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+  &__comment {
+    font-family: inherit;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    outline-color: rgb(67, 189, 67);
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+}

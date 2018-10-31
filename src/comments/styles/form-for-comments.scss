@@ -1,0 +1,11 @@
+.form-for-comments {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  background-color: rgba(138, 252, 138, 0.726);
+}
