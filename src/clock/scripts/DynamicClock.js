@@ -1,7 +1,7 @@
 const CONTEINER_CLASS_NAME = 'clock-conteiner';
 const CLOCK_CLASS_NAME = 'clock-conteiner__clock';
-const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let mode = "simpleMode";
 
 export class DynamicClock {
@@ -51,7 +51,7 @@ export class DynamicClock {
         } else if (mode === "fullMode") {
             this.clockFace.textContent = hours + " : " + minutes + " : " + seconds;
         } else {
-            this.clockFace.innerHTML = days[this.currentDate.getDay()] + " " + date + ", " + `<br>` + months[this.currentDate.getMonth()] + " " + this.currentDate.getFullYear();
+            this.clockFace.innerHTML = DAYS[this.currentDate.getDay()] + " " + date + ", " + `<br>` + MONTHS[this.currentDate.getMonth()] + " " + this.currentDate.getFullYear();
         }
     }
 

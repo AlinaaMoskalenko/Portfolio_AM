@@ -1,0 +1,9 @@
+.existing-comments {
+  max-width: 500px;
+  width: 100%;
+  margin-right: 200px;
+  &__comment {
+    font-style: italic;
+    margin-bottom: 50px;
+  }
+}

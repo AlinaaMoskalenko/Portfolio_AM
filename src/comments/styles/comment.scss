@@ -1,0 +1,26 @@
+.comment {
+  &__description {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__delete {
+    &:hover {
+      color: rgb(255, 0, 0);
+      transform: scale(1.2);
+    }
+  }
+  &__text {
+    text-align: justify;
+    text-indent: 2rem;
+    margin-top: 15px;
+  }
+}
+
+.time,
+.date {
+  margin-right: 15px;
+}

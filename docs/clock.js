@@ -60,41 +60,41 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 371);
+/******/ 	return __webpack_require__(__webpack_require__.s = 373);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 371:
+/***/ 373:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(372);
+module.exports = __webpack_require__(374);
 
 
 /***/ }),
 
-/***/ 372:
+/***/ 374:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(373);
+__webpack_require__(375);
 
-var _DynamicClock = __webpack_require__(374);
+var _DynamicClock = __webpack_require__(376);
 
 var clock = new _DynamicClock.DynamicClock(document.querySelector("#clockConteiner"));
 
 /***/ }),
 
-/***/ 373:
+/***/ 375:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 374:
+/***/ 376:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110,8 +110,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var CONTEINER_CLASS_NAME = 'clock-conteiner';
 var CLOCK_CLASS_NAME = 'clock-conteiner__clock';
-var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var mode = "simpleMode";
 
 var DynamicClock = exports.DynamicClock = function () {
@@ -163,7 +163,7 @@ var DynamicClock = exports.DynamicClock = function () {
             } else if (mode === "fullMode") {
                 this.clockFace.textContent = hours + " : " + minutes + " : " + seconds;
             } else {
-                this.clockFace.innerHTML = days[this.currentDate.getDay()] + " " + date + ", " + '<br>' + months[this.currentDate.getMonth()] + " " + this.currentDate.getFullYear();
+                this.clockFace.innerHTML = DAYS[this.currentDate.getDay()] + " " + date + ", " + '<br>' + MONTHS[this.currentDate.getMonth()] + " " + this.currentDate.getFullYear();
             }
         }
     }, {

@@ -9,8 +9,11 @@
     border: none;
     border-radius: 7px;
     outline-color: rgb(67, 189, 67);
-    &:focus::placeholder {
-      color: transparent;
+    &:focus{
+      border: none;
+      &::placeholder {
+        color: transparent;
+      }
     }
   }
   &__comment {
@@ -19,8 +22,11 @@
     border: none;
     border-radius: 7px;
     outline-color: rgb(67, 189, 67);
-    &:focus::placeholder {
-      color: transparent;
+    &:focus{
+      border: none;
+      &::placeholder {
+        color: transparent;
+      }
     }
   }
 }
