@@ -1,0 +1,28 @@
+.comment {
+  margin-bottom: 25px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__author {
+    font-style: italic;
+  }
+  &__delete {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-decoration: underline;
+    &:hover {
+      color: rgb(255, 0, 0);
+    }
+  }
+  &__text {
+    margin: 10px 0;
+    font-style: italic;
+    text-align: justify;
+  }
+  &__date {
+    font-size: 12px;
+    text-align: right;
+  }
+}

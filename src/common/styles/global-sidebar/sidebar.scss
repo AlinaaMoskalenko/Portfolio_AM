@@ -2,7 +2,7 @@ $background-color: rgba(4, 4, 73, 0.541);
 
 .sidebar {
   visibility: hidden;
-  position: relative;
+  position: fixed;
   width: 0;
   height: 100vh;
   background-color: $background-color;

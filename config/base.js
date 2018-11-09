@@ -23,6 +23,7 @@ const baseConf = (_path) => {
         clock: ['./src/clock/clock.js'],
         comments: ['./src/comments/comments.js'],
         sidebar_react: ['./src/sidebar_react/sidebar_react.js'],
+        comment_page: ['./src/comment_page/comment_page.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

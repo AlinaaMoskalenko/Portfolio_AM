@@ -60,30 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 364);
+/******/ 	return __webpack_require__(__webpack_require__.s = 382);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 364:
+/***/ 382:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(365);
+module.exports = __webpack_require__(383);
 
 
 /***/ }),
 
-/***/ 365:
+/***/ 383:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(366);
+__webpack_require__(384);
 
-var _trafficLighterDynamic = __webpack_require__(367);
+var _trafficLighterDynamic = __webpack_require__(385);
 
-var _trafficLighterDynamicStyles = __webpack_require__(368);
+var _trafficLighterDynamicStyles = __webpack_require__(386);
 
 (0, _trafficLighterDynamic.trafficLighterDynamic)('#trafficLighter');
 (0, _trafficLighterDynamic.trafficLighterDynamic)('#trafficLighter1', ['red', 'yellow', 'green', 'aqua']);
@@ -95,14 +95,14 @@ var _trafficLighterDynamicStyles = __webpack_require__(368);
 
 /***/ }),
 
-/***/ 366:
+/***/ 384:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 367:
+/***/ 385:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -159,7 +159,7 @@ function trafficLighterDynamic(selector, options) {
 
 /***/ }),
 
-/***/ 368:
+/***/ 386:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

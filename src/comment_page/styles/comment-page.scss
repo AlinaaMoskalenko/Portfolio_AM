@@ -1,0 +1,12 @@
+.comment-page {
+  margin: 0 auto;
+  width: 50%;
+  &__title {
+    margin: 25px 0;
+    text-align: center;
+  }
+  &__form {
+    margin-left: 35px;
+    margin-bottom: 35px;
+  }
+}
