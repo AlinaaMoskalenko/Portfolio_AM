@@ -20429,7 +20429,7 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
                 href: 'https://support.apple.com/'
             }, {
                 title: 'Users comments',
-                href: '/comment_page.html'
+                href: '/WA/comment_page.html'
             }]
         };
 
