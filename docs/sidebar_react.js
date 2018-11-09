@@ -20411,7 +20411,7 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
             isOpened: false,
             menu: [{
                 title: 'WA home page',
-                href: 'index.html'
+                href: '../../../../docs/index.html'
             }, {
                 title: 'Mac',
                 href: 'https://www.apple.com/mac/'

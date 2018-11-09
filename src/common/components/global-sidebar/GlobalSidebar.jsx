@@ -10,7 +10,7 @@ export class GlobalSidebar extends React.Component {
             menu: [
                 {
                     title: 'WA home page',
-                    href: 'index.html',
+                    href: '../../../../docs/index.html',
                 },
                 {
                     title: 'Mac',
