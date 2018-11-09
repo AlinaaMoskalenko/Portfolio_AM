@@ -34,7 +34,7 @@ export class GlobalSidebar extends React.Component {
                 },
                 {
                     title: 'Users comments',
-                    href: '/comment_page.html',
+                    href: '/WA/comment_page.html',
                 },
             ],
         };
