@@ -12,13 +12,41 @@ export class App extends Component {
         super();
         this.httpService = new HTTPService();
         this.onSubmit = this.onSubmit.bind(this);
-        this.valueChange = this.valueChange.bind(this);
-        this.onReset = this.onReset.bind(this);
         this.deleteComment = this.deleteComment.bind(this);
         this.state = {
             comments: [],
-            newAuthor: '',
-            newText: '',
+            sidebar_menu: [
+                {
+                    title: 'WA home page',
+                    href: '/WA/index.html',
+                    // href: 'index.html',
+                },
+                {
+                    title: 'Sidebar',
+                    href: '/WA/sidebar_react.html',
+                    // href: 'sidebar_react.html',
+                },
+                {
+                    title: 'Mac',
+                    href: 'https://www.apple.com/mac/',
+                },
+                {
+                    title: 'iPhone',
+                    href: 'https://www.apple.com/iphone/',
+                },
+                {
+                    title: 'Watch',
+                    href: 'https://www.apple.com/watch/',
+                },
+                {
+                    title: 'Music',
+                    href: 'https://www.apple.com/music/',
+                },
+                {
+                    title: 'Support',
+                    href: 'https://support.apple.com/',
+                },
+            ],
         };
     }
 
@@ -36,45 +64,18 @@ export class App extends Component {
         });
     }
 
-    onSubmit(event) {
-        event.preventDefault();
-        const author = this.state.newAuthor;
-        const text = this.state.newText;
+    onSubmit(formData) {
+        const author = formData.newAuthor;
+        const text = formData.newText;
         if (author && text) {
             this.httpService.post(URL, { author, text }, (comment) => {
                 this.setState((oldState) => {
                     const newState = Object.assign({}, oldState);
-                    newState.newAuthor = '';
-                    newState.newText = '';
                     newState.comments.push(comment);
                     return newState;
                 });
             });
         }
-    }
-
-    valueChange(event) {
-        const value = event.target.value;
-        const classListName = event.target.classList.value;
-
-        this.setState((oldState) => {
-            const newState = Object.assign({}, oldState);
-            if (classListName === 'comment__new-author') {
-                newState.newAuthor = value;
-            } else {
-                newState.newText = value;
-            }
-            return newState;
-        })
-    }
-
-    onReset() {
-        this.setState((oldState) => {
-            const newState = Object.assign({}, oldState);
-            newState.newAuthor = '';
-            newState.newText = '';
-            return newState;
-        })
     }
 
     deleteComment(commentId) {
@@ -89,16 +90,14 @@ export class App extends Component {
 
     render() {
         return <div className='wrapper'>
-            <GlobalSidebar />
+            <GlobalSidebar links={this.state.sidebar_menu} />
             <div className="comment-page">
                 <h2 className="comment-page__title">Users comments</h2>
                 <div className="comment-page__content">
                     <CommentForm
                         newAuthor={this.state.newAuthor}
                         newText={this.state.newText}
-                        onChange={this.valueChange}
-                        onSubmit={this.onSubmit}
-                        onReset={this.onReset} />
+                        onSubmit={this.onSubmit} />
                     <CommentList
                         comments={this.state.comments}
                         onDeleteItem={this.deleteComment} />

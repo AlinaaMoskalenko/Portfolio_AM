@@ -20408,29 +20408,8 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
 
         _this.toggleMenu = _this.toggleMenu.bind(_this);
         _this.state = {
-            isOpened: false,
-            menu: [{
-                title: 'WA home page',
-                href: '/WA/index.html'
-            }, {
-                title: 'Mac',
-                href: 'https://www.apple.com/mac/'
-            }, {
-                title: 'iPhone',
-                href: 'https://www.apple.com/iphone/'
-            }, {
-                title: 'Watch',
-                href: 'https://www.apple.com/watch/'
-            }, {
-                title: 'Music',
-                href: 'https://www.apple.com/music/'
-            }, {
-                title: 'Support',
-                href: 'https://support.apple.com/'
-            }, {
-                title: 'Users comments',
-                href: '/WA/comment_page.html'
-            }]
+            isOpened: false
+
         };
 
         /*
@@ -20491,7 +20470,7 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
             });
             */
 
-            var listLink = this.state.menu.map(function (link, i) {
+            var listLink = this.props.links.map(function (link, i) {
                 return React.createElement(
                     'a',
                     { key: i, href: link.href, className: 'sidebar__link' },
@@ -20735,13 +20714,41 @@ var App = exports.App = function (_Component) {
     function App() {
         _classCallCheck(this, App);
 
-        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+        _this.state = {
+            sidebar_menu: [{
+                title: 'WA home page',
+                href: '/WA/index.html'
+                // href: 'index.html',
+            }, {
+                title: 'Users comments',
+                href: '/WA/comment_page.html'
+                // href: 'comment_page.html',
+            }, {
+                title: 'Mac',
+                href: 'https://www.apple.com/mac/'
+            }, {
+                title: 'iPhone',
+                href: 'https://www.apple.com/iphone/'
+            }, {
+                title: 'Watch',
+                href: 'https://www.apple.com/watch/'
+            }, {
+                title: 'Music',
+                href: 'https://www.apple.com/music/'
+            }, {
+                title: 'Support',
+                href: 'https://support.apple.com/'
+            }]
+        };
+        return _this;
     }
 
     _createClass(App, [{
         key: 'render',
         value: function render() {
-            return React.createElement(_GlobalSidebar.GlobalSidebar, null);
+            return React.createElement(_GlobalSidebar.GlobalSidebar, { links: this.state.sidebar_menu });
         }
     }]);
 

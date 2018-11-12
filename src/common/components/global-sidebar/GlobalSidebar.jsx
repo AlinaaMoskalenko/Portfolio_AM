@@ -7,36 +7,7 @@ export class GlobalSidebar extends React.Component {
         this.toggleMenu = this.toggleMenu.bind(this);
         this.state = {
             isOpened: false,
-            menu: [
-                {
-                    title: 'WA home page',
-                    href: '/WA/index.html',
-                },
-                {
-                    title: 'Mac',
-                    href: 'https://www.apple.com/mac/',
-                },
-                {
-                    title: 'iPhone',
-                    href: 'https://www.apple.com/iphone/',
-                },
-                {
-                    title: 'Watch',
-                    href: 'https://www.apple.com/watch/',
-                },
-                {
-                    title: 'Music',
-                    href: 'https://www.apple.com/music/',
-                },
-                {
-                    title: 'Support',
-                    href: 'https://support.apple.com/',
-                },
-                {
-                    title: 'Users comments',
-                    href: '/WA/comment_page.html',
-                },
-            ],
+           
         };
 
         /*
@@ -93,7 +64,7 @@ export class GlobalSidebar extends React.Component {
         });
         */
 
-        const listLink = this.state.menu.map((link, i) => {
+        const listLink = this.props.links.map((link, i) => {
             return <a key={i} href={link.href} className="sidebar__link">
                 {link.title}
             </a>

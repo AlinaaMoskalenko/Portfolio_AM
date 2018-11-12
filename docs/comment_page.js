@@ -20408,29 +20408,8 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
 
         _this.toggleMenu = _this.toggleMenu.bind(_this);
         _this.state = {
-            isOpened: false,
-            menu: [{
-                title: 'WA home page',
-                href: '/WA/index.html'
-            }, {
-                title: 'Mac',
-                href: 'https://www.apple.com/mac/'
-            }, {
-                title: 'iPhone',
-                href: 'https://www.apple.com/iphone/'
-            }, {
-                title: 'Watch',
-                href: 'https://www.apple.com/watch/'
-            }, {
-                title: 'Music',
-                href: 'https://www.apple.com/music/'
-            }, {
-                title: 'Support',
-                href: 'https://support.apple.com/'
-            }, {
-                title: 'Users comments',
-                href: '/WA/comment_page.html'
-            }]
+            isOpened: false
+
         };
 
         /*
@@ -20491,7 +20470,7 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
             });
             */
 
-            var listLink = this.state.menu.map(function (link, i) {
+            var listLink = this.props.links.map(function (link, i) {
                 return React.createElement(
                     'a',
                     { key: i, href: link.href, className: 'sidebar__link' },
@@ -20747,13 +20726,33 @@ var App = exports.App = function (_Component) {
 
         _this.httpService = new _httpService.HTTPService();
         _this.onSubmit = _this.onSubmit.bind(_this);
-        _this.valueChange = _this.valueChange.bind(_this);
-        _this.onReset = _this.onReset.bind(_this);
         _this.deleteComment = _this.deleteComment.bind(_this);
         _this.state = {
             comments: [],
-            newAuthor: '',
-            newText: ''
+            sidebar_menu: [{
+                title: 'WA home page',
+                href: '/WA/index.html'
+                // href: 'index.html',
+            }, {
+                title: 'Sidebar',
+                href: '/WA/sidebar_react.html'
+                // href: 'sidebar_react.html',
+            }, {
+                title: 'Mac',
+                href: 'https://www.apple.com/mac/'
+            }, {
+                title: 'iPhone',
+                href: 'https://www.apple.com/iphone/'
+            }, {
+                title: 'Watch',
+                href: 'https://www.apple.com/watch/'
+            }, {
+                title: 'Music',
+                href: 'https://www.apple.com/music/'
+            }, {
+                title: 'Support',
+                href: 'https://support.apple.com/'
+            }]
         };
         return _this;
     }
@@ -20778,49 +20777,20 @@ var App = exports.App = function (_Component) {
         }
     }, {
         key: 'onSubmit',
-        value: function onSubmit(event) {
+        value: function onSubmit(formData) {
             var _this3 = this;
 
-            event.preventDefault();
-            var author = this.state.newAuthor;
-            var text = this.state.newText;
+            var author = formData.newAuthor;
+            var text = formData.newText;
             if (author && text) {
                 this.httpService.post(URL, { author: author, text: text }, function (comment) {
                     _this3.setState(function (oldState) {
                         var newState = Object.assign({}, oldState);
-                        newState.newAuthor = '';
-                        newState.newText = '';
                         newState.comments.push(comment);
                         return newState;
                     });
                 });
             }
-        }
-    }, {
-        key: 'valueChange',
-        value: function valueChange(event) {
-            var value = event.target.value;
-            var classListName = event.target.classList.value;
-
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                if (classListName === 'comment__new-author') {
-                    newState.newAuthor = value;
-                } else {
-                    newState.newText = value;
-                }
-                return newState;
-            });
-        }
-    }, {
-        key: 'onReset',
-        value: function onReset() {
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.newAuthor = '';
-                newState.newText = '';
-                return newState;
-            });
         }
     }, {
         key: 'deleteComment',
@@ -20843,7 +20813,7 @@ var App = exports.App = function (_Component) {
             return React.createElement(
                 'div',
                 { className: 'wrapper' },
-                React.createElement(_GlobalSidebar.GlobalSidebar, null),
+                React.createElement(_GlobalSidebar.GlobalSidebar, { links: this.state.sidebar_menu }),
                 React.createElement(
                     'div',
                     { className: 'comment-page' },
@@ -20858,9 +20828,7 @@ var App = exports.App = function (_Component) {
                         React.createElement(_CommentForm.CommentForm, {
                             newAuthor: this.state.newAuthor,
                             newText: this.state.newText,
-                            onChange: this.valueChange,
-                            onSubmit: this.onSubmit,
-                            onReset: this.onReset }),
+                            onSubmit: this.onSubmit }),
                         React.createElement(_CommentList.CommentList, {
                             comments: this.state.comments,
                             onDeleteItem: this.deleteComment })
@@ -21014,48 +20982,124 @@ var CommentForm = exports.CommentForm = function (_React$Component) {
     function CommentForm() {
         _classCallCheck(this, CommentForm);
 
-        return _possibleConstructorReturn(this, (CommentForm.__proto__ || Object.getPrototypeOf(CommentForm)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (CommentForm.__proto__ || Object.getPrototypeOf(CommentForm)).call(this));
+
+        _this.changeAuthor = _this.changeAuthor.bind(_this);
+        _this.changeText = _this.changeText.bind(_this);
+        _this.state = {
+            isSubmited: false,
+            isValidAuthor: true,
+            isValidText: true,
+            newAuthor: '',
+            newText: ''
+        };
+        return _this;
     }
 
     _createClass(CommentForm, [{
+        key: 'changeAuthor',
+        value: function changeAuthor(event) {
+            var value = event.target.value;
+
+            this.setState(function (oldState) {
+                var newState = Object.assign({}, oldState);
+                newState.newAuthor = value;
+                newState.isValidAuthor = true;
+                return newState;
+            });
+
+            this.setState(function (oldState) {
+                var newState = Object.assign({}, oldState);
+
+                return newState;
+            });
+        }
+    }, {
+        key: 'changeText',
+        value: function changeText(event) {
+            var value = event.target.value;
+
+            this.setState(function (oldState) {
+                var newState = Object.assign({}, oldState);
+                newState.newText = value;
+                newState.isValidText = true;
+                return newState;
+            });
+        }
+    }, {
+        key: 'onSubmit',
+        value: function onSubmit(e) {
+            e.preventDefault();
+
+            if (!this.state.newAuthor) {
+                this.setState(function (oldState) {
+                    var newState = Object.assign({}, oldState);
+                    newState.isValidAuthor = false;
+                    return newState;
+                });
+            }
+
+            if (!this.state.newText) {
+                this.setState(function (oldState) {
+                    var newState = Object.assign({}, oldState);
+                    newState.isValidText = false;
+                    return newState;
+                });
+            }
+
+            this.setState(function (oldState) {
+                var newState = Object.assign({}, oldState);
+                newState.isSubmited = true;
+                return newState;
+            });
+
+            if (this.state.newAuthor && this.state.newText) {
+                this.props.onSubmit(this.state);
+                this.setState(function (oldState) {
+                    var newState = Object.assign({}, oldState);
+                    newState.newAuthor = '';
+                    newState.newText = '';
+                    return newState;
+                });
+            }
+        }
+    }, {
+        key: 'onReset',
+        value: function onReset() {
+            this.setState(function (oldState) {
+                var newState = Object.assign({}, oldState);
+                newState.newAuthor = '';
+                newState.newText = '';
+                return newState;
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var date = new Date();
             var dateString = MONTHS[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
 
-            /*
-            Для добавления красной рамки вокруг полей введения данных, 
-            когда при нажатии на send там были пустые поля
-            
-            let classNamesAuthor = 'comment__new-author ';
-            let classNamesText = 'comment__new-text ';
-              if (!this.props.newAuthor || !this.props.newText) {
-                classNamesAuthor += 'comment__new-author_empty';
-                classNamesText += 'comment__new-text_empty';
-            }
-            */
-
             return React.createElement(
                 'form',
                 { className: 'comment-page__form',
-                    onSubmit: this.props.onSubmit,
-                    onReset: this.props.onReset },
+                    onSubmit: this.onSubmit.bind(this),
+                    onReset: this.onReset.bind(this) },
                 React.createElement(
                     'div',
                     { className: 'comment__current-date' },
                     dateString
                 ),
-                React.createElement('input', { className: 'comment__new-author',
+                React.createElement('input', { className: "comment__new-author" + (!this.state.isValidAuthor && this.state.isSubmited ? ' comment__new-author_empty' : ''),
                     type: 'text',
                     placeholder: 'Enter your full name (eg. John Smith)',
-                    onChange: this.props.onChange,
-                    value: this.props.newAuthor }),
-                React.createElement('textarea', { className: 'comment__new-text',
+                    onChange: this.changeAuthor,
+                    value: this.state.newAuthor }),
+                React.createElement('textarea', { className: "comment__new-text" + (!this.state.isValidText && this.state.isSubmited ? ' comment__new-text_empty' : ''),
                     rows: '5',
                     cols: '30',
                     placeholder: 'Write your comment',
-                    onChange: this.props.onChange,
-                    value: this.props.newText }),
+                    onChange: this.changeText,
+                    value: this.state.newText }),
                 React.createElement(
                     'div',
                     { className: 'comment__action' },
