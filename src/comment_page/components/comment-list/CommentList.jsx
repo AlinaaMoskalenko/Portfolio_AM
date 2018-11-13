@@ -6,7 +6,6 @@ const MONTHS = ['January', 'February', 'March', 'April',
     'October', 'November', 'December'];
 
 export class CommentList extends React.Component {
-
     render() {
         const commentList = this.props.comments.map((comment, i) => {
             const id = 'ID' + comment.id;

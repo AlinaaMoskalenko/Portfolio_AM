@@ -1,0 +1,11 @@
+.infobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 400px;
+  height: 414px;
+  background-color: rgb(247, 241, 241);
+  border-radius: 5px;
+  box-shadow: 3px 4px 15px rgb(54, 54, 54); //по х, по у, размытость и растяжение по 15px, цвет
+}

@@ -60,12 +60,99 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 395);
+/******/ 	return __webpack_require__(__webpack_require__.s = 396);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 144:
+/***/ 106:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var HTTPService = exports.HTTPService = function () {
+    function HTTPService() {
+        _classCallCheck(this, HTTPService);
+    }
+
+    _createClass(HTTPService, [{
+        key: 'get',
+        value: function get(url, successCallBack, errorCallBack) {
+            //url - адрес сервера, successCallBack - что нужно выполнить при удачном выполнении запроса, errorCallBack - при неудачном 
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url); //указывает какую команду хотим выполнить и адресс сервера
+            xhr.send(); //данные улетели
+
+            //проверка состояния, 4 указывает на возврат от сервера данных полных, клиент получил последнюю порцию данных(есть состояния от 1-4), 
+            // а 200 на успешное выполнение запроса и получения данных от сервера (есть ошибки от 100-500)
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var parseData = JSON.parse(xhr.response); //полученый массив строк переводим в массив объектов
+                        successCallBack(parseData);
+                    } else {
+                        errorCallBack(xhr);
+                    }
+                }
+            };
+        }
+    }, {
+        key: 'post',
+        value: function post(url, data, successCallBack, errorCallBack) {
+            //data - информация которую нужно отправить
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', url);
+
+            xhr.setRequestHeader('content-type', 'application/json'); //даем понять серверу, что мы ему отправим json строку
+            xhr.send(typeof data !== 'string' ? JSON.stringify(data) : data); //данные превращаем в строку делая сначало проверку на то, являются ли данные уже строкой
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var parseData = JSON.parse(xhr.response); //полученый массив строк переводим в массив объектов
+                        successCallBack(parseData);
+                    } else {
+                        errorCallBack(xhr);
+                    }
+                }
+            };
+        }
+    }, {
+        key: 'delete',
+        value: function _delete(url, successCallBack, errorCallBack) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('DELETE', url);
+
+            xhr.send();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var parseData = JSON.parse(xhr.response);
+                        successCallBack(parseData);
+                    } else {
+                        errorCallBack(xhr);
+                    }
+                }
+            };
+        }
+    }]);
+
+    return HTTPService;
+}();
+
+/***/ }),
+
+/***/ 145:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -78,7 +165,7 @@ exports.UserComment = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _httpService = __webpack_require__(95);
+var _httpService = __webpack_require__(106);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -221,27 +308,27 @@ var UserComment = exports.UserComment = function () {
 
 /***/ }),
 
-/***/ 395:
+/***/ 396:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(396);
+module.exports = __webpack_require__(397);
 
 
 /***/ }),
 
-/***/ 396:
+/***/ 397:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(397);
+__webpack_require__(398);
 
-var _commentForm = __webpack_require__(398);
+var _commentForm = __webpack_require__(399);
 
-var _userComment = __webpack_require__(144);
+var _userComment = __webpack_require__(145);
 
-var _httpService = __webpack_require__(95);
+var _httpService = __webpack_require__(106);
 
 new _commentForm.CommentForm(document.querySelector('#formForComments'));
 var allComments = new _userComment.UserComment(document.querySelector('#existComments'));
@@ -249,14 +336,14 @@ allComments.getComments();
 
 /***/ }),
 
-/***/ 397:
+/***/ 398:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 398:
+/***/ 399:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -269,9 +356,9 @@ exports.CommentForm = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _httpService = __webpack_require__(95);
+var _httpService = __webpack_require__(106);
 
-var _userComment = __webpack_require__(144);
+var _userComment = __webpack_require__(145);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -403,93 +490,6 @@ var CommentForm = exports.CommentForm = function () {
     }]);
 
     return CommentForm;
-}();
-
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var HTTPService = exports.HTTPService = function () {
-    function HTTPService() {
-        _classCallCheck(this, HTTPService);
-    }
-
-    _createClass(HTTPService, [{
-        key: 'get',
-        value: function get(url, successCallBack, errorCallBack) {
-            //url - адрес сервера, successCallBack - что нужно выполнить при удачном выполнении запроса, errorCallBack - при неудачном 
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', url); //указывает какую команду хотим выполнить и адресс сервера
-            xhr.send(); //данные улетели
-
-            //проверка состояния, 4 указывает на возврат от сервера данных полных, клиент получил последнюю порцию данных(есть состояния от 1-4), 
-            // а 200 на успешное выполнение запроса и получения данных от сервера (есть ошибки от 100-500)
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        var parseData = JSON.parse(xhr.response); //полученый массив строк переводим в массив объектов
-                        successCallBack(parseData);
-                    } else {
-                        errorCallBack(xhr);
-                    }
-                }
-            };
-        }
-    }, {
-        key: 'post',
-        value: function post(url, data, successCallBack, errorCallBack) {
-            //data - информация которую нужно отправить
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', url);
-
-            xhr.setRequestHeader('content-type', 'application/json'); //даем понять серверу, что мы ему отправим json строку
-            xhr.send(typeof data !== 'string' ? JSON.stringify(data) : data); //данные превращаем в строку делая сначало проверку на то, являются ли данные уже строкой
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        var parseData = JSON.parse(xhr.response); //полученый массив строк переводим в массив объектов
-                        successCallBack(parseData);
-                    } else {
-                        errorCallBack(xhr);
-                    }
-                }
-            };
-        }
-    }, {
-        key: 'delete',
-        value: function _delete(url, successCallBack, errorCallBack) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('DELETE', url);
-
-            xhr.send();
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        var parseData = JSON.parse(xhr.response);
-                        successCallBack(parseData);
-                    } else {
-                        errorCallBack(xhr);
-                    }
-                }
-            };
-        }
-    }]);
-
-    return HTTPService;
 }();
 
 /***/ })

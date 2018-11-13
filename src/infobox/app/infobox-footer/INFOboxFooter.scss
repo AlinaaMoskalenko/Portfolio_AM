@@ -1,0 +1,84 @@
+@import "../../styles/variables.scss";
+
+.infobox__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+}
+
+.footer {
+  &__control-btn {
+    cursor: pointer;
+    color: rgb(160, 160, 160);
+    display: flex;
+  }
+  &__button-arrow {
+    width: 21px;
+    height: 26px;
+    &:first-child {
+      background: url("../../../../assets/images/infobox/arrow_bg_left.png")
+        no-repeat;
+      &:hover {
+        background: url("../../../../assets/images/infobox/arrow_bg_left_hover.png")
+          no-repeat;
+      }
+    }
+    &:last-child {
+      background: url("../../../../assets/images/infobox/arrow_bg_right.png")
+        no-repeat;
+      &:hover {
+        background: url("../../../../assets/images/infobox/arrow_bg_right_hover.png")
+          no-repeat;
+      }
+    }
+  }
+  &__button {
+    padding: 7px 14px 9px 14px;
+    font-size: 10px;
+    &:nth-child(2) {
+      margin-right: 2px;
+      background: url("../../../../assets/images/infobox/btn_bg_left.png")
+        no-repeat;
+      &:hover {
+        color: rgb(255, 255, 255);
+        background: url("../../../../assets/images/infobox/btn_bg_left_hover.png")
+          no-repeat;
+      }
+    }
+    &:nth-child(3) {
+      background: url("../../../../assets/images/infobox/btn_bg_right.png")
+        no-repeat;
+      &:hover {
+        color: rgb(255, 255, 255);
+        background: url("../../../../assets/images/infobox/btn_bg_right_hover.png")
+          no-repeat;
+      }
+    }
+  }
+  &__find-a-store {
+    display: flex;
+    color: rgb(160, 160, 160);
+    cursor: pointer;
+  }
+}
+
+.find-a-store {
+  &__button {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    padding: 7px 0px 9px 0px;
+    font-size: 10px;
+    background: url("../../../../assets/images/infobox/btn_bg_big.png")
+      no-repeat;
+    &:hover {
+      color: $colorObject;
+    }
+  }
+  &__button-arrow {
+    width: 20px;
+    height: 26px;
+    background: url("../../../../assets/images/infobox/arrow_bg_big.png")
+      no-repeat;
+  }
+}

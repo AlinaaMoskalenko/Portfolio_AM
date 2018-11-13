@@ -3,10 +3,10 @@ import { Component } from 'react';
 import { GlobalSidebar } from '../../common/components/global-sidebar/GlobalSidebar.jsx';
 
 export class App extends Component {
-    constructor(){
+    constructor() {
         super();
-        this.state ={
-            sidebar_menu:[
+        this.state = {
+            sidebar_menu: [
                 {
                     title: 'WA home page',
                     href: '/WA/index.html',
@@ -41,6 +41,6 @@ export class App extends Component {
         };
     }
     render() {
-        return <GlobalSidebar links={this.state.sidebar_menu}/>
+        return <GlobalSidebar links={this.state.sidebar_menu} />
     }
 }

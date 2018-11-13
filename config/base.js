@@ -24,6 +24,7 @@ const baseConf = (_path) => {
         comments: ['./src/comments/comments.js'],
         sidebar_react: ['./src/sidebar_react/sidebar_react.js'],
         comment_page: ['./src/comment_page/comment_page.js'],
+        infobox: ['./src/infobox/infobox.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

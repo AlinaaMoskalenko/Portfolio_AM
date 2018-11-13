@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+
+.post__description {
+  position: absolute;
+  height: calc(414px - 41px - 256.5px);
+  padding: 10px;
+  bottom: 41px;
+  left: 0;
+  opacity: 1;
+  transition: opacity 1.5s, height 2s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  &_hidden {
+    opacity: 0;
+  }
+  &_full {
+    height: calc(414px - 41px);
+    .post {
+      &__text {
+        max-height: none;
+        height: none;
+        width: 100%;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+.post {
+  &__text {
+    max-height: 2.5rem;
+    height: 100%;
+    width: 95%;
+    overflow: hidden;
+    &:after {
+      content: "...";
+      right: 38px;
+      top: 44px;
+      position: absolute;
+    }
+  }
+  &__note {
+    padding-top: 35px;
+    color: rgb(186, 186, 186);
+    opacity: 1;
+    &_hidden {
+      opacity: 0;
+    }
+  }
+}
+
+.link-details {
+  position: absolute;
+  left: 10px;
+  bottom: 51px;
+  font-size: 9px;
+  color: $colorObject;
+}

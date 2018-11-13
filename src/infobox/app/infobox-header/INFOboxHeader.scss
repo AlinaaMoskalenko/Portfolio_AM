@@ -1,0 +1,18 @@
+.infobox__header {
+  max-height: 256.5px;
+  height: 100%;
+}
+
+.header__image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 2s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  &_hidden {
+    opacity: 0;
+  }
+}
