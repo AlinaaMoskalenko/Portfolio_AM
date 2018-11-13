@@ -576,7 +576,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IMG_URL = '../../../../assets/images/';
+var IMG_URL = './assets/images/';
 
 var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
     _inherits(INFOboxHeader, _React$Component);
@@ -584,7 +584,20 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
     function INFOboxHeader() {
         _classCallCheck(this, INFOboxHeader);
 
-        return _possibleConstructorReturn(this, (INFOboxHeader.__proto__ || Object.getPrototypeOf(INFOboxHeader)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (INFOboxHeader.__proto__ || Object.getPrototypeOf(INFOboxHeader)).call(this));
+
+        _this.state = {
+            images: [{
+                url: '../../../../assets/images/comp_plate_promo1.png'
+            }, {
+                url: '../../../../assets/images/comp_plate_promo2.png'
+            }, {
+                url: '../../../../assets/images/comp_plate_promo3.png'
+            }, {
+                url: '../../../../assets/images/comp_plate_promo4.png'
+            }]
+        };
+        return _this;
     }
 
     _createClass(INFOboxHeader, [{
@@ -593,7 +606,7 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
             var _this2 = this;
 
             var contentIMG = this.props.infobox_contents.map(function (content, i) {
-                var img = IMG_URL + content.img;
+                // const img = IMG_URL + content.img;
 
                 var classNames = 'header__image ';
 
@@ -602,11 +615,12 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
                 } else if (i !== _this2.props.id) {
                     classNames += 'header__image_hidden';
                 }
-
+                console.log(_this2.state.images[i].url);
                 return React.createElement('img', { key: i,
                     className: classNames,
-                    src: img,
-                    alt: 'Donats' });
+                    src: _this2.state.images[i].url
+                    // src={img}
+                    , alt: 'Donats' });
             });
 
             return React.createElement(
