@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './INFOboxHeader.scss';
 
-const IMG_URL = './assets/images/';
+const IMG_URL = '../../../../assets/images/';
 
 export class INFOboxHeader extends React.Component {
     render() {
@@ -18,8 +18,8 @@ export class INFOboxHeader extends React.Component {
 
             return <img key={i}
                 className={classNames}
-                src={img}
-                // src ={require('../../../../assets/images/infobox/comp_plate_promo1.png')}
+                src={`${img}`}
+                // src ={require('../../../../assets/images/infobox/comp_plate_promo4.png')}
                 alt="Image post" />
         });
 
