@@ -18,18 +18,28 @@ h4 {
   margin: 0;
   padding: 0; }
 
+.instruction {
+  margin: 50px 0;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .instruction__title {
+    font-size: 30px; }
+  .instruction__content {
+    font-size: 24px; }
+
 .clock-conteiner {
-  position: absolute;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-align: center;
-      align-items: center;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
+      align-items: center; }
   .clock-conteiner__clock {
     text-align: center;
     height: 150px;

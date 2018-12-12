@@ -23,3 +23,17 @@ h4 {
   margin: 0;
   padding: 0;
 }
+
+.instruction {
+  margin: 50px 0;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  &__title {
+    font-size: 30px;
+  }
+  &__content {
+    font-size: 24px;
+  }
+}
