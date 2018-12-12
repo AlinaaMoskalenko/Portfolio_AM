@@ -29,11 +29,7 @@ export class CommentForm extends React.Component {
             return newState;
         });
 
-        this.setState((oldState) => {
-            const newState = Object.assign({}, oldState);
-
-            return newState;
-        });
+       
     }
 
     changeText(event) {

@@ -7,7 +7,6 @@ export class GlobalSidebar extends React.Component {
         this.toggleMenu = this.toggleMenu.bind(this);
         this.state = {
             isOpened: false,
-           
         };
 
         /*

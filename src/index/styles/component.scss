@@ -1,0 +1,38 @@
+.component {
+  margin-bottom: 50px;
+  &__title {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    position: relative;
+    font-weight: 500;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__item {
+    text-align: center;
+    min-width: 200px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 20px 30px;
+    margin: 20px 0;
+    background-color: rgba(238, 227, 227, 0.466);
+    color: rgb(0, 0, 0);
+  }
+}
+
+.bottom-line {
+  height: 1px;
+  width: 100%;
+  background-color: grey;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}

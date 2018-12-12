@@ -17,7 +17,7 @@ export class App extends Component {
             comments: [],
             sidebar_menu: [
                 {
-                    title: 'WA home page',
+                    title: 'Home page',
                     href: '/WA/index.html',
                     // href: 'index.html',
                 },

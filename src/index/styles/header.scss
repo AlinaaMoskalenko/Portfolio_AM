@@ -1,15 +1,13 @@
-$logo-image-size: 150px;
-
-.logo {
+.header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
   padding: 50px 0;
-  &__image {
-    width: $logo-image-size;
-    height: $logo-image-size;
+  &__caption{
+    margin: 10px 0;
   }
 }
