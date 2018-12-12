@@ -101,11 +101,8 @@ $min-col-size: 100% / $col-counts;
     color: rgb(114, 114, 118);
     background-color: white;
     border-radius: 5px;
-    &_mini {
+    &_top {
       top: 45%;
-    }
-    &_max {
-      top: 40%;
     }
     @include md {
       max-height: 48px;

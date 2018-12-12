@@ -125,10 +125,8 @@ h2 {
     color: #727276;
     background-color: white;
     border-radius: 5px; }
-    .home__text_mini {
+    .home__text_top {
       top: 45%; }
-    .home__text_max {
-      top: 40%; }
     @media (min-width: 768px) and (max-width: 991.9px) {
       .home__text {
         max-height: 48px;
