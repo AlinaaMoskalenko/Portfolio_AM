@@ -119,7 +119,6 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
         _this.toggleMenu = _this.toggleMenu.bind(_this);
         _this.state = {
             isOpened: false
-
         };
 
         /*
@@ -528,7 +527,7 @@ var App = exports.App = function (_Component) {
 
         _this.state = {
             sidebar_menu: [{
-                title: 'WA home page',
+                title: 'Home page',
                 href: '/WA/index.html'
                 // href: 'index.html',
             }, {

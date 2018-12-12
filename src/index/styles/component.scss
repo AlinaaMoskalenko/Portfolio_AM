@@ -1,7 +1,7 @@
 .component {
   margin-bottom: 50px;
   &__title {
-    max-width: 500px;
+    max-width: 250px;
     width: 100%;
     text-align: center;
     margin: 0 auto 10px auto;
@@ -10,7 +10,7 @@
   }
   &__links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 700px;
     width: 100%;
@@ -22,7 +22,7 @@
     border-radius: 10px;
     text-decoration: none;
     padding: 20px 30px;
-    margin: 20px 0;
+    margin: 20px 10px;
     background-color: rgba(238, 227, 227, 0.466);
     color: rgb(0, 0, 0);
   }

@@ -119,7 +119,6 @@ var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
         _this.toggleMenu = _this.toggleMenu.bind(_this);
         _this.state = {
             isOpened: false
-
         };
 
         /*
@@ -627,7 +626,7 @@ var App = exports.App = function (_Component) {
         _this.state = {
             comments: [],
             sidebar_menu: [{
-                title: 'WA home page',
+                title: 'Home page',
                 href: '/WA/index.html'
                 // href: 'index.html',
             }, {
@@ -902,12 +901,6 @@ var CommentForm = exports.CommentForm = function (_React$Component) {
                 var newState = Object.assign({}, oldState);
                 newState.newAuthor = value;
                 newState.isValidAuthor = true;
-                return newState;
-            });
-
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-
                 return newState;
             });
         }

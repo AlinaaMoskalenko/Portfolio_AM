@@ -452,9 +452,9 @@ var React = _interopRequireWildcard(_react);
 
 var _INFOboxHeader = __webpack_require__(419);
 
-var _INFOboxMain = __webpack_require__(421);
+var _INFOboxMain = __webpack_require__(425);
 
-var _INFOboxFooter = __webpack_require__(423);
+var _INFOboxFooter = __webpack_require__(427);
 
 var _httpService = __webpack_require__(109);
 
@@ -478,10 +478,34 @@ var App = exports.App = function (_Component) {
         _this.setID = _this.setID.bind(_this);
         _this.toggleDetails = _this.toggleDetails.bind(_this);
         _this.state = {
-            infobox_contents: [],
             infobox_contents_length: 0,
             ID: 0,
-            isModeOpened: false
+            isModeOpened: false,
+            infobox_contents: [{
+                id: 0,
+                title: "Time to Share: 6 for $3.99*",
+                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
+                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
+                productUrl: "/products/promo1.html"
+            }, {
+                id: 1,
+                title: "Rise 'n shine",
+                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
+                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
+                productUrl: "/products/promo2.html"
+            }, {
+                id: 2,
+                title: "PM Snackers: Brownie Bites",
+                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
+                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
+                productUrl: "/products/promo3.html"
+            }, {
+                id: 3,
+                title: "PM Snackers: Brownie Bites new",
+                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
+                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
+                productUrl: "/products/promo4.html"
+            }]
         };
         return _this;
     }
@@ -489,22 +513,27 @@ var App = exports.App = function (_Component) {
     _createClass(App, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            this.fetchData();
-        }
-    }, {
-        key: 'fetchData',
-        value: function fetchData() {
             var _this2 = this;
 
-            this.httpService.get('http://localhost:3000/posts', function (response) {
-                _this2.setState(function (oldState) {
-                    var newState = Object.assign({}, oldState);
-                    newState.infobox_contents = response;
-                    newState.infobox_contents_length = response.length;
-                    return newState;
-                });
+            // this.fetchData();
+            this.setState(function (oldState) {
+                var newState = Object.assign({}, oldState);
+                newState.infobox_contents_length = _this2.state.infobox_contents.length;
+                return newState;
             });
         }
+
+        // fetchData() {
+        //     this.httpService.get('http://localhost:3000/posts', (response) => {
+        //         this.setState((oldState) => {
+        //             const newState = Object.assign({}, oldState);
+        //             newState.infobox_contents = response;
+        //             newState.infobox_contents_length = response.length;
+        //             return newState;
+        //         });
+        //     });
+        // }
+
     }, {
         key: 'setID',
         value: function setID(postID) {
@@ -576,7 +605,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IMG_URL = './assets/images/';
+var IMG_URL = '../../../../assets/images/';
 
 var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
     _inherits(INFOboxHeader, _React$Component);
@@ -584,20 +613,7 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
     function INFOboxHeader() {
         _classCallCheck(this, INFOboxHeader);
 
-        var _this = _possibleConstructorReturn(this, (INFOboxHeader.__proto__ || Object.getPrototypeOf(INFOboxHeader)).call(this));
-
-        _this.state = {
-            images: [{
-                url: '../../../../assets/images/comp_plate_promo1.png'
-            }, {
-                url: '../../../../assets/images/comp_plate_promo2.png'
-            }, {
-                url: '../../../../assets/images/comp_plate_promo3.png'
-            }, {
-                url: '../../../../assets/images/comp_plate_promo4.png'
-            }]
-        };
-        return _this;
+        return _possibleConstructorReturn(this, (INFOboxHeader.__proto__ || Object.getPrototypeOf(INFOboxHeader)).apply(this, arguments));
     }
 
     _createClass(INFOboxHeader, [{
@@ -606,21 +622,15 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
             var _this2 = this;
 
             var contentIMG = this.props.infobox_contents.map(function (content, i) {
-                // const img = IMG_URL + content.img;
-
                 var classNames = 'header__image ';
 
-                if (_this2.props.isModeOpened) {
-                    classNames += 'header__image_hidden';
-                } else if (i !== _this2.props.id) {
-                    classNames += 'header__image_hidden';
-                }
-                console.log(_this2.state.images[i].url);
+                if (_this2.props.isModeOpened) classNames += 'header__image_hidden';else if (content.id !== _this2.props.id) classNames += 'header__image_hidden';
+
+                var icon = content.id === 0 ? __webpack_require__(421) : content.id === 1 ? __webpack_require__(422) : content.id === 2 ? __webpack_require__(423) : __webpack_require__(424);
+
                 return React.createElement('img', { key: i,
                     className: classNames,
-                    src: _this2.state.images[i].url
-                    // src={img}
-                    , alt: 'Donats' });
+                    src: icon });
             });
 
             return React.createElement(
@@ -644,6 +654,34 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
 /***/ }),
 
 /***/ 421:
+/***/ (function(module, exports) {
+
+module.exports = "./assets/images/comp_plate_promo1.png";
+
+/***/ }),
+
+/***/ 422:
+/***/ (function(module, exports) {
+
+module.exports = "./assets/images/comp_plate_promo2.png";
+
+/***/ }),
+
+/***/ 423:
+/***/ (function(module, exports) {
+
+module.exports = "./assets/images/comp_plate_promo3.png";
+
+/***/ }),
+
+/***/ 424:
+/***/ (function(module, exports) {
+
+module.exports = "./assets/images/comp_plate_promo4.png";
+
+/***/ }),
+
+/***/ 425:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -660,7 +698,7 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-__webpack_require__(422);
+__webpack_require__(426);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -763,14 +801,14 @@ var INFOboxMain = exports.INFOboxMain = function (_React$Component) {
 
 /***/ }),
 
-/***/ 422:
+/***/ 426:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 423:
+/***/ 427:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -787,7 +825,7 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-__webpack_require__(424);
+__webpack_require__(428);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -920,7 +958,7 @@ var INFOboxFooter = exports.INFOboxFooter = function (_React$Component) {
 
 /***/ }),
 
-/***/ 424:
+/***/ 428:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
