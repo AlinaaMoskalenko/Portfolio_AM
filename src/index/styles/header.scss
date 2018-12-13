@@ -1,13 +1,37 @@
+@import "./mixins.scss";
+
 .header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
   padding: 50px 0;
-  &__caption{
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    .photo {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: url("../../assets/images/IMG_4085_photo.jpg");
+    }
+  }
+  &__caption {
     margin: 10px 0;
+  }
+  @include xs-mobile{
+    flex-direction: column;
+    &__content {
+      margin-top: 10px;
+    }
   }
 }
