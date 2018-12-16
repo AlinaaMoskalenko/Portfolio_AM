@@ -276,11 +276,9 @@
         </h4>
       </div>
       <nav class="footer-content__nav-ftr nav-ftr footer-content__mobile-nav">
-        <div class="nav-ftr__item nav-ftr__item-1">
-          <h3>Shop and Learn
-            <div class="burger-ftr burger-ftr-1">+</div>
-          </h3>
-          <div class="burger-menu-1">
+        <div class="nav-ftr__item">
+          <h3 class="footer-content__item-title">Shop and Learn</h3>
+          <div class="burger-menu">
             <a href="">Mac</a>
             <a href="">iPad</a>
             <a href="">iPhone</a>
@@ -294,11 +292,9 @@
             <a href="">Gift Cards</a>
           </div>
         </div>
-        <div class="nav-ftr__item nav-ftr__item-2">
-          <h3>Apple Store
-            <div class="burger-ftr burger-ftr-2">+</div>
-          </h3>
-          <div class="burger-menu-2">
+        <div class="nav-ftr__item">
+          <h3 class="footer-content__item-title">Apple Store</h3>
+          <div class="burger-menu">
             <a href="">Find a Store</a>
             <a href="">Genius Bar</a>
             <a href="">Today at Apple</a>
@@ -312,42 +308,34 @@
             <a href="">Shopping Help</a>
           </div>
         </div>
-        <div class="nav-ftr__item item">
-          <div class="item__column nav-ftr__item-3">
-            <h3>For Education
-              <div class="burger-ftr burger-ftr-3">+</div>
-            </h3>
-            <div class="burger-menu-3">
+        <div class="nav-ftr__item">
+          <div class="item__column">
+            <h3 class="footer-content__item-title">For Education</h3>
+            <div class="burger-menu">
               <a href="">Apple and Education</a>
               <a href="">Shop for College</a>
             </div>
           </div>
-          <div class="item__column nav-ftr__item-4">
-            <h3>For Business
-              <div class="burger-ftr burger-ftr-4">+</div>
-            </h3>
-            <div class="burger-menu-4">
+          <div class="item__column">
+            <h3 class="footer-content__item-title">For Business</h3>
+            <div class="burger-menu">
               <a href="">Apple and Business</a>
               <a href="">Shop for Business</a>
             </div>
           </div>
         </div>
         <div class="nav-ftr__item">
-          <div class="item__column nav-ftr__item-5">
-            <h3>Account
-              <div class="burger-ftr burger-ftr-5">+</div>
-            </h3>
-            <div class="burger-menu-5">
+          <div class="item__column">
+            <h3 class="footer-content__item-title">Account</h3>
+            <div class="burger-menu">
               <a href="">Manage Your Apple ID</a>
               <a href="">Apple Store Account</a>
               <a href="">iCloud.com</a>
             </div>
           </div>
-          <div class="item__column nav-ftr__item-6">
-            <h3>Apple Values
-              <div class="burger-ftr burger-ftr-6">+</div>
-            </h3>
-            <div class="burger-menu-6">
+          <div class="item__column">
+            <h3 class="footer-content__item-title">Apple Values</h3>
+            <div class="burger-menu">
               <a href="">Accessibility</a>
               <a href="">Education</a>
               <a href="">Environment</a>
@@ -357,11 +345,9 @@
             </div>
           </div>
         </div>
-        <div class="nav-ftr__item nav-ftr__item-7">
-          <h3>About Apple
-            <div class="burger-ftr burger-ftr-7">+</div>
-          </h3>
-          <div class="burger-menu-7">
+        <div class="nav-ftr__item">
+          <h3 class="footer-content__item-title">About Apple</h3>
+          <div class="burger-menu">
             <a href="">Newsroom</a>
             <a href="">Apple Leadership</a>
             <a href="">Job Opportunities</a>
@@ -401,61 +387,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.global-nav');
-
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('global-nav_opened');
-    });
-  </script>
-
-  <script>
-    const burgerftr1 = document.querySelector('.burger-ftr-1');
-    const burgerftr2 = document.querySelector('.burger-ftr-2');
-    const burgerftr3 = document.querySelector('.burger-ftr-3');
-    const burgerftr4 = document.querySelector('.burger-ftr-4');
-    const burgerftr5 = document.querySelector('.burger-ftr-5');
-    const burgerftr6 = document.querySelector('.burger-ftr-6');
-    const burgerftr7 = document.querySelector('.burger-ftr-7');
-
-    const footer1 = document.querySelector('.nav-ftr');
-    const footer2 = document.querySelector('.nav-ftr');
-    const footer3 = document.querySelector('.nav-ftr');
-    const footer4 = document.querySelector('.nav-ftr');
-    const footer5 = document.querySelector('.nav-ftr');
-    const footer6 = document.querySelector('.nav-ftr');
-    const footer7 = document.querySelector('.nav-ftr');
-
-    burgerftr1.addEventListener('click', () => {
-      footer1.classList.toggle('nav-ftr_opened-1');
-    });
-
-    burgerftr2.addEventListener('click', () => {
-      footer2.classList.toggle('nav-ftr_opened-2');
-    });
-
-    burgerftr3.addEventListener('click', () => {
-      footer3.classList.toggle('nav-ftr_opened-3');
-    });
-
-    burgerftr4.addEventListener('click', () => {
-      footer4.classList.toggle('nav-ftr_opened-4');
-    });
-
-    burgerftr5.addEventListener('click', () => {
-      footer5.classList.toggle('nav-ftr_opened-5');
-    });
-
-    burgerftr6.addEventListener('click', () => {
-      footer6.classList.toggle('nav-ftr_opened-6');
-    });
-
-    burgerftr7.addEventListener('click', () => {
-      footer7.classList.toggle('nav-ftr_opened-7');
-    });
-  </script>
 </body>
 
 </html>

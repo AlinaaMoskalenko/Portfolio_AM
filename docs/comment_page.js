@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 405);
+/******/ 	return __webpack_require__(__webpack_require__.s = 406);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -526,34 +526,34 @@ if (process.env.NODE_ENV === 'production') {
 
 /***/ }),
 
-/***/ 405:
+/***/ 406:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(406);
+module.exports = __webpack_require__(407);
 
 
 /***/ }),
 
-/***/ 406:
+/***/ 407:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(407);
-
 __webpack_require__(408);
+
+__webpack_require__(409);
 
 /***/ }),
 
-/***/ 407:
+/***/ 408:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 408:
+/***/ 409:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -567,7 +567,7 @@ var _reactDom = __webpack_require__(57);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(409);
+var _App = __webpack_require__(410);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -577,7 +577,7 @@ _reactDom2.default.render(React.createElement(_App.App, null), document.querySel
 
 /***/ }),
 
-/***/ 409:
+/***/ 410:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -596,9 +596,9 @@ var React = _interopRequireWildcard(_react);
 
 var _GlobalSidebar = __webpack_require__(107);
 
-var _CommentList = __webpack_require__(410);
+var _CommentList = __webpack_require__(411);
 
-var _CommentForm = __webpack_require__(412);
+var _CommentForm = __webpack_require__(413);
 
 var _httpService = __webpack_require__(109);
 
@@ -739,7 +739,7 @@ var App = exports.App = function (_Component) {
 
 /***/ }),
 
-/***/ 410:
+/***/ 411:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -752,7 +752,7 @@ exports.CommentList = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(411);
+__webpack_require__(412);
 
 var _react = __webpack_require__(10);
 
@@ -836,14 +836,14 @@ var CommentList = exports.CommentList = function (_React$Component) {
 
 /***/ }),
 
-/***/ 411:
+/***/ 412:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 412:
+/***/ 413:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -856,7 +856,7 @@ exports.CommentForm = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(413);
+__webpack_require__(414);
 
 var _react = __webpack_require__(10);
 
@@ -1015,7 +1015,7 @@ var CommentForm = exports.CommentForm = function (_React$Component) {
 
 /***/ }),
 
-/***/ 413:
+/***/ 414:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

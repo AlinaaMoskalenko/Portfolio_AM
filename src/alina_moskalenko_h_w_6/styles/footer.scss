@@ -76,40 +76,32 @@ $count: 7;
     position: absolute;
     right: 8px;
     bottom: 9px;
+    transition: all 100ms;
   }
-  @for $i from 1 through $count {
-    .burger-menu-#{$i} {
-      opacity: 0;
-      visibility: hidden;
-      transform: scale(0);
+  .burger-menu {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 500ms;
+    a {
+      display: none;
+    }
+  }
+  .ftr-item_opened {
+    .burger-ftr {
+      transform: rotate(45deg);
+    }
+    h3 {
+      border: none;
+    }
+    .burger-menu {
+      opacity: 1;
+      transform: scale(1);
       a {
-        display: none;
-      }
-    }
-    .burger-ftr-#{$i} {
-      transition: all 100ms;
-    }
-    .nav-ftr_opened-#{$i} .nav-ftr__item-#{$i} {
-      transition: all 100ms;
-      .burger-ftr-#{$i} {
-        transform: rotate(45deg);
-        transition: all 100ms;
-      }
-      h3 {
-        border: none;
-      }
-      .burger-menu-#{$i} {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1);
-        transition: opacity 200ms;
-        a {
-          display: block;
-          padding: 6px 14px;
-          &:last-child {
-            padding-bottom: 16px;
-            border-bottom: 1px solid $border-color;
-          }
+        display: block;
+        padding: 6px 14px;
+        &:last-child {
+          padding-bottom: 16px;
+          border-bottom: 1px solid $border-color;
         }
       }
     }
