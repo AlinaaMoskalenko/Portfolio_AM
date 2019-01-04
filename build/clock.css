@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: white; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #720909; }
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0; }
+
+.instruction {
+  margin: 50px 0;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .instruction__title {
+    font-size: 30px; }
+  .instruction__content {
+    font-size: 24px; }
+
+.clock-conteiner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center; }
+  .clock-conteiner__clock {
+    text-align: center;
+    height: 150px;
+    width: 350px;
+    background-color: white;
+    border: 10px solid #a843b6;
+    border-radius: 10px;
+    margin: 4px 0;
+    font-size: inherit; }
+  .clock-conteiner:before, .clock-conteiner:after {
+    display: inline-block;
+    content: "";
+    height: 75px;
+    width: 275px;
+    border: 1px solid;
+    background-color: #a843b6; }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speak Starter</title>
+<link href="speakStarter.css" rel="stylesheet"></head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper__sidebar">
+            <aside class="sidebar">
+                <div class="sidebar__logo">
+                    <img src="./assets/images/logo.png" alt="Logo SpeakStarter" class="logo">
+                </div>
+                <div class="sidebar__links">
+                    <ul class="link">
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <img src="./assets/images/main_page.png" alt="Main page icon" class="item__icon">
+                                <span class="item__text">Главная</span>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <img src="./assets/images/home_tasks.png" alt="Home task icon" class="item__icon">
+                                <span class="item__text">Домашнее задание</span>
+                                <div class="item__notification">3</div>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <img src="./assets/images/media.png" alt="Media icon" class="item__icon">
+                                <span class="item__text">Медиа</span>
+                            </a>
+                        </li>
+                        <li class="link__item link__item_active">
+                            <a href="#" class="item">
+                                <img src="./assets/images/tasks.png" alt="Tasks icon" class="item__icon">
+                                <span class="item__text">Упражнения</span>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <img src="./assets/images/wallet.png" alt="Wallet icon" class="item__icon">
+                                <span class="item__text">Оплата</span>
+                            </a>
+                        </li>
+                        <li class="link__item">
+                            <a href="#" class="item">
+                                <img src="./assets/images/settings.png" alt="Settings icon" class="item__icon">
+                                <span class="item__text">Настройки</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <div class="wrapper__content">
+            <header class="header">
+                <div class="header__user">
+                    <div class="user__photo">
+                        <img src="./assets/images/user.png" alt="User photo" class="photo">
+                    </div>
+                    <div class="user__name">Nataliya Sergeevna</div>
+                </div>
+                <div class="header__notification notification">
+                    <img src="./assets/images/bell.png" alt="Notification bell" class="notification__bell">
+                    <div class="notification__indicator"></div>
+                </div>
+            </header>
+            <main class="content">
+                <section class="content__previous-lesson">
+                    <div class="previous-lesson__header">
+                        <h1 class="content__title">Предыдущие уроки</h1>
+                        <div class="previous-lesson__filter">
+                            <button class="filter-btn">задать д/з</button>
+                            <button class="filter-btn">ожидается д/з</button>
+                            <button class="filter-btn">проверить д/з</button>
+                        </div>
+                    </div>
+                    <div class="previous-lesson__content">
+                        <div class="previous-lesson__card"></div>
+                        <div class="previous-lesson__card"></div>
+                        <div class="previous-lesson__card"></div>
+                        <div class="previous-lesson__card"></div>
+                        <div class="previous-lesson__card"></div>
+                        <div class="previous-lesson__card"></div>
+                    </div>
+                </section>
+                <section class="content__next-lesson">
+                    <div class="next-lesson__header">
+                        <h2 class="content__title">Предстоящий уроки</h2>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+<script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="speakStarter.js"></script></body>
+
+</html>

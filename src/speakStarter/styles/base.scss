@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+button {
+  font-family: 'MuseoSansCyrl500', Helvetica, sans-serif;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  display: flex;
+  &__sidebar {
+    position: fixed;
+    // max-width: 473px;
+    width: 24.9%;
+  }
+  &__content {
+    // max-width: calc(100% - 473px);
+    min-height: 1180px;
+    width: 75.1%;
+    position: absolute;
+    right: 0;
+    background-color: #f8f8f8;
+    border-left: 1px solid #e8e8e8;
+  }
+}
