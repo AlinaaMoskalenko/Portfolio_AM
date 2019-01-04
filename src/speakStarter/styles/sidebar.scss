@@ -28,11 +28,19 @@
       color: #66b074;
       border: 1px solid #edf8ef;
       background-color: #edf8ef;
+      .cls-1, 
+      .cls-2 {
+        stroke: #66b074;
+      }
     }
     &_active {
       color: #66b074;
       border: 1px solid #edf8ef;
       background-color: #edf8ef;
+      .cls-1, 
+      .cls-2 {
+        stroke: #66b074;
+      }
     }
   }
 }
@@ -40,6 +48,43 @@
 .item {
   display: flex;
   align-items: center;
+  &__icon-exercises {
+    width: 14px;
+    height: 17px;
+  }
+  &__icon-home {
+    width: 16px;
+    height: 16px;
+  }
+  &__icon-hometasks {
+    width: 20px;
+    height: 15px;
+    .cls-1,
+    .cls-2 {
+      fill: none;
+      stroke: #7f7f7f;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .cls-1 {
+      stroke-width: 1.5px;
+    }
+  }
+  &__icon-media {
+    width: 17px;
+    height: 15px;
+  }
+  &__icon-payments {
+    width: 16px;
+    height: 16px;
+    .cls-2 {
+      fill: #7f7f7f;
+    }
+  }
+  &__icon-settings {
+    width: 17px;
+    height: 17px;
+  }
   &__text {
     padding-left: 10px;
   }
@@ -54,4 +99,12 @@
     border-radius: 5px;
     margin-left: 18px;
   }
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #7f7f7f;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5px;
 }

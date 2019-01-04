@@ -29,6 +29,7 @@
 
 .notification {
   position: relative;
+  min-width: 71px;
   &__indicator {
     position: absolute;
     top: 29px;
@@ -40,3 +41,6 @@
     background-color: #ea8862;
   }
 }
+
+
+

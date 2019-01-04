@@ -35,9 +35,9 @@ a {
     width: 24.9%;
   }
   &__content {
-    // max-width: calc(100% - 473px);
-    min-height: 1180px;
+    // min-width: 1110px;    
     width: 75.1%;
+    min-height: 1180px;
     position: absolute;
     right: 0;
     background-color: #f8f8f8;
