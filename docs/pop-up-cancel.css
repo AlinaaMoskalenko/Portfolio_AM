@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'MuseoSansCyrl500';
+  src: url(./assets/fonts/MuseoSansCyrl_500.otf);
+  font-weight: 500; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+button {
+  font-family: "MuseoSansCyrl500", Helvetica, sans-serif;
+  font-size: 15px;
+  color: #454545; }
+
+body {
+  background: rgba(54, 51, 51, 0.322); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+body {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.wrapper {
+  margin: 150px auto;
+  max-width: 550px;
+  box-shadow: 0 1px 4px #0000003a;
+  border-radius: 5px;
+  position: relative; }
+
+.header {
+  width: 100%;
+  background-color: #fafafa;
+  font-size: 18px;
+  color: #262626;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 16px 20px; }
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .close-btn:before {
+    position: absolute;
+    top: 7px;
+    left: 17px;
+    content: "";
+    height: 21px;
+    border: 1px solid #e8e8e8;
+    color: #e8e8e8;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .close-btn:after {
+    position: absolute;
+    top: 7px;
+    left: 17px;
+    content: "";
+    height: 21px;
+    border: 1px solid #e8e8e8;
+    color: #e8e8e8;
+    -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
+
+.content {
+  height: 344px;
+  padding: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ffffff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .content__text {
+    color: #262626; }
+    .content__text:after {
+      content: "*";
+      color: #ea8862;
+      margin-left: 2px; }
+
+.form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .form__comment {
+    margin: 25px 0;
+    width: 100%;
+    height: 140px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px; }
+  .form__submit {
+    width: 162px;
+    height: 45px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    color: #ffffff;
+    background-color: #ea8862;
+    border: none;
+    border-radius: 5px; }

@@ -26,6 +26,7 @@ const baseConf = (_path) => {
         comment_page: ['./src/comment_page/comment_page.js'],
         infobox: ['./src/infobox/infobox.js'],
         speakStarter: ['./src/speakStarter/speakStarter.js'],
+        'pop-up-cancel': ['./src/pop-up-cancel/pop-up-cancel.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
