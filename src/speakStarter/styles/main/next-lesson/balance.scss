@@ -1,0 +1,89 @@
+$tab-bg: #62a56b;
+$tab-color-text-active: #ffffff;
+$z-index-2: 2;
+
+.balance {
+  &__content {
+    width: 254px;
+    height: 327px;
+    border-radius: $border-radius;
+    background-color: $bg-color-content;
+    box-shadow: $box-shadow;
+    @include flex-column-around-center;
+    margin-top: $indent-1;
+  }
+  &__tab {
+    @include flex-justify-center;
+  }
+  &__tab-content {
+    height: 26px;
+    padding: 0 13px;
+    background-color: transparent;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    color: #a0a0a0;
+    outline: none;
+    font-size: $font-size-2;
+    &:hover {
+      color: $tab-bg;
+    }
+    &_active {
+      color: $tab-color-text-active;
+      background-color: $tab-bg;
+      &:hover {
+        color: $tab-color-text-active;
+      }
+    }
+  }
+  &__diagram {
+    width: 157px;
+    height: 157px;
+    border-radius: 50%;
+    border: 1px solid $green-color;
+    background-color: $light-green-bg-color;
+    @include flex-center-center;
+    color: $green-color;
+    font-size: $font-size-8;
+    position: relative;
+    overflow: hidden;
+    .diagram__text {
+      margin-right: 5px;
+      z-index: $z-index-2;
+    }
+    .bg-lines {
+      position: absolute;
+      top: -20px;
+      width: 320px;
+      height: 170px;
+      z-index: 1;
+      background-image: url("../../assets/images/speakStarter/bg_line.png");
+    }
+  }
+  &__symbol {
+    width: 15px;
+    height: 19px;
+    z-index: $z-index-2;
+    .money-symbol {
+      fill: $green-color;
+      stroke: $green-color;
+      stroke-miterlimit: 10;
+      stroke-width: 1.5px;
+    }
+  }
+  &__description {
+    width: 141px;
+    height: 47px;
+    border: 1px solid $light-grey-color;
+    background-color: transparent;
+    border-radius: $border-radius;
+    color: $green-color;
+    font-size: $font-size-2;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $light-green-bg-color;
+      border-color: $green-color;
+    }
+  }
+}

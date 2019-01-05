@@ -4,9 +4,9 @@
 
 html,
 button {
-  font-family: 'MuseoSansCyrl500', Helvetica, sans-serif;
-  font-size: 14px;
-  color: #6a6a6a;
+  font-family: "MuseoSansCyrl500", Helvetica, sans-serif;
+  font-size: $font-size;
+  color: $main-color-text;
 }
 
 h1,
@@ -35,7 +35,7 @@ a {
     width: 24.9%;
   }
   &__content {
-    // min-width: 1110px;    
+    // min-width: 1110px;
     width: 75.1%;
     min-height: 1180px;
     position: absolute;

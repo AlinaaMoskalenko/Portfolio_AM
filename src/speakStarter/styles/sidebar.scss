@@ -1,53 +1,62 @@
+$green-color: #66b074;
+$icon-color: #7f7f7f;
+$indent: 18px;
+
+$border: 1px solid #edf8ef;
+
 .sidebar {
   max-width: 234px;
   width: 100%;
   position: absolute;
   right: 12px;
-}
-
-.logo {
-  padding: 26px 18px;
+  &__logo {
+    margin: 26px $indent;
+  }
 }
 
 .link {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flex-column-between;
   height: 270px;
   &__item {
-    list-style: none;
-    display: flex;
-    align-items: center;
+    @include flex-align-center;
     max-width: 222px;
     width: 100%;
     height: 42px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding-left: 18px;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    padding-left: $indent;
+    cursor: pointer;
+    list-style: none;
+    font-size: $font-size-2;
     &:hover {
-      color: #66b074;
-      border: 1px solid #edf8ef;
-      background-color: #edf8ef;
-      .cls-1, 
-      .cls-2 {
-        stroke: #66b074;
+      color: $green-color;
+      border: $border;
+      background-color: $light-green-bg-color;
+      .item__icon-1,
+      .item__icon-2 {
+        stroke: $green-color;
       }
     }
     &_active {
-      color: #66b074;
-      border: 1px solid #edf8ef;
-      background-color: #edf8ef;
-      .cls-1, 
-      .cls-2 {
-        stroke: #66b074;
+      color: $green-color;
+      border: $border;
+      background-color: $light-green-bg-color;
+      .item__icon-1,
+      .item__icon-2 {
+        stroke: $green-color;
       }
     }
   }
 }
 
 .item {
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
+  &__icon-1 {
+    fill: none;
+    stroke: $icon-color;
+    @include svg-stroke-line-;
+    stroke-width: 1.5px;
+  }
   &__icon-exercises {
     width: 14px;
     height: 17px;
@@ -59,14 +68,13 @@
   &__icon-hometasks {
     width: 20px;
     height: 15px;
-    .cls-1,
-    .cls-2 {
+    .item__icon-1,
+    .item__icon-2 {
       fill: none;
-      stroke: #7f7f7f;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+      stroke: $icon-color;
+      @include svg-stroke-line-;
     }
-    .cls-1 {
+    .item__icon-1 {
       stroke-width: 1.5px;
     }
   }
@@ -77,8 +85,8 @@
   &__icon-payments {
     width: 16px;
     height: 16px;
-    .cls-2 {
-      fill: #7f7f7f;
+    .item__icon-2 {
+      fill: $icon-color;
     }
   }
   &__icon-settings {
@@ -89,22 +97,13 @@
     padding-left: 10px;
   }
   &__notification {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-center;
     width: 19px;
     height: 19px;
     color: #ffffff;
-    background-color: #ea8862;
-    border-radius: 5px;
-    margin-left: 18px;
+    font-size: 11px;
+    background-color: $orange-red-color;
+    border-radius: $border-radius;
+    margin-left: 14px;
   }
-}
-
-.cls-1 {
-  fill: none;
-  stroke: #7f7f7f;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.5px;
 }

@@ -1,5 +1,11 @@
 @import './styles/font.scss';
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
 @import './styles/base.scss';
-@import './styles/main.scss';
+@import './styles/main/main.scss';
+@import './styles/main/previous-lesson/previous-lesson.scss';
+@import './styles/main/previous-lesson/circle.scss';
+@import './styles/main/next-lesson/next-lesson.scss';
+@import './styles/main/next-lesson/balance.scss';
 @import './styles/sidebar.scss';
 @import './styles/header.scss';

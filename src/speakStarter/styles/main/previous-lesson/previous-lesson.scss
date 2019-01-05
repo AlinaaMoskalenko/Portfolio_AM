@@ -1,0 +1,196 @@
+$light-pink-color-text: #efbcab;
+$light-blue-color-text: #8dcddd;
+$light-green-color-text: #81c88e;
+
+$green-state-color: #b6e3a6;
+$blue-state-color: #8dcddd;
+$pink-state-color: #f0baa8;
+
+$border-green: 1px solid $green-state-color;
+$border-blue: 1px solid $blue-state-color;
+$border-pink: 1px solid $pink-state-color;
+
+.previous-lesson {
+  &__header {
+    @include flex-center-between;
+  }
+  &__filter {
+    display: flex;
+  }
+  &__content {
+    @include flex-column-between;
+    height: 565px;
+    padding-top: 12px;
+  }
+  &__card {
+    width: 100%;
+    height: 87px;
+    border-radius: $border-radius;
+    background-color: $bg-color-content;
+    box-shadow: $box-shadow;
+    @include flex-center-between;
+    padding: 0 29px 0 13px;
+  }
+  &__number {
+    width: 61px;
+    height: 61px;
+    background-color: $light-green-bg-color;
+    border: 1px solid $green-color;
+    border-radius: $border-radius;
+    color: $green-color;
+    @include flex-column-center-center;
+    text-align: center;
+    font-size: $font-size-7;
+    &:after{
+      content: 'урок';
+      font-size: $font-size;
+    }
+  }
+  &__details {
+    padding-left: 17px;
+  }
+  &__title {
+    font-size: $font-size-3;
+    margin: 7px 0 8px 0;
+  }
+  &__subtitle {
+    color: #999999;
+  }
+  &__action {
+    display: flex;
+    &_hidden {
+      display: none;
+    }
+  }
+  &__state {
+    @include flex-align-center;
+    &_hidden {
+      display: none;
+    }
+  }
+}
+
+.filter-btn {
+  height: 33px;
+  border: none;
+  background-color: #ffffff;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: $font-size-2;
+  &:first-child {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-color: $blue-state-color;
+    border-right: none;
+  }
+  &:nth-child(2) {
+    border-color: $green-state-color;
+    border-right: none;
+  }
+  &:last-child {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    border-color: $pink-state-color;
+  }
+  &:hover {
+    transform: scale(1.05);
+    &:first-child {
+      border-right: $border-blue;
+    }
+    &:nth-child(2) {
+      border-right: $border-green;
+    }
+  }
+  &_active {
+    transform: scale(1.05);
+    &:first-child {
+      border-right: $border-blue;
+    }
+    &:nth-child(2) {
+      border-right: $border-green;
+    }
+  }
+}
+
+.card__description {
+  display: flex;
+}
+
+.action {
+  &__button {
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    height: 37px;
+    &:first-child {
+      width: 131px;
+      border-color: $green-color;
+      color: $green-color;
+      margin-right: 10px;
+      &:hover {
+        background-color: $light-green-bg-color;
+      }
+    }
+    &:last-child {
+      width: 109px;
+      border-color: $orange-red-color;
+      color: $orange-red-color;
+      &:hover {
+        background-color: #f0baa865;
+      }
+    }
+  }
+}
+
+.state {
+  &__stage {
+    padding-right: 20px;
+  }
+  &__diagram {
+    position: relative;
+    width: 51px;
+    height: 51px;
+  }
+  &__color {
+    &_waiting {
+      color: $light-green-color-text;
+    }
+    &_setting {
+      color: $light-blue-color-text;
+    }
+    &_checking {
+      color: $light-pink-color-text;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.arrow {
+  fill: none;
+  stroke: none;
+  @include svg-stroke-line-;
+  stroke-width: 1.8px;
+  &_wait {
+    stroke: $green-state-color;
+  }
+  &_set {
+    stroke: $blue-state-color;
+  }
+  &_check {
+    stroke: $pink-state-color;
+  }
+  &_fill {
+    fill: $pink-state-color;
+  }
+}

@@ -1,24 +1,24 @@
+$padding-top: 5px;
+
+$border: 1px solid $light-grey-color;
+
 .header {
   width: 100%;
   min-height: 80px;
   height: 100%;
-  border-bottom: 1px solid #e8e8e8;
-  display: flex;
-  flex-direction: row-reverse;
+  border-bottom: $border;
+  @include flex-row-reverse;
   &__user {
-    display: flex;
-    align-items: center;
-    flex-basis: 33.7%;
-    border-left: 1px solid #e8e8e8;
-    padding-top: 5px;
+    @include flex-align-center;
+    flex-basis: 34%;
+    border-left: $border;
+    padding-top: $padding-top;
   }
   &__notification {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center-center;
     flex-basis: 5%;
-    border-left: 1px solid #e8e8e8;
-    padding-top: 5px;
+    border-left: $border;
+    padding-top: $padding-top;
   }
 }
 
@@ -30,6 +30,7 @@
 .notification {
   position: relative;
   min-width: 71px;
+  cursor: pointer;
   &__indicator {
     position: absolute;
     top: 29px;
@@ -38,9 +39,6 @@
     height: 9px;
     border: 1px solid #ffffff;
     border-radius: 50%;
-    background-color: #ea8862;
+    background-color: $orange-red-color;
   }
 }
-
-
-

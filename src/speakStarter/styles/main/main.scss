@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  margin-top: 45px;
+  &__title {
+    font-weight: inherit;
+    font-size: $main-title-size;
+  }
+  &__previous-lesson {
+    max-width: 889px;
+    width: 100%;
+    padding-right: 36px;
+    padding-left: 57px;
+  }
+}
+
+
+
+
