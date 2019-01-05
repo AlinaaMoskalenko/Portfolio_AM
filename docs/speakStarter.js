@@ -81,6 +81,20 @@ module.exports = __webpack_require__(431);
 
 __webpack_require__(432);
 
+var lessonMenu = document.querySelectorAll('.scheduled-lesson__options');
+var lessonAction = document.querySelectorAll('.next-lesson__action');
+
+var _loop = function _loop(i) {
+    lessonMenu[i].addEventListener('click', function (event) {
+        event.target.classList.toggle('scheduled-lesson__options_opened');
+        lessonAction[i].classList.toggle('next-lesson__action_opened');
+    });
+};
+
+for (var i = 0; i < lessonMenu.length; i++) {
+    _loop(i);
+}
+
 /***/ }),
 
 /***/ 432:
