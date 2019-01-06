@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+button {
+  font-family: "MuseoSansCyrl500", Helvetica, sans-serif;
+  font-size: $font-size;
+  color: $main-color-text;
+}
+
+body {
+  background: rgba(54, 51, 51, 0.322);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  position: relative;
+  margin: 150px auto;
+  max-width: 399px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px #0000003a;
+  &:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: -34px;
+    border: 17px solid transparent;
+    border-bottom: 17px solid white;
+  }
+}
+
+.header {
+  padding: 16px 30px;
+  font-size: 18px;
+}

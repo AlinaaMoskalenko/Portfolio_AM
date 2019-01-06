@@ -27,6 +27,8 @@ const baseConf = (_path) => {
         infobox: ['./src/infobox/infobox.js'],
         speakStarter: ['./src/speakStarter/speakStarter.js'],
         'pop-up-cancel': ['./src/pop-up-cancel/pop-up-cancel.js'],
+        'pop-up-cancel-2': ['./src/pop-up-cancel-2/pop-up-cancel-2.js'],
+        'pop-up-notification':['./src/pop-up-notification/pop-up-notification.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

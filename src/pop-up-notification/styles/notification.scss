@@ -1,0 +1,33 @@
+.notification {
+  &__details {
+    padding: 0 30px;
+    height: 67px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+  &__identificator {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 15px;
+    &_new-homework {
+      background-color: #f0baa8;
+    }
+    &_no-homework {
+      background-color: #8dcddd;
+    }
+  }
+  &__subtitle {
+    padding: 5px 0 0 24px;
+    font-size: 14px;
+    color: #8d8d8d;
+  }
+}
