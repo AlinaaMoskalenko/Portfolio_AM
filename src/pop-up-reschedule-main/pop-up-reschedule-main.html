@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reschedule main form</title>
+</head>
+
+<body>
+    <div class="reschedule">
+        <div class="reschedule__content">
+            <div class="reschedule__arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="content__time-data">
+                <div class="lesson">
+                    <div class="lesson__date">4 декабря</div>
+                    <div class="lesson__subtitle">Среда</div>
+                </div>
+                <div class="lesson">
+                    <div class="lesson__date lesson__date_new">25 декабря</div>
+                    <div class="lesson__subtitle">Среда</div>
+                </div>
+            </div>
+            <div class="content__time-data">
+                <div class="lesson">
+                    <div class="lesson__time">13:00 - 14:00</div>
+                    <div class="lesson__subtitle">1 час</div>
+                </div>
+                <div class="lesson">
+                    <div class="lesson__time lesson__time_new">13:45 - 14:45</div>
+                    <div class="lesson__subtitle">1 час</div>
+                </div>
+            </div>
+            <div class="content__user-information">
+                <div class="user__icon">
+                    <img src="../../assets/images/speakStarter/user_2.png" alt="User">
+                </div>
+                <div class="user__name">Чулков Егор</div>
+            </div>
+            <div class="content__text">По чьей вине переносится урок</div>
+            <div class="content__checkbox-block">
+                <div class="content__checkbox-option">
+                    <input type="checkbox" id="check1" class="content__checkbox">
+                    <label for="check1">Ученик</label>
+                </div>
+                <div class="content__checkbox-option">
+                    <input type="checkbox" id="check2" class="content__checkbox">
+                    <label for="check2">Учитель</label>
+                </div>
+            </div>
+            <form action="" class="form">
+                <textarea class="form__comment" placeholder="Причина отмены урока"></textarea>
+                <button class="form__submit" type="submit">Перенести урок</button>
+            </form>
+        </div>
+        <div class="close-btn"></div>
+    </div>
+</body>
+
+</html>

@@ -29,17 +29,11 @@ a {
 
 .wrapper {
   display: flex;
-  &__sidebar {
-    position: fixed;
-    // max-width: 473px;
-    width: 24.9%;
-  }
+  justify-content: flex-end;
   &__content {
-    // min-width: 1110px;
-    width: 75.1%;
-    min-height: 1180px;
-    position: absolute;
-    right: 0;
+    max-width: 1427px;
+    width: 100%;
+    min-width: 1000px;
     background-color: #f8f8f8;
     border-left: 1px solid #e8e8e8;
   }

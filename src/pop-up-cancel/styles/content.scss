@@ -28,6 +28,7 @@ $orange-color: #ea8862;
     height: 140px;
     border: 1px solid #e8e8e8;
     border-radius: $border-radius;
+    outline: none;
   }
   &__submit {
     width: 162px;
@@ -38,5 +39,6 @@ $orange-color: #ea8862;
     border: none;
     border-radius: $border-radius;
     cursor: pointer;
+    outline: none;
   }
 }

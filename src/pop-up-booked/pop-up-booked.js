@@ -1,1 +1,0 @@
-import './pop-up-booked.scss';

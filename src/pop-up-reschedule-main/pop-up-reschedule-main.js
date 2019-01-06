@@ -1,4 +1,4 @@
-import './pop-up-reschedule.scss';
+import './pop-up-reschedule-main.scss';
 
 const checkbox = document.querySelectorAll('.content__checkbox');
 const check1 = document.getElementById('check1');

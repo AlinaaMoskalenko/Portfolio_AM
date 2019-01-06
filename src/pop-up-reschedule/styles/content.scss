@@ -28,7 +28,6 @@ $orange-color: #ea8862;
   &__checkbox {
     opacity: 0;
     position: absolute;
-    pointer-events: none;
     & + label {
       position: relative;
       padding-left: 30px;
@@ -86,5 +85,6 @@ $orange-color: #ea8862;
     border: none;
     border-radius: $border-radius;
     cursor: pointer;
+    outline: none;
   }
 }

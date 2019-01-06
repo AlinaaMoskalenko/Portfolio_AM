@@ -81,6 +81,20 @@ module.exports = __webpack_require__(446);
 
 __webpack_require__(447);
 
+var checkbox = document.querySelectorAll('.content__checkbox');
+var check1 = document.getElementById('check1');
+var check2 = document.getElementById('check2');
+
+for (var i = 0; i < checkbox.length; i++) {
+    checkbox[i].addEventListener('click', function () {
+        var element = event.target;
+        if (element.checked) {
+            element.checked = true;
+            if (element.id === "check1") check2.checked = false;else check1.checked = false;
+        }
+    });
+}
+
 /***/ }),
 
 /***/ 447:

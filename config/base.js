@@ -30,7 +30,8 @@ const baseConf = (_path) => {
         'pop-up-cancel-2': ['./src/pop-up-cancel-2/pop-up-cancel-2.js'],
         'pop-up-notification':['./src/pop-up-notification/pop-up-notification.js'],
         'pop-up-reschedule':['./src/pop-up-reschedule/pop-up-reschedule.js'],
-        'pop-up-booked':['./src/pop-up-booked/pop-up-booked.js'],
+        'pop-up-reschedule-main':['./src/pop-up-reschedule-main/pop-up-reschedule-main.js'],
+        'pop-up-appoint':['./src/pop-up-appoint/pop-up-appoint.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

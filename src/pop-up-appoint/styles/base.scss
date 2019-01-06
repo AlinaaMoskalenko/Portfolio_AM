@@ -31,6 +31,35 @@ a {
   color: inherit;
 }
 
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  cursor: pointer;
+  &:before {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    content: "";
+    height: 14px;
+    border: 0.5px solid #878787;
+    transform: rotate(45deg);
+  }
+  &:after {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    content: "";
+    height: 14px;
+    border: 0.5px solid #878787;
+    transform: rotate(-45deg);
+  }
+}
+
 .booked-success {
   margin: 20px auto;
   max-width: 185px;

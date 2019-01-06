@@ -10,8 +10,6 @@ button {
 }
 
 body {
-  display:flex;
-  justify-content: space-around;
   background: rgba(54, 51, 51, 0.322);
 }
 
@@ -33,20 +31,13 @@ a {
   color: inherit;
 }
 
-.block{
-  padding-top:150px;
-  width: 100%;
-  display:flex;
-  justify-content: space-around;
-  // flex-wrap: wrap;
-}
-
 .wrapper {
   max-width: 550px;
   width: 100%;
   box-shadow: 0 1px 4px #0000003a;
   border-radius: $border-radius;
   position: relative;
+  margin: 0 auto;
 }
 
 .header {
@@ -66,9 +57,9 @@ a {
   height: 37px;
   border: 1px solid #e8e8e8;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   cursor: pointer;
   &:before {
     position: absolute;
@@ -77,8 +68,6 @@ a {
     content: "";
     height: 21px;
     border: 1px solid #e8e8e8;
-    color: #e8e8e8;
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   &:after {
@@ -88,9 +77,6 @@ a {
     content: "";
     height: 21px;
     border: 1px solid #e8e8e8;
-    color: #e8e8e8;
     transform: rotate(-45deg);
   }
 }
-
-

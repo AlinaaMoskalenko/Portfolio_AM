@@ -5,10 +5,10 @@ $indent: 18px;
 $border: 1px solid #edf8ef;
 
 .sidebar {
+  // position: absolute;
   max-width: 234px;
-  width: 100%;
-  position: absolute;
-  right: 12px;
+  width:100%;
+  margin:0 15px;
   &__logo {
     margin: 26px $indent;
   }

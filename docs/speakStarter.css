@@ -31,15 +31,13 @@ a {
 
 .wrapper {
   display: -ms-flexbox;
-  display: flex; }
-  .wrapper__sidebar {
-    position: fixed;
-    width: 24.9%; }
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
   .wrapper__content {
-    width: 75.1%;
-    min-height: 1180px;
-    position: absolute;
-    right: 0;
+    max-width: 1427px;
+    width: 100%;
+    min-width: 1000px;
     background-color: #f8f8f8;
     border-left: 1px solid #e8e8e8; }
 
@@ -541,8 +539,7 @@ a {
 .sidebar {
   max-width: 234px;
   width: 100%;
-  position: absolute;
-  right: 12px; }
+  margin: 0 15px; }
   .sidebar__logo {
     margin: 26px 18px; }
 
@@ -640,9 +637,7 @@ a {
     margin-left: 14px; }
 
 .header {
-  width: 100%;
-  min-height: 80px;
-  height: 100%;
+  height: 80px;
   border-bottom: 1px solid #e8e8e8;
   display: -ms-flexbox;
   display: flex;
@@ -671,7 +666,11 @@ a {
 
 .user__photo {
   margin-left: 19px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  width: 42px;
+  height: 41px;
+  overflow: hidden;
+  border-radius: 5px; }
 
 .notification {
   position: relative;

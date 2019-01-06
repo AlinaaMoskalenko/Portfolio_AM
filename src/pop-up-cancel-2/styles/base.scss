@@ -57,9 +57,6 @@ a {
   height: 37px;
   border: 1px solid #e8e8e8;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   &:before {
     position: absolute;
@@ -68,8 +65,6 @@ a {
     content: "";
     height: 21px;
     border: 1px solid #e8e8e8;
-    color: #e8e8e8;
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   &:after {
@@ -79,7 +74,6 @@ a {
     content: "";
     height: 21px;
     border: 1px solid #e8e8e8;
-    color: #e8e8e8;
     transform: rotate(-45deg);
   }
 }
