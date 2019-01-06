@@ -59,7 +59,8 @@ a {
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  cursor: pointer; }
   .notification__details:hover {
     background-color: #f7f7f7; }
 
