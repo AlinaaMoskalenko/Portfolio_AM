@@ -84,7 +84,7 @@ a {
           padding: 0 18px; }
           .wrapper-sidebar_opened .sidebar__items {
             transition: 0.2s;
-            transition-delay: 0.4s;
+            transition-delay: 0.3s;
             opacity: 1; }
           .wrapper-sidebar_opened .sidebar__toggle {
             right: 18px; }
