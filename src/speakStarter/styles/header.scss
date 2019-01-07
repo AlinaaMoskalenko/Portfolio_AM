@@ -6,37 +6,60 @@ $border: 1px solid $light-grey-color;
   height: 80px;
   border-bottom: $border;
   @include flex-row-reverse;
+  @include md {
+    z-index: -1;
+  }
   &__user {
     @include flex-align-center;
     flex-basis: 34%;
     border-left: $border;
     padding-top: $padding-top;
+    @include sm {
+      flex-basis: 25%;
+      padding: 0;
+      justify-content: center;
+    }
   }
   &__notification {
     @include flex-center-center;
     flex-basis: 5%;
     border-left: $border;
     padding-top: $padding-top;
+    min-width: 71px;
+    cursor: pointer;
+  }
+  &__notification-icon {
+    position: relative;
   }
 }
 
-.user__photo {
-  margin-left: 19px;
-  margin-right: 10px;
-  width:42px;
-  height: 41px;
-  overflow: hidden;
-  border-radius: $border-radius;
+.user {
+  &__photo {
+    margin-left: 19px;
+    margin-right: 10px;
+    width: 42px;
+    height: 41px;
+    overflow: hidden;
+    border-radius: $border-radius;
+    @include sm{
+      min-width: 42px;
+    }
+    @include xs {
+      margin: 0;
+    }
+  }
+  &__name {
+    @include xs {
+      display: none;
+    }
+  }
 }
 
 .notification {
-  position: relative;
-  min-width: 71px;
-  cursor: pointer;
   &__indicator {
     position: absolute;
-    top: 29px;
-    right: 25px;
+    top: -3px;
+    right: 1px;
     width: 9px;
     height: 9px;
     border: 1px solid #ffffff;

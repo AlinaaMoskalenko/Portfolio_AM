@@ -1,3 +1,49 @@
+$xs-screen: 576px;
+$sm-screen: 768px;
+$md-screen: 992px;
+$lg-screen: 1200px;
+
+// Extra Small devices (portrait phones, less than 576px)
+@mixin xs {
+  @media (max-width: #{$xs-screen - 0.1px}) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin sm {
+  @media (max-width: #{$sm-screen - 0.1px}) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin md {
+  @media (max-width: #{$md-screen - 0.1px}) {
+    @content;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin lg {
+  @media (max-width: #{$lg-screen - 0.1px}) {
+    @content;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin xl {
+  @media (min-width: #{$lg-screen}) {
+    @content;
+  }
+}
+
+// @mixin landscape {
+//   @media (orientation: landscape) {
+//     @content;
+//   }
+// }
+
 @mixin flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
@@ -8,9 +54,13 @@
   align-items: center;
 }
 @mixin flex-justify-center {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
 @mixin flex-around {
   display: flex;
   justify-content: space-around;
@@ -49,6 +99,21 @@
   justify-content: space-around;
   align-items: center;
 }
+
+@mixin -column-around-center {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-center-center-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 
 @mixin svg-stroke-line- {
   stroke-linecap: round;
