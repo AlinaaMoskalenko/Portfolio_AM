@@ -61,7 +61,7 @@ $border-pink: 1px solid $pink-state-color;
   }
   &__content {
     @include flex-column-between;
-    height: 565px;
+    min-height: 565px;
   }
   &__card {
     width: 100%;
@@ -331,5 +331,13 @@ $border-pink: 1px solid $pink-state-color;
     padding: 0 10px;
     outline: none;
     align-self: flex-end;
+  }
+}
+
+.loading-circle {
+  @include flex-justify-center;
+  margin-top: 20px;
+  @include md {
+    margin-top: 10px;
   }
 }
