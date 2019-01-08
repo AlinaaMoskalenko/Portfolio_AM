@@ -83,10 +83,26 @@ __webpack_require__(432);
 
 var _tabMenu = __webpack_require__(433);
 
+var _notificationMenu = __webpack_require__(434);
+
+var _slider = __webpack_require__(435);
+
+var _balanceMenu = __webpack_require__(436);
+
 var tabBtn = document.querySelector('.nav');
 var tabContents = document.querySelector('.main');
-
 (0, _tabMenu.tabMenu)(tabBtn, tabContents);
+
+var notificationBtn = document.querySelector('.header__notification');
+(0, _notificationMenu.notificationMenu)(notificationBtn);
+
+var sliderContent = document.querySelector('.next-lesson__conteiner');
+var sliderBtn = document.querySelector('.next-lesson__slider');
+(0, _slider.slider)(sliderContent, sliderBtn);
+
+var balanceTabs = document.querySelector('.balance__tab');
+var balanceContents = document.querySelector('.balance__conteiner');
+(0, _balanceMenu.balanceMenu)(balanceTabs, balanceContents);
 
 //sidebar open
 var sidebarToggle = document.querySelector('.sidebar__toggle');
@@ -112,6 +128,11 @@ var _loop = function _loop(i) {
 for (var i = 0; i < lessonMenu.length; i++) {
     _loop(i);
 }
+
+var sidebarElement = document.querySelector('.wrapper-sidebar');
+window.addEventListener("orientationchange", function () {
+    if (sidebarElement.classList.contains('wrapper-sidebar_opened')) sidebarElement.style.transition = 'none';
+});
 
 /***/ }),
 
@@ -162,6 +183,138 @@ function tabMenu(targetBtn, targetContent) {
         if (activeTab) {
             activeTab.classList.remove(ACTIVE_TAB);
             content.classList.remove(ACTIVE_CONTENT);
+        }
+    }
+
+    attachEvents();
+}
+
+/***/ }),
+
+/***/ 434:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.notificationMenu = notificationMenu;
+function notificationMenu(notificationBtn) {
+    // console.log(notificationBtn);
+    var notification = notificationBtn.querySelector('.notification__conteiner');
+    notificationBtn.addEventListener('click', function () {
+        notification.classList.toggle('notification__conteiner_opened');
+    });
+}
+
+/***/ }),
+
+/***/ 435:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.slider = slider;
+function slider(targetContent, targetToggle) {
+    var contents = targetContent.querySelectorAll('.next-lesson__conteiner-information');
+    var toggleArrows = targetToggle.querySelectorAll('.slider__arrow');
+    var toggles = targetToggle.querySelectorAll('.slider__round');
+
+    var activeContent = targetContent.querySelector('.next-lesson__conteiner-information_opened');
+    var activeToggle = targetToggle.querySelector('.slider__round_active');
+
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].setAttribute('data-id-content', i);
+        toggles[i].setAttribute('data-id-toggle', i);
+    }
+
+    for (var _i = 0; _i < toggleArrows.length; _i++) {
+        toggleArrows[_i].setAttribute('data-id-arrow', _i);
+        toggleArrows[_i].addEventListener('click', function (event) {
+            toggleSlider(event);
+        });
+    }
+
+    function toggleSlider(event) {
+        event.preventDefault();
+        var eventID = event.target.getAttribute('data-id-arrow');
+        var activeContentID = +activeContent.getAttribute('data-id-content');
+        var activeToggleID = +activeToggle.getAttribute('data-id-toggle');
+
+        if (eventID === '0' && activeContentID === 0 || eventID === '1' && activeContentID === 2) {
+            return;
+        }
+
+        hideContent(activeContent);
+        if (eventID === '1') {
+            var index = activeContentID + 1;
+            contents[index].classList.add('next-lesson__conteiner-information_opened');
+            toggles[index].classList.add('slider__round_active');
+            activeToggle = toggles[index];
+            activeContent = contents[index];
+            return;
+        }
+
+        if (eventID === '0') {
+            var _index = activeContentID - 1;
+            contents[_index].classList.add('next-lesson__conteiner-information_opened');
+            toggles[_index].classList.add('slider__round_active');
+            activeToggle = toggles[_index];
+            activeContent = contents[_index];
+            return;
+        }
+    }
+
+    function hideContent(activeContent) {
+        if (activeToggle) {
+            activeToggle.classList.remove('slider__round_active');
+            activeContent.classList.remove('next-lesson__conteiner-information_opened');
+        }
+    }
+}
+
+/***/ }),
+
+/***/ 436:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.balanceMenu = balanceMenu;
+function balanceMenu(balanceTabs, balanceContents) {
+    var tabs = balanceTabs.querySelectorAll('.balance__tab-content');
+    var contents = balanceContents.querySelectorAll('.balance__diagram');
+    var activeTab = balanceTabs.querySelector('.balance__tab-content_active');
+    var activeTabContent = balanceContents.querySelector('.balance__diagram_opened');
+
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].setAttribute('data-tab', i);
+    }
+
+    function attachEvents() {
+        balanceTabs.addEventListener('click', function (event) {
+            hideTabContent(activeTabContent);
+            activeTab = event.target;
+            activeTabContent = contents[event.target.getAttribute('data-tab')];
+            event.target.classList.add('balance__tab-content_active');
+            activeTabContent.classList.add('balance__diagram_opened');
+        });
+    }
+
+    function hideTabContent(content) {
+        if (activeTab) {
+            activeTab.classList.remove('balance__tab-content_active');
+            content.classList.remove('balance__diagram_opened');
         }
     }
 

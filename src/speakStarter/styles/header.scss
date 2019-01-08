@@ -27,9 +27,11 @@ $border: 1px solid $light-grey-color;
     padding-top: $padding-top;
     min-width: 71px;
     cursor: pointer;
+    position: relative;
   }
   &__notification-icon {
     position: relative;
+    pointer-events: none;
   }
 }
 
@@ -41,7 +43,7 @@ $border: 1px solid $light-grey-color;
     height: 41px;
     overflow: hidden;
     border-radius: $border-radius;
-    @include sm{
+    @include sm {
       min-width: 42px;
     }
     @include xs {
@@ -56,6 +58,9 @@ $border: 1px solid $light-grey-color;
 }
 
 .notification {
+  &__bell {
+    pointer-events: none;
+  }
   &__indicator {
     position: absolute;
     top: -3px;
@@ -65,5 +70,88 @@ $border: 1px solid $light-grey-color;
     border: 1px solid #ffffff;
     border-radius: 50%;
     background-color: $orange-red-color;
+    pointer-events: none;
+  }
+  &__conteiner {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 80px;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px #0000003a;
+    transform: translateX(-40%);
+    &:after {
+      content: "";
+      position: absolute;
+      right: 23px;
+      top: -34px;
+      border: 17px solid transparent;
+      border-bottom: 17px solid white;
+      @include sm {
+        right: 19px;
+      }
+      @include xs {
+        right: 82px;
+      }
+    }
+    &_opened {
+      display: block;
+    }
+    @include sm {
+      width: 300px;
+      transform: translateX(-38%);
+    }
+    @include xs {
+      width: 250px;
+      transform: translateX(-10%);
+    }
+  }
+  &__caption {
+    padding: 16px 30px;
+    font-size: 18px;
+    @include sm {
+      padding-bottom: 10px;
+    }
+    @include xs {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &__details {
+    padding: 0 30px;
+    height: 67px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      background-color: #f7f7f7;
+    }
+    @include xs {
+      padding: 0 20px;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+  &__state {
+    min-width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin-right: 15px;
+    &_new-homework {
+      background-color: #f0baa8;
+    }
+    &_no-homework {
+      background-color: #8dcddd;
+    }
+  }
+  &__subtitle {
+    padding: 5px 0 0 24px;
+    font-size: 14px;
+    color: #8d8d8d;
   }
 }

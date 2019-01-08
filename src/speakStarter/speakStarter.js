@@ -1,12 +1,23 @@
 import './speakStarter.scss';
 import { tabMenu } from "./scripts/tabMenu";
-
+import { notificationMenu } from './scripts/notificationMenu';
+import { slider } from './scripts/slider';
+import { balanceMenu } from './scripts/balanceMenu';
 
 const tabBtn = document.querySelector('.nav');
 const tabContents = document.querySelector('.main');
-
 tabMenu(tabBtn, tabContents);
 
+const notificationBtn = document.querySelector('.header__notification');
+notificationMenu(notificationBtn);
+
+const sliderContent = document.querySelector('.next-lesson__conteiner');
+const sliderBtn = document.querySelector('.next-lesson__slider');
+slider(sliderContent, sliderBtn);
+
+const balanceTabs = document.querySelector('.balance__tab');
+const balanceContents = document.querySelector('.balance__conteiner');
+balanceMenu(balanceTabs, balanceContents);
 
 //sidebar open
 const sidebarToggle = document.querySelector('.sidebar__toggle');
@@ -28,3 +39,10 @@ for (let i = 0; i < lessonMenu.length; i++) {
         lessonAction[i].classList.toggle('next-lesson__action_opened');
     });
 }
+
+const sidebarElement = document.querySelector('.wrapper-sidebar');
+window.addEventListener("orientationchange", function () {
+    if (sidebarElement.classList.contains('wrapper-sidebar_opened'))
+        sidebarElement.style.transition = 'none';
+
+});

@@ -60,44 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 446);
+/******/ 	return __webpack_require__(__webpack_require__.s = 455);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 446:
+/***/ 455:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(447);
+module.exports = __webpack_require__(456);
 
 
 /***/ }),
 
-/***/ 447:
+/***/ 456:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(448);
-
-var checkbox = document.querySelectorAll('.content__checkbox');
-var check1 = document.getElementById('check1');
-var check2 = document.getElementById('check2');
-
-for (var i = 0; i < checkbox.length; i++) {
-    checkbox[i].addEventListener('click', function () {
-        var element = event.target;
-        if (element.checked) {
-            element.checked = true;
-            if (element.id === "check1") check2.checked = false;else check1.checked = false;
-        }
-    });
-}
+__webpack_require__(457);
 
 /***/ }),
 
-/***/ 448:
+/***/ 457:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

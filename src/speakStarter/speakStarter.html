@@ -114,6 +114,25 @@
                         <img src="../../assets/images/speakStarter/bell.png" alt="Notification bell" class="notification__bell">
                         <div class="notification__indicator"></div>
                     </div>
+                    <div class="notification__conteiner">
+                        <div class="notification__caption">Уведомления</div>
+                        <div class="notification">
+                            <div class="notification__details">
+                                <div class="notification__title">
+                                    <div class="notification__state notification__state_new-homework"></div>
+                                    <div class="notification__text">Вам было задано д/з</div>
+                                </div>
+                                <div class="notification__subtitle">25 мин.</div>
+                            </div>
+                            <div class="notification__details">
+                                <div class="notification__title">
+                                    <div class="notification__state notification__state_no-homework"></div>
+                                    <div class="notification__text">Урок перешел в стадию "д/з не задали"</div>
+                                </div>
+                                <div class="notification__subtitle">5 мин.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </header>
             <nav class="nav">
@@ -150,14 +169,11 @@
                                 <div class="previous-lesson__state previous-lesson__state_hidden">
                                     <span class="state__stage state__color_waiting">ожидается д/з</span>
                                     <div class="state__diagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.74 41.37">
-                                            <g>
-                                                <path class="half-circle-1 half-circle-1_active" d="M8.21,5.35C9,4.81,17.1-.81,26.69,2.58A20.55,20.55,0,0,1,38.26,13.41" />
-                                                <path class="half-circle-2" d="M39.16,16.24c.12.61,1.9,10.68-5.66,17.66C26.91,40,18.58,38.79,17.55,38.62" />
-                                                <path class="half-circle-3" d="M5.76,7.45c-.63.79-6,7.72-3.7,16.72C4.59,34.25,14.3,37.58,14.92,37.78" />
-                                                <line class="circle-line" x1="36.27" y1="16.23" x2="42.25" y2="14.17" />
-                                                <line class="circle-line" x1="4.56" y1="4.1" x2="8.41" y2="9.2" />
-                                                <line class="circle-line" x1="16.82" y1="35.93" x2="15.64" y2="41.03" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.48 69.39" class="state__circle">
+                                            <g class='circle'>
+                                                <path class="right" d="M59.14,51.62a29.7,29.7,0,0,1-48.8,0L6,54.13a34.71,34.71,0,0,0,57.5,0Z" />
+                                                <path class="up up_active" d="M37.24,5A29.78,29.78,0,0,1,64.48,34.64a29.46,29.46,0,0,1-2.83,12.65L66,49.8A34.74,34.74,0,0,0,37.24,0Z" />
+                                                <path class="left" d="M7.83,47.29A29.73,29.73,0,0,1,32.24,5V0A34.72,34.72,0,0,0,3.49,49.8Z" />
                                             </g>
                                         </svg>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.53 17.16" class="state__arrow">
@@ -185,14 +201,11 @@
                                 <div class="previous-lesson__state">
                                     <span class="state__stage state__color_waiting">ожидается д/з</span>
                                     <div class="state__diagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.74 41.37">
-                                            <g>
-                                                <path class="half-circle-1 half-circle-1_active" d="M8.21,5.35C9,4.81,17.1-.81,26.69,2.58A20.55,20.55,0,0,1,38.26,13.41" />
-                                                <path class="half-circle-2" d="M39.16,16.24c.12.61,1.9,10.68-5.66,17.66C26.91,40,18.58,38.79,17.55,38.62" />
-                                                <path class="half-circle-3" d="M5.76,7.45c-.63.79-6,7.72-3.7,16.72C4.59,34.25,14.3,37.58,14.92,37.78" />
-                                                <line class="circle-line" x1="36.27" y1="16.23" x2="42.25" y2="14.17" />
-                                                <line class="circle-line" x1="4.56" y1="4.1" x2="8.41" y2="9.2" />
-                                                <line class="circle-line" x1="16.82" y1="35.93" x2="15.64" y2="41.03" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.48 69.39" class="state__circle">
+                                            <g class='circle'>
+                                                <path class="right" d="M59.14,51.62a29.7,29.7,0,0,1-48.8,0L6,54.13a34.71,34.71,0,0,0,57.5,0Z" />
+                                                <path class="up up_active" d="M37.24,5A29.78,29.78,0,0,1,64.48,34.64a29.46,29.46,0,0,1-2.83,12.65L66,49.8A34.74,34.74,0,0,0,37.24,0Z" />
+                                                <path class="left" d="M7.83,47.29A29.73,29.73,0,0,1,32.24,5V0A34.72,34.72,0,0,0,3.49,49.8Z" />
                                             </g>
                                         </svg>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.53 17.16" class="state__arrow">
@@ -220,19 +233,18 @@
                                 <div class="previous-lesson__state">
                                     <span class="state__stage state__color_checking">проверить д/з</span>
                                     <div class="state__diagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.74 41.37">
-                                            <g>
-                                                <path class="half-circle-1 half-circle-1_active" d="M8.21,5.35C9,4.81,17.1-.81,26.69,2.58A20.55,20.55,0,0,1,38.26,13.41" />
-                                                <path class="half-circle-2 half-circle-2_active" d="M39.16,16.24c.12.61,1.9,10.68-5.66,17.66C26.91,40,18.58,38.79,17.55,38.62" />
-                                                <path class="half-circle-3 half-circle-3_active" d="M5.76,7.45c-.63.79-6,7.72-3.7,16.72C4.59,34.25,14.3,37.58,14.92,37.78" />
-                                                <line class="circle-line" x1="36.27" y1="16.23" x2="42.25" y2="14.17" />
-                                                <line class="circle-line" x1="4.56" y1="4.1" x2="8.41" y2="9.2" />
-                                                <line class="circle-line" x1="16.82" y1="35.93" x2="15.64" y2="41.03" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.48 69.39" class="state__circle">
+                                            <g class='circle'>
+                                                <path class="right right_active" d="M59.14,51.62a29.7,29.7,0,0,1-48.8,0L6,54.13a34.71,34.71,0,0,0,57.5,0Z" />
+                                                <path class="up up_active" d="M37.24,5A29.78,29.78,0,0,1,64.48,34.64a29.46,29.46,0,0,1-2.83,12.65L66,49.8A34.74,34.74,0,0,0,37.24,0Z" />
+                                                <path class="left left_active" d="M7.83,47.29A29.73,29.73,0,0,1,32.24,5V0A34.72,34.72,0,0,0,3.49,49.8Z" />
                                             </g>
                                         </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" class="state__arrow">
-                                            <g class="arrow arrow_check arrow_fill">
-                                                <path d="M68,4A13,13,0,0,0,58.5,0h-45A13,13,0,0,0,4,4,13,13,0,0,0,0,13.5v45A13,13,0,0,0,4,68a13,13,0,0,0,9.54,4h45A13.52,13.52,0,0,0,72,58.5v-45A13,13,0,0,0,68,4ZM60,37.5a2.82,2.82,0,0,1-1.83,2.77A3.37,3.37,0,0,1,57,40.5a2.8,2.8,0,0,1-2.11-.89l-6.75-6.75-25,25a2.95,2.95,0,0,1-4.22,0l-4.78-4.78a2.95,2.95,0,0,1,0-4.22l25-25-6.75-6.75a2.69,2.69,0,0,1-.65-3.28A2.8,2.8,0,0,1,34.5,12H57a3,3,0,0,1,3,3V37.5Z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.53 17.16" class="state__arrow">
+                                            <g class="arrow arrow_check">
+                                                <path d="M15.21,10.23V14A2.24,2.24,0,0,1,13,16.26H3.14A2.24,2.24,0,0,1,.9,14V4.19A2.23,2.23,0,0,1,3.14,2h8.27" />
+                                                <polyline points="8.21 11.13 19.63 1.38 19.16 7.29" />
+                                                <line x1="19.63" y1="1.38" x2="13.5" y2="0.9" />
                                             </g>
                                         </svg>
                                     </div>
@@ -253,14 +265,11 @@
                                 <div class="previous-lesson__state">
                                     <span class="state__stage state__color_setting">задать д/з</span>
                                     <div class="state__diagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.74 41.37">
-                                            <g>
-                                                <path class="half-circle-1 half-circle-1_active" d="M8.21,5.35C9,4.81,17.1-.81,26.69,2.58A20.55,20.55,0,0,1,38.26,13.41" />
-                                                <path class="half-circle-2 half-circle-2_active" d="M39.16,16.24c.12.61,1.9,10.68-5.66,17.66C26.91,40,18.58,38.79,17.55,38.62" />
-                                                <path class="half-circle-3" d="M5.76,7.45c-.63.79-6,7.72-3.7,16.72C4.59,34.25,14.3,37.58,14.92,37.78" />
-                                                <line class="circle-line" x1="36.27" y1="16.23" x2="42.25" y2="14.17" />
-                                                <line class="circle-line" x1="4.56" y1="4.1" x2="8.41" y2="9.2" />
-                                                <line class="circle-line" x1="16.82" y1="35.93" x2="15.64" y2="41.03" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.48 69.39" class="state__circle">
+                                            <g class='circle'>
+                                                <path class="right right_active" d="M59.14,51.62a29.7,29.7,0,0,1-48.8,0L6,54.13a34.71,34.71,0,0,0,57.5,0Z" />
+                                                <path class="up up_active" d="M37.24,5A29.78,29.78,0,0,1,64.48,34.64a29.46,29.46,0,0,1-2.83,12.65L66,49.8A34.74,34.74,0,0,0,37.24,0Z" />
+                                                <path class="left" d="M7.83,47.29A29.73,29.73,0,0,1,32.24,5V0A34.72,34.72,0,0,0,3.49,49.8Z" />
                                             </g>
                                         </svg>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.53 17.16" class="state__arrow">
@@ -288,14 +297,11 @@
                                 <div class="previous-lesson__state">
                                     <span class="state__stage state__color_waiting">ожидается д/з</span>
                                     <div class="state__diagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.74 41.37">
-                                            <g>
-                                                <path class="half-circle-1 half-circle-1_active" d="M8.21,5.35C9,4.81,17.1-.81,26.69,2.58A20.55,20.55,0,0,1,38.26,13.41" />
-                                                <path class="half-circle-2 " d="M39.16,16.24c.12.61,1.9,10.68-5.66,17.66C26.91,40,18.58,38.79,17.55,38.62" />
-                                                <path class="half-circle-3 " d="M5.76,7.45c-.63.79-6,7.72-3.7,16.72C4.59,34.25,14.3,37.58,14.92,37.78" />
-                                                <line class="circle-line" x1="36.27" y1="16.23" x2="42.25" y2="14.17" />
-                                                <line class="circle-line" x1="4.56" y1="4.1" x2="8.41" y2="9.2" />
-                                                <line class="circle-line" x1="16.82" y1="35.93" x2="15.64" y2="41.03" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.48 69.39" class="state__circle">
+                                            <g class='circle'>
+                                                <path class="right " d="M59.14,51.62a29.7,29.7,0,0,1-48.8,0L6,54.13a34.71,34.71,0,0,0,57.5,0Z" />
+                                                <path class="up up_active" d="M37.24,5A29.78,29.78,0,0,1,64.48,34.64a29.46,29.46,0,0,1-2.83,12.65L66,49.8A34.74,34.74,0,0,0,37.24,0Z" />
+                                                <path class="left " d="M7.83,47.29A29.73,29.73,0,0,1,32.24,5V0A34.72,34.72,0,0,0,3.49,49.8Z" />
                                             </g>
                                         </svg>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.53 17.16" class="state__arrow">
@@ -323,14 +329,11 @@
                                 <div class="previous-lesson__state">
                                     <span class="state__stage state__color_checking">проверить д/з</span>
                                     <div class="state__diagram">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.74 41.37">
-                                            <g>
-                                                <path class="half-circle-1 half-circle-1_active" d="M8.21,5.35C9,4.81,17.1-.81,26.69,2.58A20.55,20.55,0,0,1,38.26,13.41" />
-                                                <path class="half-circle-2 half-circle-2_active" d="M39.16,16.24c.12.61,1.9,10.68-5.66,17.66C26.91,40,18.58,38.79,17.55,38.62" />
-                                                <path class="half-circle-3 half-circle-3_active" d="M5.76,7.45c-.63.79-6,7.72-3.7,16.72C4.59,34.25,14.3,37.58,14.92,37.78" />
-                                                <line class="circle-line" x1="36.27" y1="16.23" x2="42.25" y2="14.17" />
-                                                <line class="circle-line" x1="4.56" y1="4.1" x2="8.41" y2="9.2" />
-                                                <line class="circle-line" x1="16.82" y1="35.93" x2="15.64" y2="41.03" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.48 69.39" class="state__circle">
+                                            <g class='circle'>
+                                                <path class="right right_active" d="M59.14,51.62a29.7,29.7,0,0,1-48.8,0L6,54.13a34.71,34.71,0,0,0,57.5,0Z" />
+                                                <path class="up up_active" d="M37.24,5A29.78,29.78,0,0,1,64.48,34.64a29.46,29.46,0,0,1-2.83,12.65L66,49.8A34.74,34.74,0,0,0,37.24,0Z" />
+                                                <path class="left left_active" d="M7.83,47.29A29.73,29.73,0,0,1,32.24,5V0A34.72,34.72,0,0,0,3.49,49.8Z" />
                                             </g>
                                         </svg>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.53 17.16" class="state__arrow">
@@ -360,40 +363,121 @@
                                     </div>
                                     <span class="calendar__details">ноября (GMT+2)</span>
                                 </div>
-                                <div class="next-lesson__information">
-                                    <div class="next-lesson__scheduled-lesson">
-                                        <div class="scheduled-lesson__time">11:25</div>
-                                        <div class="scheduled-lesson__student">Чулков Егор</div>
-                                        <div class="scheduled-lesson__options scheduled-lesson__options_opened"></div>
-                                        <a href="#" class="scheduled-lesson__student-login">yegor-10</a>
+                                <div class="next-lesson__conteiner">
+                                    <div class="next-lesson__conteiner-information next-lesson__conteiner-information_opened">
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">11:25</div>
+                                                <div class="scheduled-lesson__student">Чулков Егор</div>
+                                                <div class="scheduled-lesson__options scheduled-lesson__options_opened"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">yegor-10</a>
+                                            </div>
+                                            <div class="next-lesson__action next-lesson__action_opened">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">12:30</div>
+                                                <div class="scheduled-lesson__student">Евпатий Коловрат</div>
+                                                <div class="scheduled-lesson__options"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">evpatly-20</a>
+                                            </div>
+                                            <div class="next-lesson__action">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">20:45</div>
+                                                <div class="scheduled-lesson__student">Александр Пушкин</div>
+                                                <div class="scheduled-lesson__options"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">pushka-12</a>
+                                            </div>
+                                            <div class="next-lesson__action">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="next-lesson__action next-lesson__action_opened">
-                                        <button class="next-lesson__btn">Отменить</button>
-                                        <button class="next-lesson__btn">Перенести</button>
+                                    <div class="next-lesson__conteiner-information">
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">12:30</div>
+                                                <div class="scheduled-lesson__student">Евпатий Коловрат</div>
+                                                <div class="scheduled-lesson__options"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">evpatly-20</a>
+                                            </div>
+                                            <div class="next-lesson__action">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">11:25</div>
+                                                <div class="scheduled-lesson__student">Чулков Егор</div>
+                                                <div class="scheduled-lesson__options scheduled-lesson__options_opened"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">yegor-10</a>
+                                            </div>
+                                            <div class="next-lesson__action next-lesson__action_opened">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">20:45</div>
+                                                <div class="scheduled-lesson__student">Александр Пушкин</div>
+                                                <div class="scheduled-lesson__options"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">pushka-12</a>
+                                            </div>
+                                            <div class="next-lesson__action">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="next-lesson__information">
-                                    <div class="next-lesson__scheduled-lesson">
-                                        <div class="scheduled-lesson__time">12:30</div>
-                                        <div class="scheduled-lesson__student">Евпатий Коловрат</div>
-                                        <div class="scheduled-lesson__options"></div>
-                                        <a href="#" class="scheduled-lesson__student-login">evpatly-20</a>
-                                    </div>
-                                    <div class="next-lesson__action">
-                                        <button class="next-lesson__btn">Отменить</button>
-                                        <button class="next-lesson__btn">Перенести</button>
-                                    </div>
-                                </div>
-                                <div class="next-lesson__information">
-                                    <div class="next-lesson__scheduled-lesson">
-                                        <div class="scheduled-lesson__time">20:45</div>
-                                        <div class="scheduled-lesson__student">Александр Пушкин</div>
-                                        <div class="scheduled-lesson__options"></div>
-                                        <a href="#" class="scheduled-lesson__student-login">pushka-12</a>
-                                    </div>
-                                    <div class="next-lesson__action">
-                                        <button class="next-lesson__btn">Отменить</button>
-                                        <button class="next-lesson__btn">Перенести</button>
+                                    <div class="next-lesson__conteiner-information">
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">20:45</div>
+                                                <div class="scheduled-lesson__student">Александр Пушкин</div>
+                                                <div class="scheduled-lesson__options"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">pushka-12</a>
+                                            </div>
+                                            <div class="next-lesson__action">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">11:25</div>
+                                                <div class="scheduled-lesson__student">Чулков Егор</div>
+                                                <div class="scheduled-lesson__options scheduled-lesson__options_opened"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">yegor-10</a>
+                                            </div>
+                                            <div class="next-lesson__action next-lesson__action_opened">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
+                                        <div class="next-lesson__information">
+                                            <div class="next-lesson__scheduled-lesson">
+                                                <div class="scheduled-lesson__time">12:30</div>
+                                                <div class="scheduled-lesson__student">Евпатий Коловрат</div>
+                                                <div class="scheduled-lesson__options"></div>
+                                                <a href="#" class="scheduled-lesson__student-login">evpatly-20</a>
+                                            </div>
+                                            <div class="next-lesson__action">
+                                                <button class="next-lesson__btn">Отменить</button>
+                                                <button class="next-lesson__btn">Перенести</button>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -419,18 +503,24 @@
                                     <button class="balance__tab-content balance__tab-content_active">грн</button>
                                     <button class="balance__tab-content">уроки</button>
                                 </div>
-                                <div class="balance__diagram">
-                                    <span class="diagram__text">12 430</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.79 19.24" class="balance__symbol">
-                                        <g class="money-symbol">
-                                            <line y1="7.79" x2="16.79" y2="7.79" />
-                                            <line y1="11.65" x2="16.79" y2="11.65" />
-                                            <path d="M10.33,7a2.43,2.43,0,0,0,1-1.94A2.43,2.43,0,0,0,10.28,2.9a4.65,4.65,0,0,0-2.63-.71,7.45,7.45,0,0,0-2.56.46,5.36,5.36,0,0,0-2,1.22L1.88,2A7.88,7.88,0,0,1,7.54,0,7.16,7.16,0,0,1,12,1.35a4.43,4.43,0,0,1,1.79,3.76,4.23,4.23,0,0,1-.72,2.47" />
-                                            <path d="M5.77,11.65a8.7,8.7,0,0,0-.77.53A2.35,2.35,0,0,0,4,14.1a2.55,2.55,0,0,0,1,2.17,4.28,4.28,0,0,0,2.65.78,7.41,7.41,0,0,0,5.55-2.22l1.31,1.75a9,9,0,0,1-6.83,2.66,6.68,6.68,0,0,1-4.45-1.46,4.62,4.62,0,0,1-1.76-3.72,4.16,4.16,0,0,1,1-2.83" />
-                                            <path d="M13.06,7.58a3.44,3.44,0,0,1-.28.36" />
-                                        </g>
-                                    </svg>
-                                    <div class="bg-lines"></div>
+                                <div class="balance__conteiner">
+                                    <div class="balance__diagram balance__diagram_opened">
+                                        <span class="diagram__text">12 430</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.79 19.24" class="balance__symbol">
+                                            <g class="money-symbol">
+                                                <line y1="7.79" x2="16.79" y2="7.79" />
+                                                <line y1="11.65" x2="16.79" y2="11.65" />
+                                                <path d="M10.33,7a2.43,2.43,0,0,0,1-1.94A2.43,2.43,0,0,0,10.28,2.9a4.65,4.65,0,0,0-2.63-.71,7.45,7.45,0,0,0-2.56.46,5.36,5.36,0,0,0-2,1.22L1.88,2A7.88,7.88,0,0,1,7.54,0,7.16,7.16,0,0,1,12,1.35a4.43,4.43,0,0,1,1.79,3.76,4.23,4.23,0,0,1-.72,2.47" />
+                                                <path d="M5.77,11.65a8.7,8.7,0,0,0-.77.53A2.35,2.35,0,0,0,4,14.1a2.55,2.55,0,0,0,1,2.17,4.28,4.28,0,0,0,2.65.78,7.41,7.41,0,0,0,5.55-2.22l1.31,1.75a9,9,0,0,1-6.83,2.66,6.68,6.68,0,0,1-4.45-1.46,4.62,4.62,0,0,1-1.76-3.72,4.16,4.16,0,0,1,1-2.83" />
+                                                <path d="M13.06,7.58a3.44,3.44,0,0,1-.28.36" />
+                                            </g>
+                                        </svg>
+                                        <div class="bg-lines"></div>
+                                    </div>
+                                    <div class="balance__diagram">
+                                        <span class="diagram__text">7 уроков</span>
+                                        <div class="bg-lines"></div>
+                                    </div>
                                 </div>
                                 <button class="balance__description">Подробнее</button>
                             </div>

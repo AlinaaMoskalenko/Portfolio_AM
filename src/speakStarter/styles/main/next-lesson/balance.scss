@@ -29,6 +29,7 @@ $z-index-2: 2;
       color: $tab-bg;
     }
     &_active {
+      transition: 0.5s;
       color: $tab-color-text-active;
       background-color: $tab-bg;
       &:hover {
@@ -37,8 +38,9 @@ $z-index-2: 2;
     }
   }
   &__diagram {
-    width: 157px;
-    height: 157px;
+    width: 0;
+    height: 0;
+    opacity: 0;
     border-radius: 50%;
     border: 1px solid $green-color;
     background-color: $light-green-bg-color;
@@ -58,6 +60,12 @@ $z-index-2: 2;
       height: 170px;
       z-index: 1;
       background-image: url("../../assets/images/speakStarter/bg_line.png");
+    }
+    &_opened {
+      width: 157px;
+      height: 157px;
+      opacity: 1;
+      transition: opacity 1s;
     }
   }
   &__symbol {

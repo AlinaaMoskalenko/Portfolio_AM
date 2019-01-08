@@ -3,36 +3,24 @@ $green-circle-color: #b6e3a6;
 $blue-circle-color: #8dcddd;
 $pink-circle-color: #f0baa8;
 
-.half-circle-1,
-.half-circle-2,
-.half-circle-3,
-.circle-line {
-  fill: none;
-  stroke-miterlimit: 10;
-  stroke-width: 3px;
+.circle {
+  fill: $grey-circle-color;
 }
 
-.half-circle-1 {
-  stroke: $grey-circle-color;
+.up {
   &_active {
-    stroke: $green-circle-color;
+    fill: $green-circle-color;
   }
 }
 
-.half-circle-2 {
-  stroke: $grey-circle-color;
+.right {
   &_active {
-    stroke: $blue-circle-color;
+    fill: $blue-circle-color;
   }
 }
 
-.half-circle-3 {
-  stroke: $grey-circle-color;
+.left {
   &_active {
-    stroke: $pink-circle-color;
+    fill: $pink-circle-color;
   }
-}
-
-.circle-line {
-  stroke: $bg-color-content;
 }

@@ -37,6 +37,21 @@ $notmain-color-text: #767676;
     padding: 13px $indent-3;
     font-size: $font-size-4;
   }
+  &__conteiner {
+    display: flex;
+    overflow: hidden;
+  }
+  &__conteiner-information {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &_opened {
+      width: 100%;
+      height: inherit;
+      transition: opacity 1s;
+      opacity: 1;
+    }
+  }
   &__information {
     margin-top: 2px;
     padding: $indent-2 $indent-4 0 $indent-4;

@@ -28,10 +28,11 @@ const baseConf = (_path) => {
         speakStarter: ['./src/speakStarter/speakStarter.js'],
         'pop-up-cancel': ['./src/pop-up-cancel/pop-up-cancel.js'],
         'pop-up-cancel-2': ['./src/pop-up-cancel-2/pop-up-cancel-2.js'],
-        'pop-up-notification':['./src/pop-up-notification/pop-up-notification.js'],
-        'pop-up-reschedule':['./src/pop-up-reschedule/pop-up-reschedule.js'],
-        'pop-up-reschedule-main':['./src/pop-up-reschedule-main/pop-up-reschedule-main.js'],
-        'pop-up-appoint':['./src/pop-up-appoint/pop-up-appoint.js'],
+        'pop-up-notification': ['./src/pop-up-notification/pop-up-notification.js'],
+        'pop-up-reschedule': ['./src/pop-up-reschedule/pop-up-reschedule.js'],
+        'pop-up-reschedule-main': ['./src/pop-up-reschedule-main/pop-up-reschedule-main.js'],
+        'pop-up-appoint': ['./src/pop-up-appoint/pop-up-appoint.js'],
+        test: ['./src/test/test.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
