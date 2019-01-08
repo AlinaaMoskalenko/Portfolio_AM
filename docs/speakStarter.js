@@ -60,45 +60,87 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 430);
+/******/ 	return __webpack_require__(__webpack_require__.s = 431);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 430:
+/***/ 146:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(431);
+"use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.tabMenu = tabMenu;
+function tabMenu(targetBtn, targetContent, props) {
+    var tabs = targetBtn.querySelectorAll(props.TAB);
+    var contents = targetContent.querySelectorAll(props.CONTENT);
+    var activeTab = targetBtn.querySelector(props.CLASS_ACTIVE_TAB);
+    var activeTabContent = targetContent.querySelector(props.CLASS_ACTIVE_CONTENT);
+
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].setAttribute('data-tab', i);
+    }
+
+    function attachEvents() {
+        targetBtn.addEventListener('click', function (event) {
+            hideTabContent(activeTabContent);
+            activeTab = event.target;
+            activeTabContent = contents[event.target.getAttribute('data-tab')];
+            event.target.classList.add(props.ACTIVE_TAB);
+            activeTabContent.classList.add(props.ACTIVE_CONTENT);
+        });
+    }
+
+    function hideTabContent(content) {
+        if (activeTab) {
+            activeTab.classList.remove(props.ACTIVE_TAB);
+            content.classList.remove(props.ACTIVE_CONTENT);
+        }
+    }
+
+    attachEvents();
+}
 
 /***/ }),
 
 /***/ 431:
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(432);
+
+
+/***/ }),
+
+/***/ 432:
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
-__webpack_require__(432);
-
-var _tabMenu = __webpack_require__(433);
+__webpack_require__(433);
 
 var _notificationMenu = __webpack_require__(434);
 
-var _slider = __webpack_require__(435);
+var _sliderMenu = __webpack_require__(435);
 
 var _balanceMenu = __webpack_require__(436);
 
+var _lessonMenu = __webpack_require__(437);
+
 var tabBtn = document.querySelector('.nav');
 var tabContents = document.querySelector('.main');
-(0, _tabMenu.tabMenu)(tabBtn, tabContents);
+(0, _lessonMenu.lessonMenu)(tabBtn, tabContents);
 
 var notificationBtn = document.querySelector('.header__notification');
 (0, _notificationMenu.notificationMenu)(notificationBtn);
 
 var sliderContent = document.querySelector('.next-lesson__conteiner');
 var sliderBtn = document.querySelector('.next-lesson__slider');
-(0, _slider.slider)(sliderContent, sliderBtn);
+(0, _sliderMenu.sliderMenu)(sliderContent, sliderBtn);
 
 var balanceTabs = document.querySelector('.balance__tab');
 var balanceContents = document.querySelector('.balance__conteiner');
@@ -115,17 +157,17 @@ sidebarToggle.addEventListener('click', function () {
 });
 
 //next lesson open options
-var lessonMenu = document.querySelectorAll('.scheduled-lesson__options');
+var lessonOption = document.querySelectorAll('.scheduled-lesson__options');
 var lessonAction = document.querySelectorAll('.next-lesson__action');
 
 var _loop = function _loop(i) {
-    lessonMenu[i].addEventListener('click', function (event) {
+    lessonOption[i].addEventListener('click', function (event) {
         event.target.classList.toggle('scheduled-lesson__options_opened');
         lessonAction[i].classList.toggle('next-lesson__action_opened');
     });
 };
 
-for (var i = 0; i < lessonMenu.length; i++) {
+for (var i = 0; i < lessonOption.length; i++) {
     _loop(i);
 }
 
@@ -136,58 +178,10 @@ window.addEventListener("orientationchange", function () {
 
 /***/ }),
 
-/***/ 432:
+/***/ 433:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 433:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.tabMenu = tabMenu;
-var TAB = '.nav__tab';
-var CONTENT = '.main__tab-content';
-var ACTIVE_TAB = 'nav__tab_active';
-var ACTIVE_CONTENT = 'main__tab-content_opened';
-
-function tabMenu(targetBtn, targetContent) {
-    var tabs = targetBtn.querySelectorAll(TAB);
-    var contents = targetContent.querySelectorAll(CONTENT);
-    var activeTab = targetBtn.querySelector('.nav__tab_active');
-    var activeTabContent = targetContent.querySelector('.main__tab-content_opened');
-
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].setAttribute('data-tab', i);
-    }
-
-    // из attachEvents можно выделить еще одну функцию, которая отображает контент showTabContent
-    function attachEvents() {
-        targetBtn.addEventListener('click', function (event) {
-            hideTabContent(activeTabContent);
-            activeTab = event.target;
-            activeTabContent = contents[event.target.getAttribute('data-tab')];
-            event.target.classList.add(ACTIVE_TAB);
-            activeTabContent.classList.add(ACTIVE_CONTENT);
-        });
-    }
-
-    function hideTabContent(content) {
-        if (activeTab) {
-            activeTab.classList.remove(ACTIVE_TAB);
-            content.classList.remove(ACTIVE_CONTENT);
-        }
-    }
-
-    attachEvents();
-}
 
 /***/ }),
 
@@ -202,7 +196,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.notificationMenu = notificationMenu;
 function notificationMenu(notificationBtn) {
-    // console.log(notificationBtn);
     var notification = notificationBtn.querySelector('.notification__conteiner');
     notificationBtn.addEventListener('click', function () {
         notification.classList.toggle('notification__conteiner_opened');
@@ -220,20 +213,30 @@ function notificationMenu(notificationBtn) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.slider = slider;
-function slider(targetContent, targetToggle) {
-    var contents = targetContent.querySelectorAll('.next-lesson__conteiner-information');
-    var toggleArrows = targetToggle.querySelectorAll('.slider__arrow');
-    var toggles = targetToggle.querySelectorAll('.slider__round');
+exports.sliderMenu = sliderMenu;
+var CLASS_CONTENT = '.next-lesson__conteiner-information';
+var CLASS_TOGGLE_ARROW = '.slider__arrow';
+var CLASS_INDECATOR = '.slider__round';
+var ACTIVE_CONTENT = '.next-lesson__conteiner-information_opened';
+var ACTIVE_INDECATOR = '.slider__round_active';
 
-    var activeContent = targetContent.querySelector('.next-lesson__conteiner-information_opened');
-    var activeToggle = targetToggle.querySelector('.slider__round_active');
+var CLASS_ACTIVE_CONTENT = 'next-lesson__conteiner-information_opened';
+var CLASS_ACTIVE_INDECATOR = 'slider__round_active';
+
+function sliderMenu(targetContent, targetToggle) {
+    var contents = targetContent.querySelectorAll(CLASS_CONTENT);
+    var toggleArrows = targetToggle.querySelectorAll(CLASS_TOGGLE_ARROW);
+    var toggles = targetToggle.querySelectorAll(CLASS_INDECATOR);
+
+    var activeContent = targetContent.querySelector(ACTIVE_CONTENT);
+    var activeToggle = targetToggle.querySelector(ACTIVE_INDECATOR);
 
     for (var i = 0; i < contents.length; i++) {
         contents[i].setAttribute('data-id-content', i);
         toggles[i].setAttribute('data-id-toggle', i);
     }
 
+    changeArrow();
     for (var _i = 0; _i < toggleArrows.length; _i++) {
         toggleArrows[_i].setAttribute('data-id-arrow', _i);
         toggleArrows[_i].addEventListener('click', function (event) {
@@ -245,7 +248,16 @@ function slider(targetContent, targetToggle) {
         event.preventDefault();
         var eventID = event.target.getAttribute('data-id-arrow');
         var activeContentID = +activeContent.getAttribute('data-id-content');
-        var activeToggleID = +activeToggle.getAttribute('data-id-toggle');
+
+        if (activeContentID === 2) {
+            toggleArrows[1].classList.remove('slider__arrow_active');
+            toggleArrows[0].classList.add('slider__arrow_active');
+        }
+
+        if (activeContentID === 0) {
+            toggleArrows[0].classList.remove('slider__arrow_active');
+            toggleArrows[1].classList.add('slider__arrow_active');
+        }
 
         if (eventID === '0' && activeContentID === 0 || eventID === '1' && activeContentID === 2) {
             return;
@@ -254,27 +266,41 @@ function slider(targetContent, targetToggle) {
         hideContent(activeContent);
         if (eventID === '1') {
             var index = activeContentID + 1;
-            contents[index].classList.add('next-lesson__conteiner-information_opened');
-            toggles[index].classList.add('slider__round_active');
+            contents[index].classList.add(CLASS_ACTIVE_CONTENT);
+            toggles[index].classList.add(CLASS_ACTIVE_INDECATOR);
             activeToggle = toggles[index];
             activeContent = contents[index];
+            changeArrow(index);
             return;
         }
 
         if (eventID === '0') {
             var _index = activeContentID - 1;
-            contents[_index].classList.add('next-lesson__conteiner-information_opened');
-            toggles[_index].classList.add('slider__round_active');
+            contents[_index].classList.add(CLASS_ACTIVE_CONTENT);
+            toggles[_index].classList.add(CLASS_ACTIVE_INDECATOR);
             activeToggle = toggles[_index];
             activeContent = contents[_index];
+            changeArrow(_index);
             return;
         }
     }
 
     function hideContent(activeContent) {
         if (activeToggle) {
-            activeToggle.classList.remove('slider__round_active');
-            activeContent.classList.remove('next-lesson__conteiner-information_opened');
+            activeToggle.classList.remove(CLASS_ACTIVE_INDECATOR);
+            activeContent.classList.remove(CLASS_ACTIVE_CONTENT);
+        }
+    }
+
+    function changeArrow(index) {
+        if (index === 2) {
+            toggleArrows[1].classList.remove('slider__arrow_active');
+            toggleArrows[0].classList.add('slider__arrow_active');
+        }
+
+        if (index === 0) {
+            toggleArrows[0].classList.remove('slider__arrow_active');
+            toggleArrows[1].classList.add('slider__arrow_active');
         }
     }
 }
@@ -291,34 +317,48 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.balanceMenu = balanceMenu;
+
+var _tabMenu = __webpack_require__(146);
+
 function balanceMenu(balanceTabs, balanceContents) {
-    var tabs = balanceTabs.querySelectorAll('.balance__tab-content');
-    var contents = balanceContents.querySelectorAll('.balance__diagram');
-    var activeTab = balanceTabs.querySelector('.balance__tab-content_active');
-    var activeTabContent = balanceContents.querySelector('.balance__diagram_opened');
+    var props = {
+        TAB: '.balance__tab-content',
+        CONTENT: '.balance__diagram',
+        CLASS_ACTIVE_TAB: '.balance__tab-content_active',
+        CLASS_ACTIVE_CONTENT: '.balance__diagram_opened',
+        ACTIVE_TAB: 'balance__tab-content_active',
+        ACTIVE_CONTENT: 'balance__diagram_opened'
+    };
 
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].setAttribute('data-tab', i);
-    }
+    (0, _tabMenu.tabMenu)(balanceTabs, balanceContents, props);
+}
 
-    function attachEvents() {
-        balanceTabs.addEventListener('click', function (event) {
-            hideTabContent(activeTabContent);
-            activeTab = event.target;
-            activeTabContent = contents[event.target.getAttribute('data-tab')];
-            event.target.classList.add('balance__tab-content_active');
-            activeTabContent.classList.add('balance__diagram_opened');
-        });
-    }
+/***/ }),
 
-    function hideTabContent(content) {
-        if (activeTab) {
-            activeTab.classList.remove('balance__tab-content_active');
-            content.classList.remove('balance__diagram_opened');
-        }
-    }
+/***/ 437:
+/***/ (function(module, exports, __webpack_require__) {
 
-    attachEvents();
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.lessonMenu = lessonMenu;
+
+var _tabMenu = __webpack_require__(146);
+
+function lessonMenu(lessonTabs, lessonContents) {
+    var props = {
+        TAB: '.nav__tab',
+        CONTENT: '.main__tab-content',
+        CLASS_ACTIVE_TAB: '.nav__tab_active',
+        CLASS_ACTIVE_CONTENT: '.main__tab-content_opened',
+        ACTIVE_TAB: 'nav__tab_active',
+        ACTIVE_CONTENT: 'main__tab-content_opened'
+    };
+
+    (0, _tabMenu.tabMenu)(lessonTabs, lessonContents, props);
 }
 
 /***/ })

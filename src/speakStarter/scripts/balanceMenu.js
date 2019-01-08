@@ -1,30 +1,14 @@
+import { tabMenu } from './tabMenu';
+
 export function balanceMenu(balanceTabs, balanceContents) {
-    const tabs = balanceTabs.querySelectorAll('.balance__tab-content');
-    const contents = balanceContents.querySelectorAll('.balance__diagram');
-    let activeTab = balanceTabs.querySelector('.balance__tab-content_active');
-    let activeTabContent = balanceContents.querySelector('.balance__diagram_opened');
-
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].setAttribute('data-tab', i);
+    let props = {
+        TAB: '.balance__tab-content',
+        CONTENT: '.balance__diagram',
+        CLASS_ACTIVE_TAB: '.balance__tab-content_active',
+        CLASS_ACTIVE_CONTENT: '.balance__diagram_opened',
+        ACTIVE_TAB: 'balance__tab-content_active',
+        ACTIVE_CONTENT: 'balance__diagram_opened',
     }
 
-    function attachEvents() {
-        balanceTabs.addEventListener('click', function (event) {
-            hideTabContent(activeTabContent);
-            activeTab = event.target;
-            activeTabContent = contents[event.target.getAttribute('data-tab')];
-            event.target.classList.add('balance__tab-content_active');
-            activeTabContent.classList.add('balance__diagram_opened');
-        });
-    }
-
-    function hideTabContent(content) {
-        if (activeTab) {
-            activeTab.classList.remove('balance__tab-content_active');
-            content.classList.remove('balance__diagram_opened');
-        }
-    }
-
-    attachEvents();
-
+    tabMenu(balanceTabs, balanceContents, props);
 }

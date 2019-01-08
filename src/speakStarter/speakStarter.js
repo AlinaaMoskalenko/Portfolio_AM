@@ -1,19 +1,19 @@
 import './speakStarter.scss';
-import { tabMenu } from "./scripts/tabMenu";
 import { notificationMenu } from './scripts/notificationMenu';
-import { slider } from './scripts/slider';
+import { sliderMenu } from './scripts/sliderMenu';
 import { balanceMenu } from './scripts/balanceMenu';
+import { lessonMenu } from './scripts/lessonMenu';
 
 const tabBtn = document.querySelector('.nav');
 const tabContents = document.querySelector('.main');
-tabMenu(tabBtn, tabContents);
+lessonMenu(tabBtn, tabContents);
 
 const notificationBtn = document.querySelector('.header__notification');
 notificationMenu(notificationBtn);
 
 const sliderContent = document.querySelector('.next-lesson__conteiner');
 const sliderBtn = document.querySelector('.next-lesson__slider');
-slider(sliderContent, sliderBtn);
+sliderMenu(sliderContent, sliderBtn);
 
 const balanceTabs = document.querySelector('.balance__tab');
 const balanceContents = document.querySelector('.balance__conteiner');
@@ -30,11 +30,11 @@ sidebarToggle.addEventListener('click', () => {
 });
 
 //next lesson open options
-const lessonMenu = document.querySelectorAll('.scheduled-lesson__options');
+const lessonOption = document.querySelectorAll('.scheduled-lesson__options');
 const lessonAction = document.querySelectorAll('.next-lesson__action');
 
-for (let i = 0; i < lessonMenu.length; i++) {
-    lessonMenu[i].addEventListener('click', (event) => {
+for (let i = 0; i < lessonOption.length; i++) {
+    lessonOption[i].addEventListener('click', (event) => {
         event.target.classList.toggle('scheduled-lesson__options_opened');
         lessonAction[i].classList.toggle('next-lesson__action_opened');
     });
