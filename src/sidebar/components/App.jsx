@@ -9,7 +9,7 @@ export class App extends Component {
             sidebar_menu: [
                 {
                     title: 'Home page',
-                    href: '/',
+                    href: 'index.html',
                 },
                 {
                     title: 'Users comments',

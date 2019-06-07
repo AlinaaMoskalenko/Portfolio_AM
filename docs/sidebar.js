@@ -384,7 +384,7 @@ var App = exports.App = function (_Component) {
         _this.state = {
             sidebar_menu: [{
                 title: 'Home page',
-                href: '/'
+                href: 'index.html'
             }, {
                 title: 'Users comments',
                 href: 'comment_page_react.html'
