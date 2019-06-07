@@ -384,10 +384,10 @@ var App = exports.App = function (_Component) {
         _this.state = {
             sidebar_menu: [{
                 title: 'Home page',
-                href: '/index.html'
+                href: 'index.html'
             }, {
                 title: 'Comment page',
-                href: '/comment_page_react.html'
+                href: 'comment_page_react.html'
             }, {
                 title: 'Mac',
                 href: 'https://www.apple.com/mac/'
