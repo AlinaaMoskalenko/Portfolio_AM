@@ -8,6 +8,11 @@ $border-radius: 6px;
   border-top-right-radius: $border-radius;
   background-color: $white-color;
 
+  @include sm {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
   &__button {
     width: $btn-size;
     height: $btn-size;

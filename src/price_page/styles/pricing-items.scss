@@ -2,10 +2,14 @@
 @import "./mixins.scss";
 
 .pricing-items {
-  padding-left: 40px;
-  padding-right: 20px;
+  padding: 0 40px;
   padding-bottom: 34.8px;
   @include horizontal-center-center;
+
+  @include sm {
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 
 .item {
@@ -14,12 +18,26 @@
   @include vertical-between;
   align-items: center;
   width: 171.5px;
-  height: 253.4px;
+  height: 254px;
   background-color: $white-color;
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.1);
   padding-top: 39.5px;
   padding-bottom: 29.1px;
   transition-duration: 50ms;
+
+  @include sm {
+    width: 50%;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include xs {
+    width: 85%;
+  }
+
   &__recommended {
     position: absolute;
     @include horizontal-center-center;

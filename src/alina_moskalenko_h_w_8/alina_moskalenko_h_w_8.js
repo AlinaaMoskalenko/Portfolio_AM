@@ -1,1 +1,0 @@
-import './alina_moskalenko_h_w_8.scss';

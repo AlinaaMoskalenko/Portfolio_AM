@@ -11,6 +11,12 @@ $border-radius: 2.3px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include sm {
+    padding: 0;
+    padding: 20px;
+  }
+
   &__title {
     font-size: 20.9px;
     line-height: 1;
@@ -37,6 +43,10 @@ $border-radius: 2.3px;
       border-bottom-left-radius: $border-radius;
       background-color: $green-color;
       color: $white-color;
+
+      @include sm {
+        margin-bottom: 10px;
+      }
     }
     &:last-child {
       border-top-right-radius: $border-radius;
@@ -44,5 +54,9 @@ $border-radius: 2.3px;
       background-color: rgb(228, 237, 242);
       color: $main-color;
     }
+  }
+
+  @include sm {
+    flex-direction: column;
   }
 }

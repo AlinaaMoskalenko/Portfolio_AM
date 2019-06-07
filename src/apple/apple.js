@@ -1,4 +1,4 @@
-import './alina_moskalenko_h_w_6.scss';
+import './apple.scss';
 import FooterMenu from './scripts/footerMenu.js';
 
 new FooterMenu(document.querySelectorAll('.footer-content__item-title'));

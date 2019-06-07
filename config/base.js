@@ -10,10 +10,10 @@ const baseConf = (_path) => {
     const VENDORS_NAME = 'vendors';
     const entry = {
         index: ['babel-polyfill', './src/index/index.js'],
-        alina_moskalenko_h_w_6: ['./src/alina_moskalenko_h_w_6/alina_moskalenko_h_w_6.js'],
-        'lesson_6-1': ['./src/lesson_6-1/lesson_6-1.js'],
+        apple: ['./src/apple/apple.js'],
+        price_page: ['./src/price_page/price_page.js'],
         lesson_8_1: ['./src/lesson_8_1/lesson_8_1.js'],
-        alina_moskalenko_h_w_8: ['./src/alina_moskalenko_h_w_8/alina_moskalenko_h_w_8.js'],
+        metro_UI: ['./src/metro_UI/metro_UI.js'],
         lesson9: ['./src/lesson9/lesson9.js'],
         lesson_10: ['./src/lesson_10/lesson_10.js'],
         lightbulb: ['./src/lightbulb/lightbulb.js'],

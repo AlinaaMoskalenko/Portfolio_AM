@@ -1,3 +1,18 @@
+$xs-screen: 576px;
+$sm-screen: 768px;
+
+@mixin xs {
+  @media (max-width: #{$xs-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin sm{
+  @media (max-width: #{$sm-screen - 0.1px}) {
+    @content;
+  }
+}
+
 @mixin horizontal-center-center {
   display: flex;
   justify-content: center;
