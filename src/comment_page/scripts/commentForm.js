@@ -48,6 +48,7 @@ export class CommentForm {
         this.sendButton.classList.add(OPTIONS_BUTTON_CLASS);
         this.cancelButton.classList.add(OPTIONS_BUTTON_CLASS);
 
+
         this.rootElement.appendChild(this.dateOfComment);
         this.rootElement.appendChild(this.userBlock);
         this.rootElement.appendChild(this.options);

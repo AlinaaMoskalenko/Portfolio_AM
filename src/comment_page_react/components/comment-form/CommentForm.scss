@@ -1,22 +1,22 @@
+@import '../../styles/mixins.scss';
+
 $date_and_btn_color_text: rgb(255, 255, 255);
 $outline-color: rgb(67, 189, 67);
 
 .comment-page__form {
-  float: right;
-  max-height: 303px;
-  max-width: 350px;
+  max-height: 333px;
   padding: 25px;
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-  background-color: rgba(4, 4, 73, 0.541);
+  background-color: rgba(138, 252, 138, 0.726);
 }
 
 .comment {
   &__current-date {
     text-align: right;
     font-style: italic;
-    color: $date_and_btn_color_text;
+    color: rgba(0, 0, 0, 0.6);
   }
   &__action {
     display: flex;
@@ -25,18 +25,23 @@ $outline-color: rgb(67, 189, 67);
   }
   &__new-author {
     margin: 15px 0;
-    width: 300px;
+    width: 100%;
     height: 50px;
     padding: 10px;
     border: none;
     border-radius: 7px;
-    outline-color: $outline-color;
+    outline-color: rgb(67, 189, 67);
     &:focus {
       border: none;
       &::placeholder {
         color: transparent;
       }
     }
+
+    @include sm {
+      text-overflow: ellipsis;
+    }
+
     &_empty {
       border: 2px solid rgb(255, 0, 0);
     }
@@ -46,13 +51,14 @@ $outline-color: rgb(67, 189, 67);
     padding: 10px;
     border: none;
     border-radius: 7px;
-    outline-color: $outline-color;
+    outline-color: rgb(67, 189, 67);
     &:focus {
       border: none;
       &::placeholder {
         color: transparent;
       }
     }
+
     &_empty {
       border: 2px solid rgb(255, 0, 0);
     }
@@ -62,12 +68,12 @@ $outline-color: rgb(67, 189, 67);
 .action__button {
   border: none;
   border-radius: 7px;
-  background-color: rgb(86, 26, 155);
+  background-color: rgba(51, 211, 51, 0.767);
   padding: 10px 15px;
-  color: $date_and_btn_color_text;
+  color: rgb(255, 255, 255);
   outline: none;
   &:hover {
-    background-color: rgb(115, 27, 216);
+    background-color: green;
   }
   &:first-child {
     margin-right: 25px;

@@ -1,0 +1,12 @@
+@import "./mixins.scss";
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+
+  @include sm {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+}

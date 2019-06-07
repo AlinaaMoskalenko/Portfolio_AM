@@ -6,4 +6,13 @@
     font-style: italic;
     margin-bottom: 50px;
   }
+
+  @include sm {
+    margin-right: 0;
+
+    &__comment {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+  }
 }

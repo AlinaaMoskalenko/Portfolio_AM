@@ -21,9 +21,9 @@ const baseConf = (_path) => {
         lesson_11_1: ['./src/lesson_11_1/lesson_11_1.js'],
         tab_menu: ['./src/tab_menu/tab_menu.js'],
         clock: ['./src/clock/clock.js'],
-        comments: ['./src/comments/comments.js'],
-        sidebar_react: ['./src/sidebar_react/sidebar_react.js'],
         comment_page: ['./src/comment_page/comment_page.js'],
+        sidebar_react: ['./src/sidebar_react/sidebar_react.js'],
+        comment_page_react: ['./src/comment_page_react/comment_page_react.js'],
         infobox: ['./src/infobox/infobox.js'],
         speakStarter: ['./src/speakStarter/speakStarter.js'],
         'pop-up-cancel': ['./src/pop-up-cancel/pop-up-cancel.js'],
@@ -31,8 +31,7 @@ const baseConf = (_path) => {
         'pop-up-notification': ['./src/pop-up-notification/pop-up-notification.js'],
         'pop-up-reschedule': ['./src/pop-up-reschedule/pop-up-reschedule.js'],
         'pop-up-reschedule-main': ['./src/pop-up-reschedule-main/pop-up-reschedule-main.js'],
-        'pop-up-appoint': ['./src/pop-up-appoint/pop-up-appoint.js'],
-        test: ['./src/test/test.js'],
+        'pop-up-appoint': ['./src/pop-up-appoint/pop-up-appoint.js']
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

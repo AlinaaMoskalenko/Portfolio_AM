@@ -1,11 +1,21 @@
+@import "./mixins.scss";
+
 .comment {
   &__description {
     display: flex;
     justify-content: space-between;
+
+    @include sm {
+      flex-direction: column;
+    }
   }
   &__info {
     display: flex;
     align-items: center;
+
+    @include sm {
+      justify-content: flex-end;
+    }
   }
   &__delete {
     &:hover {
@@ -17,6 +27,10 @@
     text-align: justify;
     text-indent: 2rem;
     margin-top: 15px;
+
+    @include sm {
+      text-indent: 1rem;
+    }
   }
 }
 
