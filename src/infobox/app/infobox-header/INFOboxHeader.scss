@@ -1,6 +1,11 @@
+@import '../../styles/mixins.scss';
+
 .infobox__header {
   max-height: 256.5px;
   height: 100%;
+
+  @include xs {
+  }
 }
 
 .header__image {
@@ -9,7 +14,7 @@
   top: 0;
   left: 0;
   opacity: 1;
-  transition: opacity 2s;
+  transition: opacity 1s;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   &_hidden {
