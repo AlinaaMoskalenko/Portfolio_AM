@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .wrapper {
   position: absolute;
   max-width: 495px;
@@ -5,4 +7,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include xs {
+    width: 95%;
+  }
 }

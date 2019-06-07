@@ -21,8 +21,8 @@ $background-color: rgba(4, 4, 73, 0.541);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 35px;
-    width: 35px;
+    height: 50px;
+    width: 50px;
     background-color: $background-color;
     &_opened {
       transform: translateX(0);
@@ -30,6 +30,8 @@ $background-color: rgba(4, 4, 73, 0.541);
       transition-delay: 0.2s;
       transition: transform 0.5s;
       .toggle__row {
+        left: 30%;
+        
         &:first-child {
           transform: rotate(-45deg);
           top: inherit;
@@ -62,11 +64,15 @@ $background-color: rgba(4, 4, 73, 0.541);
 .toggle__row {
   position: absolute;
   border-top: 2px solid rgb(255, 255, 255);
-  width: 15px;
+  width: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
   &:first-child {
-    top: 10px;
+    top: 15px;
   }
+
   &:last-child {
-    top: 20px;
+    top: 30px;
   }
 }

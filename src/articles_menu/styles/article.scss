@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 $arrow-size: 20px;
 $arrow-options: 2px solid rgb(0, 0, 255);
 
@@ -5,6 +7,11 @@ $arrow-options: 2px solid rgb(0, 0, 255);
   width: 350px;
   margin-bottom: 10px;
   position: relative;
+
+  @include xs {
+    width: 300px;
+  }
+
   &__arrow-list {
     position: absolute;
     right: 30px;
