@@ -60,26 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 365);
+/******/ 	return __webpack_require__(__webpack_require__.s = 363);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 365:
+/***/ 363:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(366);
+module.exports = __webpack_require__(364);
 
 
 /***/ }),
 
-/***/ 366:
+/***/ 364:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(367);
+__webpack_require__(365);
 
 var commentForm = document.querySelector('#commentForm');
 var cancel = document.querySelector('#cancel');
@@ -130,7 +130,7 @@ cancel.onclick = reset;
 
 /***/ }),
 
-/***/ 367:
+/***/ 365:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

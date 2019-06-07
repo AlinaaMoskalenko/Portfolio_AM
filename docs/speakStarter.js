@@ -65,7 +65,7 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 146:
+/***/ 144:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -318,7 +318,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.balanceMenu = balanceMenu;
 
-var _tabMenu = __webpack_require__(146);
+var _tabMenu = __webpack_require__(144);
 
 function balanceMenu(balanceTabs, balanceContents) {
     var props = {
@@ -346,7 +346,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.lessonMenu = lessonMenu;
 
-var _tabMenu = __webpack_require__(146);
+var _tabMenu = __webpack_require__(144);
 
 function lessonMenu(lessonTabs, lessonContents) {
     var props = {

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 402);
+/******/ 	return __webpack_require__(__webpack_require__.s = 400);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,150 +78,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
-
-/***/ }),
-
-/***/ 107:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.GlobalSidebar = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(10);
-
-var React = _interopRequireWildcard(_react);
-
-__webpack_require__(108);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
-    _inherits(GlobalSidebar, _React$Component);
-
-    function GlobalSidebar() {
-        _classCallCheck(this, GlobalSidebar);
-
-        var _this = _possibleConstructorReturn(this, (GlobalSidebar.__proto__ || Object.getPrototypeOf(GlobalSidebar)).call(this));
-
-        _this.toggleMenu = _this.toggleMenu.bind(_this);
-        _this.state = {
-            isOpened: false
-        };
-
-        /*
-        Запись объекта не в state
-        this.menu = [
-            {
-                title: 'Mac',
-                href: 'https://www.apple.com/mac/',
-            },
-            {
-                title: 'iPhone',
-                href: 'https://www.apple.com/iphone/',
-            },
-            {
-                title: 'Watch',
-                href: 'https://www.apple.com/watch/',
-            },
-            {
-                title: 'Music',
-                href: 'https://www.apple.com/music/',
-            },
-            {
-                title: 'Support',
-                href: 'https://support.apple.com/',
-            },
-            {
-                title: 'Users comments',
-                href: '/comment_page.html',
-            },
-        ];
-        */
-
-        /*
-        Запись простого массива
-        this.menu = ['Mac', 'iPhone', 'Watch', 'Music', 'Support', 'Users comments'];
-        */
-        return _this;
-    }
-
-    _createClass(GlobalSidebar, [{
-        key: 'toggleMenu',
-        value: function toggleMenu() {
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.isOpened = !oldState.isOpened;
-                return newState;
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            /*
-            Перебор простого массива
-               const listLink = this.menu.map((link, i) => {
-                    return <a key={i} className="sidebar__link">
-                        {link}
-                    </a>
-            });
-            */
-
-            var listLink = this.props.links.map(function (link, i) {
-                return React.createElement(
-                    'a',
-                    { key: i, href: link.href, className: 'sidebar__link' },
-                    link.title
-                );
-            });
-
-            var classNames = 'sidebar ';
-            var classToggleNames = 'sidebar__toggle ';
-
-            if (this.state.isOpened) {
-                classNames += 'sidebar_opened';
-                classToggleNames += 'sidebar__toggle_opened';
-            }
-
-            return React.createElement(
-                'aside',
-                { className: classNames },
-                React.createElement(
-                    'div',
-                    { className: classToggleNames, onClick: this.toggleMenu },
-                    React.createElement('div', { className: 'toggle__row' }),
-                    React.createElement('div', { className: 'toggle__row' })
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'sidebar__items' },
-                    listLink
-                )
-            );
-        }
-    }]);
-
-    return GlobalSidebar;
-}(React.Component);
-
-/***/ }),
-
-/***/ 108:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -439,34 +295,34 @@ if (process.env.NODE_ENV === 'production') {
 
 /***/ }),
 
-/***/ 402:
+/***/ 400:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(403);
+module.exports = __webpack_require__(401);
 
 
 /***/ }),
 
-/***/ 403:
+/***/ 401:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(404);
+__webpack_require__(402);
 
-__webpack_require__(405);
+__webpack_require__(403);
 
 /***/ }),
 
-/***/ 404:
+/***/ 402:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 405:
+/***/ 403:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -480,7 +336,7 @@ var _reactDom = __webpack_require__(57);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(406);
+var _App = __webpack_require__(404);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -490,7 +346,7 @@ _reactDom2.default.render(React.createElement(_App.App, null), document.querySel
 
 /***/ }),
 
-/***/ 406:
+/***/ 404:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -507,7 +363,7 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-var _GlobalSidebar = __webpack_require__(107);
+var _GlobalSidebar = __webpack_require__(405);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -563,6 +419,150 @@ var App = exports.App = function (_Component) {
 
     return App;
 }(_react.Component);
+
+/***/ }),
+
+/***/ 405:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.GlobalSidebar = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(10);
+
+var React = _interopRequireWildcard(_react);
+
+__webpack_require__(406);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var GlobalSidebar = exports.GlobalSidebar = function (_React$Component) {
+    _inherits(GlobalSidebar, _React$Component);
+
+    function GlobalSidebar() {
+        _classCallCheck(this, GlobalSidebar);
+
+        var _this = _possibleConstructorReturn(this, (GlobalSidebar.__proto__ || Object.getPrototypeOf(GlobalSidebar)).call(this));
+
+        _this.toggleMenu = _this.toggleMenu.bind(_this);
+        _this.state = {
+            isOpened: false
+        };
+
+        /*
+        Запись объекта не в state
+        this.menu = [
+            {
+                title: 'Mac',
+                href: 'https://www.apple.com/mac/',
+            },
+            {
+                title: 'iPhone',
+                href: 'https://www.apple.com/iphone/',
+            },
+            {
+                title: 'Watch',
+                href: 'https://www.apple.com/watch/',
+            },
+            {
+                title: 'Music',
+                href: 'https://www.apple.com/music/',
+            },
+            {
+                title: 'Support',
+                href: 'https://support.apple.com/',
+            },
+            {
+                title: 'Users comments',
+                href: '/comment_page.html',
+            },
+        ];
+        */
+
+        /*
+        Запись простого массива
+        this.menu = ['Mac', 'iPhone', 'Watch', 'Music', 'Support', 'Users comments'];
+        */
+        return _this;
+    }
+
+    _createClass(GlobalSidebar, [{
+        key: 'toggleMenu',
+        value: function toggleMenu() {
+            this.setState(function (oldState) {
+                var newState = Object.assign({}, oldState);
+                newState.isOpened = !oldState.isOpened;
+                return newState;
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            /*
+            Перебор простого массива
+               const listLink = this.menu.map((link, i) => {
+                    return <a key={i} className="sidebar__link">
+                        {link}
+                    </a>
+            });
+            */
+
+            var listLink = this.props.links.map(function (link, i) {
+                return React.createElement(
+                    'a',
+                    { key: i, href: link.href, className: 'sidebar__link' },
+                    link.title
+                );
+            });
+
+            var classNames = 'sidebar ';
+            var classToggleNames = 'sidebar__toggle ';
+
+            if (this.state.isOpened) {
+                classNames += 'sidebar_opened';
+                classToggleNames += 'sidebar__toggle_opened';
+            }
+
+            return React.createElement(
+                'aside',
+                { className: classNames },
+                React.createElement(
+                    'div',
+                    { className: classToggleNames, onClick: this.toggleMenu },
+                    React.createElement('div', { className: 'toggle__row' }),
+                    React.createElement('div', { className: 'toggle__row' })
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'sidebar__items' },
+                    listLink
+                )
+            );
+        }
+    }]);
+
+    return GlobalSidebar;
+}(React.Component);
+
+/***/ }),
+
+/***/ 406:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

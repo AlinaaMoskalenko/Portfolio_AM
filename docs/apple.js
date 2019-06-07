@@ -60,28 +60,28 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 352);
+/******/ 	return __webpack_require__(__webpack_require__.s = 350);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 352:
+/***/ 350:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(353);
+module.exports = __webpack_require__(351);
 
 
 /***/ }),
 
-/***/ 353:
+/***/ 351:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(354);
+__webpack_require__(352);
 
-var _footerMenu = __webpack_require__(355);
+var _footerMenu = __webpack_require__(353);
 
 var _footerMenu2 = _interopRequireDefault(_footerMenu);
 
@@ -98,14 +98,14 @@ burger.addEventListener('click', function () {
 
 /***/ }),
 
-/***/ 354:
+/***/ 352:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 355:
+/***/ 353:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

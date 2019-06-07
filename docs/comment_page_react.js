@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 416);
+/******/ 	return __webpack_require__(__webpack_require__.s = 407);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -382,34 +382,34 @@ if (process.env.NODE_ENV === 'production') {
 
 /***/ }),
 
-/***/ 416:
+/***/ 407:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(417);
+module.exports = __webpack_require__(408);
 
 
 /***/ }),
 
-/***/ 417:
+/***/ 408:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(418);
+__webpack_require__(409);
 
-__webpack_require__(419);
+__webpack_require__(410);
 
 /***/ }),
 
-/***/ 418:
+/***/ 409:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 419:
+/***/ 410:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -417,23 +417,23 @@ __webpack_require__(419);
 
 var _react = __webpack_require__(10);
 
-var React = _interopRequireWildcard(_react);
+var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(57);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(420);
+var _App = __webpack_require__(411);
+
+var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-_reactDom2.default.render(React.createElement(_App.App, null), document.querySelector('#root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.querySelector('#root'));
 
 /***/ }),
 
-/***/ 420:
+/***/ 411:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -442,7 +442,6 @@ _reactDom2.default.render(React.createElement(_App.App, null), document.querySel
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.App = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -450,15 +449,15 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-var _INFOboxHeader = __webpack_require__(421);
+var _CommentList = __webpack_require__(412);
 
-var _INFOboxMain = __webpack_require__(427);
-
-var _INFOboxFooter = __webpack_require__(429);
+var _CommentForm = __webpack_require__(414);
 
 var _httpService = __webpack_require__(106);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -466,7 +465,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = exports.App = function (_Component) {
+var URL = 'https://evening-dawn-11092.herokuapp.com/comments';
+
+var App = function (_Component) {
     _inherits(App, _Component);
 
     function App() {
@@ -475,37 +476,10 @@ var App = exports.App = function (_Component) {
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
         _this.httpService = new _httpService.HTTPService();
-        _this.setID = _this.setID.bind(_this);
-        _this.toggleDetails = _this.toggleDetails.bind(_this);
+        _this.onSubmit = _this.onSubmit.bind(_this);
+        _this.deleteComment = _this.deleteComment.bind(_this);
         _this.state = {
-            infobox_contents_length: 0,
-            ID: 0,
-            isModeOpened: false,
-            infobox_contents: [{
-                id: 0,
-                title: "Time to Share: 6 for $3.99*",
-                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
-                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
-                productUrl: "/products/promo1.html"
-            }, {
-                id: 1,
-                title: "Rise 'n shine",
-                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
-                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
-                productUrl: "/products/promo2.html"
-            }, {
-                id: 2,
-                title: "PM Snackers: Brownie Bites",
-                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
-                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
-                productUrl: "/products/promo3.html"
-            }, {
-                id: 3,
-                title: "PM Snackers: Brownie Bites new",
-                description: "Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exefcitalion ullamoo laboris nisi ut aliquip ex ea commodo oonsequat.",
-                note: "* At vero eos et accusamus et iusto odo dtgntsslmos duclmus qui blandltlis praesentlum voluptatum delenrtl atque corruptl quos doQres et quas molestlas exceptun sint occaecatl cupidrtate non pro v dent, slmllique sunt In culpa qui otflcia deserunt mollrtia anlmi. id est la bo aim et dolorum tuga.",
-                productUrl: "/products/promo4.html"
-            }]
+            comments: []
         };
         return _this;
     }
@@ -515,60 +489,67 @@ var App = exports.App = function (_Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            // this.fetchData();
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.infobox_contents_length = _this2.state.infobox_contents.length;
-                return newState;
-            });
-        }
-
-        // fetchData() {
-        //     this.httpService.get('http://localhost:3000/posts', (response) => {
-        //         this.setState((oldState) => {
-        //             const newState = Object.assign({}, oldState);
-        //             newState.infobox_contents = response;
-        //             newState.infobox_contents_length = response.length;
-        //             return newState;
-        //         });
-        //     });
-        // }
-
-    }, {
-        key: 'setID',
-        value: function setID(postID) {
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.ID = postID;
-                return newState;
+            this.httpService.get(URL, function (comments) {
+                _this2.setState({ comments: comments });
             });
         }
     }, {
-        key: 'toggleDetails',
-        value: function toggleDetails(setMode) {
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.isModeOpened = setMode;
-                return newState;
+        key: 'onSubmit',
+        value: function onSubmit(_ref) {
+            var _this3 = this;
+
+            var author = _ref.author,
+                text = _ref.text;
+
+            this.httpService.post(URL, { author: author, text: text }, function (comment) {
+                _this3.setState(function (_ref2) {
+                    var comments = _ref2.comments;
+
+                    var newArray = [].concat(_toConsumableArray(comments), [comment]);
+                    return {
+                        comments: newArray
+                    };
+                });
+            });
+        }
+    }, {
+        key: 'deleteComment',
+        value: function deleteComment(commentId) {
+            var _this4 = this;
+
+            this.httpService.delete(URL + '/' + commentId, function () {
+                _this4.setState(function (oldState) {
+                    var newState = Object.assign({}, oldState);
+                    newState.comments = newState.comments.filter(function (comment) {
+                        return comment.id !== commentId;
+                    });
+                    return newState;
+                });
             });
         }
     }, {
         key: 'render',
         value: function render() {
+            var comments = this.state.comments;
+
+
             return React.createElement(
                 'div',
-                { className: 'infobox' },
-                React.createElement(_INFOboxHeader.INFOboxHeader, {
-                    infobox_contents: this.state.infobox_contents,
-                    id: this.state.ID,
-                    isModeOpened: this.state.isModeOpened }),
-                React.createElement(_INFOboxMain.INFOboxMain, {
-                    infobox_contents: this.state.infobox_contents,
-                    id: this.state.ID,
-                    toggleDetails: this.toggleDetails }),
-                React.createElement(_INFOboxFooter.INFOboxFooter, {
-                    infoboxLength: this.state.infobox_contents_length,
-                    setPostID: this.setID })
+                { className: 'comment-page' },
+                React.createElement(
+                    'h2',
+                    { className: 'comment-page__title' },
+                    'Welcome to comment page!'
+                ),
+                React.createElement(
+                    'div',
+                    { className: 'comment-page__content' },
+                    React.createElement(_CommentList.CommentList, {
+                        comments: comments,
+                        onDeleteItem: this.deleteComment }),
+                    React.createElement(_CommentForm.CommentForm, {
+                        onSubmit: this.onSubmit })
+                )
             );
         }
     }]);
@@ -576,9 +557,11 @@ var App = exports.App = function (_Component) {
     return App;
 }(_react.Component);
 
+exports.default = App;
+
 /***/ }),
 
-/***/ 421:
+/***/ 412:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -587,15 +570,15 @@ var App = exports.App = function (_Component) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.INFOboxHeader = undefined;
+exports.CommentList = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(413);
 
 var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
-
-__webpack_require__(422);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -605,210 +588,89 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IMG_URL = '../../../../assets/images/';
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
-    _inherits(INFOboxHeader, _React$Component);
+var CommentList = exports.CommentList = function (_React$Component) {
+    _inherits(CommentList, _React$Component);
 
-    function INFOboxHeader() {
-        _classCallCheck(this, INFOboxHeader);
+    function CommentList() {
+        _classCallCheck(this, CommentList);
 
-        return _possibleConstructorReturn(this, (INFOboxHeader.__proto__ || Object.getPrototypeOf(INFOboxHeader)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (CommentList.__proto__ || Object.getPrototypeOf(CommentList)).apply(this, arguments));
     }
 
-    _createClass(INFOboxHeader, [{
+    _createClass(CommentList, [{
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _props = this.props,
+                comments = _props.comments,
+                onDeleteItem = _props.onDeleteItem;
 
-            var contentIMG = this.props.infobox_contents.map(function (content, i) {
-                var classNames = 'header__image ';
+            var commentList = comments.map(function (_ref) {
+                var id = _ref.id,
+                    date = _ref.date,
+                    author = _ref.author,
+                    text = _ref.text;
 
-                if (_this2.props.isModeOpened) classNames += 'header__image_hidden';else if (content.id !== _this2.props.id) classNames += 'header__image_hidden';
+                var newDate = new Date(date);
 
-                var icon = content.id === 0 ? __webpack_require__(423) : content.id === 1 ? __webpack_require__(424) : content.id === 2 ? __webpack_require__(425) : __webpack_require__(426);
+                var dateString = newDate.getHours() + ':' + newDate.getMinutes() + ":" + newDate.getSeconds() + " " + MONTHS[newDate.getMonth()] + " " + newDate.getDate() + ", " + newDate.getFullYear();
 
-                return React.createElement('img', { key: i,
-                    className: classNames,
-                    src: icon });
-            });
-
-            return React.createElement(
-                'div',
-                { className: 'infobox__header' },
-                contentIMG
-            );
-        }
-    }]);
-
-    return INFOboxHeader;
-}(React.Component);
-
-/***/ }),
-
-/***/ 422:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 423:
-/***/ (function(module, exports) {
-
-module.exports = "./assets/images/comp_plate_promo1.png";
-
-/***/ }),
-
-/***/ 424:
-/***/ (function(module, exports) {
-
-module.exports = "./assets/images/comp_plate_promo2.png";
-
-/***/ }),
-
-/***/ 425:
-/***/ (function(module, exports) {
-
-module.exports = "./assets/images/comp_plate_promo3.png";
-
-/***/ }),
-
-/***/ 426:
-/***/ (function(module, exports) {
-
-module.exports = "./assets/images/comp_plate_promo4.png";
-
-/***/ }),
-
-/***/ 427:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.INFOboxMain = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(10);
-
-var React = _interopRequireWildcard(_react);
-
-__webpack_require__(428);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var INFOboxMain = exports.INFOboxMain = function (_React$Component) {
-    _inherits(INFOboxMain, _React$Component);
-
-    function INFOboxMain() {
-        _classCallCheck(this, INFOboxMain);
-
-        var _this = _possibleConstructorReturn(this, (INFOboxMain.__proto__ || Object.getPrototypeOf(INFOboxMain)).call(this));
-
-        _this.toggleDetails = _this.toggleDetails.bind(_this);
-        _this.state = {
-            isFullOpened: false
-        };
-        return _this;
-    }
-
-    _createClass(INFOboxMain, [{
-        key: 'toggleDetails',
-        value: function toggleDetails(event) {
-            var _this2 = this;
-
-            event.preventDefault();
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.isFullOpened = !oldState.isFullOpened;
-                _this2.props.toggleDetails(newState.isFullOpened);
-                return newState;
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this3 = this;
-
-            var contentTEXT = this.props.infobox_contents.map(function (content, i) {
-                var classNames = 'post__description ';
-                var classNamesNote = 'post__note_hidden';
-
-                if (_this3.state.isFullOpened) {
-                    classNames += 'post__description_full ';
-                    classNamesNote = 'post__note';
-                }
-
-                if (i !== _this3.props.id) {
-                    classNames += 'post__description_hidden';
-                }
+                var deleteComment = function deleteComment() {
+                    return onDeleteItem(id);
+                };
 
                 return React.createElement(
                     'div',
-                    { key: i,
-                        className: classNames },
+                    { key: id, className: 'comment' },
                     React.createElement(
-                        'h3',
-                        { className: 'post__title' },
-                        content.title
+                        'div',
+                        { className: 'comment__header' },
+                        React.createElement(
+                            'h4',
+                            { className: 'comment__author' },
+                            author
+                        ),
+                        React.createElement(
+                            'button',
+                            { className: 'comment__delete', onClick: deleteComment },
+                            'Delete'
+                        )
                     ),
                     React.createElement(
                         'div',
-                        { className: 'post__text' },
-                        content.description,
-                        React.createElement(
-                            'div',
-                            { className: classNamesNote },
-                            content.note
-                        )
+                        { className: 'comment__text' },
+                        text
+                    ),
+                    React.createElement(
+                        'div',
+                        { className: 'comment__date' },
+                        dateString
                     )
                 );
             });
 
-            var titleLinkDetails = 'Show details';
-
-            if (this.state.isFullOpened) {
-                titleLinkDetails = 'Hide details';
-            }
-
             return React.createElement(
                 'div',
-                { className: 'infobox__main' },
-                contentTEXT,
-                React.createElement(
-                    'a',
-                    { href: '', className: 'link-details',
-                        onClick: this.toggleDetails },
-                    titleLinkDetails
-                )
+                { className: 'comment-page__list' },
+                commentList
             );
         }
     }]);
 
-    return INFOboxMain;
+    return CommentList;
 }(React.Component);
 
 /***/ }),
 
-/***/ 428:
+/***/ 413:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 429:
+/***/ 414:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -817,15 +679,15 @@ var INFOboxMain = exports.INFOboxMain = function (_React$Component) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.INFOboxFooter = undefined;
+exports.CommentForm = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(415);
 
 var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
-
-__webpack_require__(430);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -835,130 +697,139 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var INFOboxFooter = exports.INFOboxFooter = function (_React$Component) {
-    _inherits(INFOboxFooter, _React$Component);
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    function INFOboxFooter() {
-        _classCallCheck(this, INFOboxFooter);
+var CommentForm = exports.CommentForm = function (_React$Component) {
+    _inherits(CommentForm, _React$Component);
 
-        var _this = _possibleConstructorReturn(this, (INFOboxFooter.__proto__ || Object.getPrototypeOf(INFOboxFooter)).call(this));
+    function CommentForm() {
+        _classCallCheck(this, CommentForm);
 
-        _this.setFirstPostID = _this.setFirstPostID.bind(_this);
-        _this.setLastPostID = _this.setLastPostID.bind(_this);
-        _this.setPrevPostID = _this.setPrevPostID.bind(_this);
-        _this.setNextPostID = _this.setNextPostID.bind(_this);
+        var _this = _possibleConstructorReturn(this, (CommentForm.__proto__ || Object.getPrototypeOf(CommentForm)).call(this));
+
+        _this.onChange = _this.onChange.bind(_this);
+        _this.onSubmit = _this.onSubmit.bind(_this);
+        _this.onReset = _this.onReset.bind(_this);
         _this.state = {
-            ID: 0
+            isSubmited: false,
+            isValidAuthor: true,
+            isValidText: true,
+            author: '',
+            text: ''
         };
         return _this;
     }
 
-    _createClass(INFOboxFooter, [{
-        key: 'setFirstPostID',
-        value: function setFirstPostID(event) {
-            var _this2 = this;
+    _createClass(CommentForm, [{
+        key: 'onChange',
+        value: function onChange(_ref) {
+            var target = _ref.target;
+            var type = target.type,
+                value = target.value;
 
-            event.preventDefault();
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.ID = 0;
-                _this2.props.setPostID(newState.ID);
-                return newState;
-            });
+
+            if (type === 'text') {
+                this.setState({ author: value, isValidAuthor: true });
+            } else {
+                this.setState({ text: value, isValidText: true });
+            }
         }
     }, {
-        key: 'setPrevPostID',
-        value: function setPrevPostID(event) {
-            var _this3 = this;
+        key: 'onSubmit',
+        value: function onSubmit(e) {
+            e.preventDefault();
 
-            event.preventDefault();
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                if (oldState.ID === 0) {
-                    newState.ID = oldState.ID;
-                } else {
-                    newState.ID = oldState.ID - 1;
-                }
-                _this3.props.setPostID(newState.ID);
-                return newState;
-            });
+            var onSubmit = this.props.onSubmit;
+            var _state = this.state,
+                author = _state.author,
+                text = _state.text;
+
+
+            var valid = true;
+            if (!author) {
+                valid = false;
+                this.setState({ isValidAuthor: false });
+            }
+
+            if (!text) {
+                valid = false;
+                this.setState({ isValidText: false });
+            }
+
+            this.setState({ isSubmited: true });
+
+            if (valid) {
+                onSubmit(this.state);
+                this.setState({ author: '', text: '' });
+            }
         }
     }, {
-        key: 'setNextPostID',
-        value: function setNextPostID(event) {
-            var _this4 = this;
-
-            event.preventDefault();
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                if (oldState.ID === _this4.props.infoboxLength - 1) {
-                    newState.ID = oldState.ID;
-                } else {
-                    newState.ID = oldState.ID + 1;
-                }
-                _this4.props.setPostID(newState.ID);
-                return newState;
-            });
-        }
-    }, {
-        key: 'setLastPostID',
-        value: function setLastPostID(event) {
-            var _this5 = this;
-
-            event.preventDefault();
-            this.setState(function (oldState) {
-                var newState = Object.assign({}, oldState);
-                newState.ID = _this5.props.infoboxLength - 1;
-                _this5.props.setPostID(newState.ID);
-                return newState;
-            });
+        key: 'onReset',
+        value: function onReset() {
+            this.setState({ author: '', text: '' });
         }
     }, {
         key: 'render',
         value: function render() {
+            var date = new Date();
+            var dateString = MONTHS[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
+
+            var _state2 = this.state,
+                isValidAuthor = _state2.isValidAuthor,
+                isValidText = _state2.isValidText,
+                isSubmited = _state2.isSubmited,
+                author = _state2.author,
+                text = _state2.text;
+
+
+            var inputClassName = 'comment__new-author ' + (!isValidAuthor && isSubmited && 'comment__new-author_empty');
+            var textareaClassName = 'comment__new-text ' + (!isValidText && isSubmited && 'comment__new-text_empty');
+
             return React.createElement(
-                'div',
-                { className: 'infobox__footer' },
+                'form',
+                { className: 'comment-page__form',
+                    onSubmit: this.onSubmit,
+                    onReset: this.onReset },
                 React.createElement(
                     'div',
-                    { className: 'footer__control-btn' },
-                    React.createElement('div', { className: 'footer__button-arrow',
-                        onClick: this.setFirstPostID }),
-                    React.createElement(
-                        'div',
-                        { className: 'footer__button',
-                            onClick: this.setPrevPostID },
-                        'Prev'
-                    ),
-                    React.createElement(
-                        'div',
-                        { className: 'footer__button',
-                            onClick: this.setNextPostID },
-                        'Next'
-                    ),
-                    React.createElement('div', { className: 'footer__button-arrow',
-                        onClick: this.setLastPostID })
+                    { className: 'comment__current-date' },
+                    dateString
                 ),
+                React.createElement('input', { className: inputClassName,
+                    type: 'text',
+                    placeholder: 'Enter your full name (eg. John Smith)',
+                    onChange: this.onChange,
+                    value: author }),
+                React.createElement('textarea', { className: textareaClassName,
+                    rows: '7',
+                    cols: '30',
+                    placeholder: 'Write your comment',
+                    onChange: this.onChange,
+                    value: text }),
                 React.createElement(
                     'div',
-                    { className: 'footer__find-a-store' },
+                    { className: 'comment__action' },
                     React.createElement(
-                        'div',
-                        { className: 'find-a-store__button' },
-                        'Find a store'
+                        'button',
+                        { className: 'action__button', type: 'submit' },
+                        'Send'
                     ),
-                    React.createElement('div', { className: 'find-a-store__button-arrow' })
+                    React.createElement(
+                        'button',
+                        { className: 'action__button', type: 'reset' },
+                        'Cancel'
+                    )
                 )
             );
         }
     }]);
 
-    return INFOboxFooter;
+    return CommentForm;
 }(React.Component);
 
 /***/ }),
 
-/***/ 430:
+/***/ 415:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -60,28 +60,28 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 377);
+/******/ 	return __webpack_require__(__webpack_require__.s = 375);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 377:
+/***/ 375:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(378);
+module.exports = __webpack_require__(376);
 
 
 /***/ }),
 
-/***/ 378:
+/***/ 376:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(379);
+__webpack_require__(377);
 
-var _lightBulb = __webpack_require__(380);
+var _lightBulb = __webpack_require__(378);
 
 var lightBulbElements = document.querySelectorAll('.lightbulb-block');
 
@@ -91,14 +91,14 @@ for (var i = 0; i < lightBulbElements.length; i++) {
 
 /***/ }),
 
-/***/ 379:
+/***/ 377:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 380:
+/***/ 378:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

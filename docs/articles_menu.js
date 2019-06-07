@@ -60,28 +60,28 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 381);
+/******/ 	return __webpack_require__(__webpack_require__.s = 379);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 381:
+/***/ 379:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(382);
+module.exports = __webpack_require__(380);
 
 
 /***/ }),
 
-/***/ 382:
+/***/ 380:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(383);
+__webpack_require__(381);
 
-var _articleMenu = __webpack_require__(384);
+var _articleMenu = __webpack_require__(382);
 
 var articleHtmlElements = document.querySelectorAll('.wrapper');
 
@@ -91,14 +91,14 @@ for (var i = 0; i < articleHtmlElements.length; i++) {
 
 /***/ }),
 
-/***/ 383:
+/***/ 381:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 384:
+/***/ 382:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

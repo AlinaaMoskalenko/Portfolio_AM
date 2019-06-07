@@ -60,41 +60,41 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 394);
+/******/ 	return __webpack_require__(__webpack_require__.s = 392);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 394:
+/***/ 392:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(395);
+module.exports = __webpack_require__(393);
 
 
 /***/ }),
 
-/***/ 395:
+/***/ 393:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(396);
+__webpack_require__(394);
 
-var _DynamicClock = __webpack_require__(397);
+var _DynamicClock = __webpack_require__(395);
 
 var clock = new _DynamicClock.DynamicClock(document.querySelector("#clockConteiner"));
 
 /***/ }),
 
-/***/ 396:
+/***/ 394:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 397:
+/***/ 395:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
