@@ -9,13 +9,11 @@ export class App extends Component {
             sidebar_menu: [
                 {
                     title: 'Home page',
-                    href: '/WA/index.html',
-                    // href: 'index.html',
+                    href: 'index.html',
                 },
                 {
                     title: 'Users comments',
-                    href: '/WA/comment_page.html',
-                    // href: 'comment_page.html',
+                    href: 'comment_page.html',
                 },
                 {
                     title: 'Mac',

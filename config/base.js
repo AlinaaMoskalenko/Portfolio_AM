@@ -22,7 +22,7 @@ const baseConf = (_path) => {
         tab_menu: ['./src/tab_menu/tab_menu.js'],
         clock: ['./src/clock/clock.js'],
         comment_page: ['./src/comment_page/comment_page.js'],
-        sidebar_react: ['./src/sidebar_react/sidebar_react.js'],
+        sidebar: ['./src/sidebar/sidebar.js'],
         comment_page_react: ['./src/comment_page_react/comment_page_react.js'],
         infobox: ['./src/infobox/infobox.js'],
         speakStarter: ['./src/speakStarter/speakStarter.js'],
