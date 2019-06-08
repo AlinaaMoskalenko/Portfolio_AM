@@ -60,30 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 366);
+/******/ 	return __webpack_require__(__webpack_require__.s = 365);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 366:
+/***/ 365:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(367);
+module.exports = __webpack_require__(366);
 
 
 /***/ }),
 
-/***/ 367:
+/***/ 366:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _calc = __webpack_require__(368);
+var _calc = __webpack_require__(367);
 
-var _trafficLighter = __webpack_require__(373);
+var _trafficLighter = __webpack_require__(372);
 
-__webpack_require__(374);
+__webpack_require__(373);
 
 /*const initBtn = document.querySelector('#calcBtn');
 initBtn.onclick = calc;*/
@@ -95,7 +95,7 @@ for (var i = 0; i < lightersHtmlElements.length; i++) {
 
 /***/ }),
 
-/***/ 368:
+/***/ 367:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -106,13 +106,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.calc = calc;
 
-var _add = __webpack_require__(369);
+var _add = __webpack_require__(368);
 
-var _substitude = __webpack_require__(370);
+var _substitude = __webpack_require__(369);
 
-var _divide = __webpack_require__(371);
+var _divide = __webpack_require__(370);
 
-var _multiply = __webpack_require__(372);
+var _multiply = __webpack_require__(371);
 
 function calc() {
   var operandA = Number(prompt('Operand A', 0));
@@ -142,7 +142,7 @@ function calc() {
 
 /***/ }),
 
-/***/ 369:
+/***/ 368:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -160,7 +160,7 @@ var add = exports.add = function add(a, b) {
 
 /***/ }),
 
-/***/ 370:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -175,7 +175,7 @@ var subtitude = exports.subtitude = function subtitude(a, b) {
 
 /***/ }),
 
-/***/ 371:
+/***/ 370:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -190,7 +190,7 @@ var divide = exports.divide = function divide(a, b) {
 
 /***/ }),
 
-/***/ 372:
+/***/ 371:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -205,7 +205,7 @@ var multiply = exports.multiply = function multiply(a, b) {
 
 /***/ }),
 
-/***/ 373:
+/***/ 372:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -241,7 +241,7 @@ function trafficLighter(targetElement) {
 
 /***/ }),
 
-/***/ 374:
+/***/ 373:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

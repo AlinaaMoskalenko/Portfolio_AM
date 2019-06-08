@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 416);
+/******/ 	return __webpack_require__(__webpack_require__.s = 415);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -382,34 +382,34 @@ if (process.env.NODE_ENV === 'production') {
 
 /***/ }),
 
-/***/ 416:
+/***/ 415:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(417);
+module.exports = __webpack_require__(416);
 
 
 /***/ }),
 
-/***/ 417:
+/***/ 416:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(418);
+__webpack_require__(417);
 
-__webpack_require__(419);
+__webpack_require__(418);
 
 /***/ }),
 
-/***/ 418:
+/***/ 417:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 419:
+/***/ 418:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -423,7 +423,7 @@ var _reactDom = __webpack_require__(57);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(420);
+var _App = __webpack_require__(419);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -433,7 +433,7 @@ _reactDom2.default.render(React.createElement(_App.App, null), document.querySel
 
 /***/ }),
 
-/***/ 420:
+/***/ 419:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -450,11 +450,11 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-var _INFOboxHeader = __webpack_require__(421);
+var _INFOboxHeader = __webpack_require__(420);
 
-var _INFOboxMain = __webpack_require__(427);
+var _INFOboxMain = __webpack_require__(426);
 
-var _INFOboxFooter = __webpack_require__(429);
+var _INFOboxFooter = __webpack_require__(428);
 
 var _httpService = __webpack_require__(106);
 
@@ -578,7 +578,7 @@ var App = exports.App = function (_Component) {
 
 /***/ }),
 
-/***/ 421:
+/***/ 420:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -595,7 +595,7 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-__webpack_require__(422);
+__webpack_require__(421);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -626,7 +626,7 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
 
                 if (_this2.props.isModeOpened) classNames += 'header__image_hidden';else if (content.id !== _this2.props.id) classNames += 'header__image_hidden';
 
-                var icon = content.id === 0 ? __webpack_require__(423) : content.id === 1 ? __webpack_require__(424) : content.id === 2 ? __webpack_require__(425) : __webpack_require__(426);
+                var icon = content.id === 0 ? __webpack_require__(422) : content.id === 1 ? __webpack_require__(423) : content.id === 2 ? __webpack_require__(424) : __webpack_require__(425);
 
                 return React.createElement('img', { key: i,
                     className: classNames,
@@ -646,42 +646,42 @@ var INFOboxHeader = exports.INFOboxHeader = function (_React$Component) {
 
 /***/ }),
 
-/***/ 422:
+/***/ 421:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 423:
+/***/ 422:
 /***/ (function(module, exports) {
 
 module.exports = "./assets/images/comp_plate_promo1.png";
 
 /***/ }),
 
-/***/ 424:
+/***/ 423:
 /***/ (function(module, exports) {
 
 module.exports = "./assets/images/comp_plate_promo2.png";
 
 /***/ }),
 
-/***/ 425:
+/***/ 424:
 /***/ (function(module, exports) {
 
 module.exports = "./assets/images/comp_plate_promo3.png";
 
 /***/ }),
 
-/***/ 426:
+/***/ 425:
 /***/ (function(module, exports) {
 
 module.exports = "./assets/images/comp_plate_promo4.png";
 
 /***/ }),
 
-/***/ 427:
+/***/ 426:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -698,7 +698,7 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-__webpack_require__(428);
+__webpack_require__(427);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -801,14 +801,14 @@ var INFOboxMain = exports.INFOboxMain = function (_React$Component) {
 
 /***/ }),
 
-/***/ 428:
+/***/ 427:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 429:
+/***/ 428:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -825,7 +825,7 @@ var _react = __webpack_require__(10);
 
 var React = _interopRequireWildcard(_react);
 
-__webpack_require__(430);
+__webpack_require__(429);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -958,7 +958,7 @@ var INFOboxFooter = exports.INFOboxFooter = function (_React$Component) {
 
 /***/ }),
 
-/***/ 430:
+/***/ 429:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -5,9 +5,7 @@
 html,
 button {
   font-family: "MuseoSansCyrl500", Helvetica, sans-serif;
-  font-size: $font-size;
-  color: $main-color-text;
-  background-color: $bg-main;
+  font-size: 15px;
 }
 
 h1,
@@ -26,83 +24,8 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
 
-.wrapper {
-  display: flex;
-  margin-left: 25%;
-  &__content {
-    flex-basis: 100%;
-    @include md {
-      z-index: 0;
-      &_hidden {
-        z-index: -1;
-        background-color: $bg-main;
-        opacity: 0.5;
-      }
-    }
-  }
-  @include md {
-    margin-left: 0;
-  }
-}
-
-.wrapper-sidebar {
-  width: 25%;
-  position: fixed;
-  height: 100%;
-  background-color: #ffffff;
-  border-right: 1px solid $light-grey-color;
-  @include flex-justify-end;
-  padding: 0 18px;
-  @include lg {
-    padding: 0 30px;
-  }
-  @include md {
-    display: block;
-    background-color: transparent;
-    border-right: none;
-    visibility: hidden;
-    width: 0;
-    padding: 0;
-    z-index: 1;
-    position: absolute;
-    .sidebar {
-      &__items {
-        opacity: 0;
-      }
-    }
-    &_opened {
-      position: fixed;
-      transition: 1s;
-      visibility: visible;
-      width: 100%;
-      .sidebar {
-        overflow: scroll;
-        padding: 0 18px;
-        &__items {
-          transition: 0.2s;
-          transition-delay: 0.3s;
-          opacity: 1;
-        }
-        &__toggle {
-          right: 18px;
-          .toggle__row {
-            background-color: $light-grey-color;
-            &:first-child {
-              position: absolute;
-              transform: rotate(45deg);
-            }
-            &:nth-child(2) {
-              position: absolute;
-              transform: rotate(-45deg);
-            }
-            &:last-child {
-              display: none;
-            }
-          }
-        }
-      }
-    }
+  &:hover {
+    color: #469551;
   }
 }
